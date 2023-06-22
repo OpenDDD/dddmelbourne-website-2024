@@ -4,35 +4,13 @@ import { NextPage } from 'next'
 import { Text } from 'components/global/text'
 import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'
-import styled from '@emotion/styled'
-import { breakpoint } from '../components/utils/styles/breakpoints'
-
-const StyledTitle = styled('h1')(() => ({
-  fontSize: '2em',
-  padding: '4rem',
-  textAlign: 'center',
-  [breakpoint('sm')]: {
-    fontSize: '4em',
-  },
-}))
-
-const HeroImage = styled('img')(() => ({
-  width: '100%',
-  height: 'auto',
-}))
 
 export const Index: NextPage = () => {
   const { conference } = useConfig()
 
   return (
-    <Main title="Home" showHero={false}>
+    <Main title="Home" showHero={true}>
       <section>
-        <HeroImage src="/hero/hero.svg" alt="DDD Melbourne 2024" width="1023" height="553" />
-        <StyledTitle>
-          {format(conference.Date, 'do MMMM yyyy')} <br />
-          Melbourne Town Hall
-        </StyledTitle>
-
         <h2>
           {conference.Name} {format(conference.Date, 'y')}
         </h2>
