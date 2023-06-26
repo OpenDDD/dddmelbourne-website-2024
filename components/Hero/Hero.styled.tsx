@@ -9,25 +9,25 @@ export const StyledHero = styled('section')(({ theme }) => ({
   justifyContent: 'flex-end',
   padding: calcRem(80, theme.metrics.md),
   marginBottom: theme.metrics.md,
-  backgroundImage: `url(/hero/hero_w640.png)`,
+  backgroundImage: `url(/hero/hero_w640.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
 
   [breakpoint('sm')]: {
-    backgroundImage: `url(/hero/hero_w768.png)`,
+    backgroundImage: `url(/hero/hero_w768.jpg)`,
   },
 
   [breakpoint('md')]: {
-    backgroundImage: `url(/hero/hero_w1024.png)`,
+    backgroundImage: `url(/hero/hero_w1024.jpg)`,
   },
 
   [breakpoint('lg')]: {
-    backgroundImage: `url(/hero/hero_w1280.png)`,
+    backgroundImage: `url(/hero/hero_w1280.jpg)`,
   },
 
   [breakpoint('xl')]: {
-    backgroundImage: `url(/hero/hero_w1920.png)`,
+    backgroundImage: `url(/hero/hero_w1920.jpg)`,
   },
 }))
 StyledHero.displayName = 'StyledHero'
