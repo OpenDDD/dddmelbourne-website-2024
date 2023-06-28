@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledHero, StyledConferenceDetails } from './Hero.styled'
+import { StyledHero, StyledConferenceDetails, HeroContentWrapper, HeroWrapper } from './Hero.styled'
 import { formatISO } from 'date-fns'
 import { useConfig } from 'Context/Config'
 import { HiDpiPicture } from 'pixboost-react'
@@ -14,27 +14,37 @@ export const Hero = (): JSX.Element => {
     domain: 'pixboost.com',
     breakpoints: {
       lg: { media: '(min-width: 1024px)' },
-      sm: { media: '(min-width: 768px)' },
+      sm: {},
     },
   }
 
   return (
     <React.Fragment>
-      <HiDpiPicture
-        config={pixboostConfig}
-        alt="DDD Melbourne"
-        breakpoints={{
-          lg: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
-          sm: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
-        }}
-        minWidth={300}
-        maxWidth={1500}
-        src="http://www.midday.coffee/dddmelb-hero.jpg"
-        sizes={{
-          lg: '100vw',
-          sm: '100vw',
-        }}
-      />
+      <HeroWrapper>
+        {(venue || date) && (
+          <HeroContentWrapper>
+            <StyledConferenceDetails>
+              {date && <time dateTime={formatISO(conference.Date)}>{date}</time>}
+              {venue && <span>{venue}</span>}
+            </StyledConferenceDetails>
+          </HeroContentWrapper>
+        )}
+        <HiDpiPicture
+          config={pixboostConfig}
+          alt="DDD Melbourne"
+          breakpoints={{
+            lg: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
+            sm: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
+          }}
+          minWidth={300}
+          maxWidth={1500}
+          src="http://www.midday.coffee/dddmelb-hero.jpg"
+          sizes={{
+            lg: '100vw',
+            sm: '100vw',
+          }}
+        />
+      </HeroWrapper>
 
       <StyledHero>
         {(venue || date) && (
