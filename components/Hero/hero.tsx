@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledHero, StyledConferenceDetails, HeroContentWrapper, HeroWrapper } from './Hero.styled'
+import { StyledConferenceDetails, HeroContentWrapper, HeroWrapper } from './Hero.styled'
 import { formatISO } from 'date-fns'
 import { useConfig } from 'Context/Config'
 import { HiDpiPicture } from 'pixboost-react'
@@ -37,30 +37,15 @@ export const Hero = (): JSX.Element => {
             sm: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
           }}
           minWidth={300}
-          maxWidth={1500}
+          maxWidth={3000}
           src="http://www.midday.coffee/dddmelb-hero.jpg"
           sizes={{
             lg: '100vw',
             sm: '100vw',
           }}
+          imgProps={{ fetchpriority: 'high' }}
         />
       </HeroWrapper>
-
-      <StyledHero>
-        {(venue || date) && (
-          <StyledConferenceDetails>
-            {date && <time dateTime={formatISO(conference.Date)}>{date}</time>}
-            {venue && <span>{venue}</span>}
-          </StyledConferenceDetails>
-        )}
-        {/* <StyledCredit>
-          Photo by{' '}
-          <SafeLink href="https://unsplash.com/@drone_nr" target="_blank">
-            Josh Spires
-          </SafeLink>{' '}
-          - dronenr on Unsplash
-        </StyledCredit> */}
-      </StyledHero>
     </React.Fragment>
   )
 }
