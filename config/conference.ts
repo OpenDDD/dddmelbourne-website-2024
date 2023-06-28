@@ -95,7 +95,7 @@ const Conference: IConference = {
   TicketsProviderEventId: '2022',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
-  HashTag: 'DDDPerth',
+  HashTag: 'DDDMelbourne',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
   Handbook: 'handbook2022.pdf',
   SessionizeUrl: 'https://sessionize.com/ddd-perth-2023',
