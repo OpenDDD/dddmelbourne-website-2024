@@ -242,25 +242,25 @@ export default function getFaqs(dates: Dates): FAQ[] {
         </p>
         <ul>
           <li>
-            <SafeLink href="http://melbjs.com/" target="_blank">
+            <SafeLink href="https://www.meetup.com/ddd-melbourne-by-night/events/" target="_blank">
+              DDD Melbourne By Night
+            </SafeLink>
+          </li>
+          <li>
+            <SafeLink href="https://melbjs.com/" target="_blank">
               MelbJS
             </SafeLink>
           </li>
           <li>
-            <SafeLink href="http://melbourne.ozalt.net/" target="_blank">
-              Alt.net
-            </SafeLink>
-          </li>
-          <li>
-            <SafeLink href="http://melbourne.ozalt.net/" target="_blank">
-              Vic .NET
+            <SafeLink href="https://www.meetup.com/en-AU/golang-mel/" target="_blank">
+              Golang Melbourne
             </SafeLink>
           </li>
         </ul>
         <p>
           Furthermore, you can see an up to date list of Australian conferences at{' '}
-          <SafeLink href="https://github.com/readify/devevents" target="_blank">
-            Readify's DevEvents repository
+          <SafeLink href="https://github.com/telstrapurple/DevEvents" target="_blank">
+            Telstra Purple DevEvents repository
           </SafeLink>
           .
         </p>

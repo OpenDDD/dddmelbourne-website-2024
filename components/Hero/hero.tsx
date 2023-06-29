@@ -43,7 +43,7 @@ export const Hero = (): JSX.Element => {
             lg: '100vw',
             sm: '100vw',
           }}
-          imgProps={{ fetchpriority: 'high' }}
+          imgProps={{ fetchpriority: 'high', height: 400 }}
         />
       </HeroWrapper>
     </React.Fragment>
