@@ -5,6 +5,11 @@ import { calcRem } from 'components/utils/styles/calcRem'
 export const HeroWrapper = styled('div')(() => ({
   position: 'relative',
   height: '400px',
+  img: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
 }))
 
 export const HeroContentWrapper = styled('div')(({ theme }) => ({

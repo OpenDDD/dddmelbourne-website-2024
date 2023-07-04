@@ -247,6 +247,11 @@ export default function getFaqs(dates: Dates): FAQ[] {
             </SafeLink>
           </li>
           <li>
+            <SafeLink href="https://www.meetup.com/melb-net-meetup/" target="_blank">
+              Melb.NET
+            </SafeLink>
+          </li>
+          <li>
             <SafeLink href="https://melbjs.com/" target="_blank">
               MelbJS
             </SafeLink>

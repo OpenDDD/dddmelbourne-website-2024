@@ -31,19 +31,19 @@ export const Hero = (): JSX.Element => {
         )}
         <HiDpiPicture
           config={pixboostConfig}
-          alt="DDD Melbourne"
+          alt="People listening to the talk from previous DDD Melbourne"
           breakpoints={{
-            lg: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
-            sm: { op: 'fit?size={WIDTH}x{HEIGHT}', height: 400 },
+            lg: { op: 'resize?size={WIDTH}' },
+            sm: { op: 'resize?size={WIDTH}' },
           }}
           minWidth={300}
           maxWidth={3000}
-          src="http://www.midday.coffee/dddmelb-hero.jpg"
+          src="dddmelbourne/hero/dddmelb-hero.jpg"
           sizes={{
             lg: '100vw',
             sm: '100vw',
           }}
-          imgProps={{ fetchpriority: 'high', height: 400 }}
+          imgProps={{ fetchpriority: 'high', width: 4898, height: 2067 }}
         />
       </HeroWrapper>
     </React.Fragment>
