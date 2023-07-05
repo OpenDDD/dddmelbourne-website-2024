@@ -45,7 +45,7 @@
     "leaflet-easybutton": "^2.4.0",
     "leaflet.locatecontrol": "^0.76.1",
     "next": "^12.3.4",
-    "pixboost-react": "^2.2.0-1",
+    "pixboost-react": "^2.2.1",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^17.0.2",
