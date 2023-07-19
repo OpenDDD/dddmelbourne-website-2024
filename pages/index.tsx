@@ -15,9 +15,9 @@ export const Index: NextPage = () => {
           {conference.Name} {format(conference.Date, 'y')}
         </h2>
         <Text>
-          {conference.Name} DDD Melbourne is an inclusive non-profit conference for the software community. Our goal is
-          to create an approachable event that appeals to the whole community, especially people who usually don’t have
-          the opportunity to attend, or speak at, conferences.
+          {conference.Name} is an inclusive non-profit conference for the software community. Our goal is to create an
+          approachable event that appeals to the whole community, especially people who usually don’t have the
+          opportunity to attend, or speak at, conferences.
         </Text>
 
         <h2>Important Dates</h2>
