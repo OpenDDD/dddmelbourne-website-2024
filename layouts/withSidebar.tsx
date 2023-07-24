@@ -4,7 +4,8 @@ import { TemplateProps, Template } from './template'
 import { StyledSidebarContainer, StyledEventDetailsSummary } from './Layouts.styled'
 import { useConfig } from 'Context/Config'
 import { useRouter } from 'next/router'
-import { Text } from '../components/global/text'
+import { ImportantDatesList } from '../components/ImportantDatesList/importantDatesList'
+import dateTimeProvider from '../components/utils/dateTimeProvider'
 
 export const PageWithSidebar = ({ children, title, description, image }: TemplateProps): JSX.Element => {
   const { conference, dates } = useConfig()
@@ -19,8 +20,7 @@ export const PageWithSidebar = ({ children, title, description, image }: Templat
             primaryAction={getConferenceActions(conference, dates).filter((a) => a.Url !== pathname)[0]}
           />
           <h2>Important Dates</h2>
-          <Text>Coming soon!</Text>
-          {/*<ImportantDatesList layout="inline" conference={conference} currentDate={currentDate} />*/}
+          <ImportantDatesList layout="inline" conference={conference} currentDate={dateTimeProvider.now()} />
         </aside>
       </StyledSidebarContainer>
     </Template>

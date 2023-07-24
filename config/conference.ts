@@ -15,6 +15,7 @@ import { MelbourneTownHall } from './venues/melbourne-town-hall'
 const name = 'DDD Melbourne'
 const tagLine = `${name} is an inclusive non-profit conference for the Melbourne software community`
 
+const tz = 'Australia/Melbourne'
 const hideDate = false
 const ticketPurchasingOptions = TicketPurchasingOptions.OnSale
 const staticDate = '2024-03-16T08:00'
@@ -22,13 +23,14 @@ const date = zonedTimeToUtc(staticDate, '+08:00')
 const endDate = add(date, { hours: 12 })
 const currentInstance = date.getFullYear()
 const firstInstance = 2015
-const registrationOpenFrom = zonedTimeToUtc('2099-01-01T08:00:00', '+08:00')
+const registrationOpenFrom = zonedTimeToUtc('2023-09-15T08:00:00', tz)
+const registrationOpenWave2From = zonedTimeToUtc('2023-10-15T08:00:00', tz)
 const registrationOpenUntil = null
-const presentationSubmissionsOpenFrom = zonedTimeToUtc('2099-05-22T08:00:00', '+08:00')
-const presentationSubmissionsOpenUntil = zonedTimeToUtc('2099-06-18T23:59:59', '+08:00')
-const votingOpenFrom = zonedTimeToUtc('2099-07-03T17:00:00', '+08:00')
-const votingOpenUntil = zonedTimeToUtc('2099-07-14T23:59:59', '+08:00')
-const agendaPublishedFrom = zonedTimeToUtc('2099-08-04T17:00:00', '+08:00')
+const presentationSubmissionsOpenFrom = zonedTimeToUtc('2023-09-01T08:00:00', tz)
+const presentationSubmissionsOpenUntil = zonedTimeToUtc('2023-11-01T23:59:59', tz)
+const votingOpenFrom = zonedTimeToUtc('2023-11-08T17:00:00', tz)
+const votingOpenUntil = zonedTimeToUtc('2023-11-20T23:59:59', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2023-12-01T17:00:00', tz)
 const feedbackOpenFrom = toDate(date)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
@@ -45,6 +47,11 @@ const importantDates: ImportantDate[] = [
   {
     Date: registrationOpenFrom,
     Description: 'Ticket sales open',
+    Type: 'tickets',
+  },
+  {
+    Date: registrationOpenWave2From,
+    Description: 'Ticket sales wave 2 open',
     Type: 'tickets',
   },
   { Description: 'Voting open', Date: votingOpenFrom, Type: 'voting' },
@@ -119,7 +126,7 @@ const Conference: IConference = {
   MaxVotes: 6,
   WaitingListCanVoteWithEmail: true,
 
-  TimeZone: 'Australia/Perth',
+  TimeZone: tz,
   StaticDate: new Date(staticDate),
   Date: date,
   EndDate: endDate,

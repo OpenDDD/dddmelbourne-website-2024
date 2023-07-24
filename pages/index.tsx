@@ -4,9 +4,12 @@ import { NextPage } from 'next'
 import { Text } from 'components/global/text'
 import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'
+import getConferenceActions from '../config/actions'
+import ImportantDates from '../components/importantDates'
 
 export const Index: NextPage = () => {
-  const { conference } = useConfig()
+  const { conference, dates, currentDate } = useConfig()
+  const actions = getConferenceActions(conference, dates)
 
   return (
     <Main title="Home" showHero={true}>
@@ -20,8 +23,8 @@ export const Index: NextPage = () => {
           opportunity to attend, or speak at, conferences.
         </Text>
 
-        <h2>Important Dates</h2>
-        <Text>Coming soon!</Text>
+        <ImportantDates conference={conference} actions={actions} currentDate={currentDate} />
+        <p>&nbsp;</p>
 
         <h2>Sponsors</h2>
         <Text>
