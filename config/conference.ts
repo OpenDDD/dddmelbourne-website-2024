@@ -18,8 +18,8 @@ const tagLine = `${name} is an inclusive non-profit conference for the Melbourne
 const tz = 'Australia/Melbourne'
 const hideDate = false
 const ticketPurchasingOptions = TicketPurchasingOptions.OnSale
-const staticDate = '2024-03-16T08:00'
-const date = zonedTimeToUtc(staticDate, '+08:00')
+const staticDate = '2024-03-16T09:00'
+const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
 const currentInstance = date.getFullYear()
 const firstInstance = 2015
@@ -46,7 +46,7 @@ const importantDates: ImportantDate[] = [
   },
   {
     Date: registrationOpenFrom,
-    Description: 'Ticket sales open',
+    Description: 'Ticket sales wave 1 open',
     Type: 'tickets',
   },
   {

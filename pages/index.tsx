@@ -6,6 +6,7 @@ import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'
 import getConferenceActions from '../config/actions'
 import ImportantDates from '../components/importantDates'
+import Link from 'next/link'
 
 export const Index: NextPage = () => {
   const { conference, dates, currentDate } = useConfig()
@@ -28,8 +29,8 @@ export const Index: NextPage = () => {
 
         <h2>Sponsors</h2>
         <Text>
-          We are currently looking for sponsors! If you'd like to explore sponsorship opportunities, please check out
-          our sponsorship page for more information.
+          We are currently looking for sponsors! If you'd like to explore sponsorship opportunities, please{' '}
+          <Link href="/sponsorship">check out our sponsorship page</Link> for more information.
         </Text>
       </section>
     </Main>
