@@ -10,7 +10,7 @@ const Sponsorship: NextPage = () => {
   const { conference } = useConfig()
 
   return (
-    <PageWithSidebar title="Sponsorship" description="Sponsorship opportunities for DDD Perth.">
+    <PageWithSidebar title="Sponsorship" description="Sponsorship opportunities for DDD Melbourne.">
       <h1>Sponsorship</h1>
 
       <Text>
@@ -43,11 +43,6 @@ const Sponsorship: NextPage = () => {
           attendees and attracts repeat visitors and an expanding presence year on year via a growing network
         </li>
       </StyledList>
-      <Text>
-        <ButtonAnchor kind="secondary" href="/code-of-conduct">
-          Read DDD Perth Code of Conduct
-        </ButtonAnchor>
-      </Text>
 
       <Text>
         <ButtonAnchor kind="secondary" href="/about">

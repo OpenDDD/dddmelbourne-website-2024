@@ -23,7 +23,7 @@ export const globalCSS = css`
 
   a:focus,
   a:hover {
-    color: ${theme.colors.dddpink};
+    color: ${theme.colors.dddblue};
   }
 
   @media (prefers-reduced-motion: reduce) {

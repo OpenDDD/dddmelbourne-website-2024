@@ -1,13 +1,12 @@
 import React from 'react'
-import ImportantDates from 'components/importantDates'
-import Keynotes from 'components/Keynotes'
-import { Sponsors } from 'components/Sponsors/sponsors'
-import getConferenceActions from 'config/actions'
 import { Main } from 'layouts/main'
 import { NextPage } from 'next'
 import { Text } from 'components/global/text'
 import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'
+import getConferenceActions from '../config/actions'
+import ImportantDates from '../components/importantDates'
+import Link from 'next/link'
 
 export const Index: NextPage = () => {
   const { conference, dates, currentDate } = useConfig()
@@ -20,22 +19,20 @@ export const Index: NextPage = () => {
           {conference.Name} {format(conference.Date, 'y')}
         </h2>
         <Text>
-          {conference.Name} is Perth's largest community run conference for the tech community. Our goal is to create an
-          approachable event that appeals to the whole community, especially people that don't normally get to attend or
-          speak at conferences. The conference is run on a Saturday, and strives to be inclusive of everyone in the
-          Perth tech community.
+          {conference.Name} is an inclusive non-profit conference for the software community. Our goal is to create an
+          approachable event that appeals to the whole community, especially people who usually don’t have the
+          opportunity to attend, or speak at, conferences.
         </Text>
+
+        <ImportantDates conference={conference} actions={actions} currentDate={currentDate} />
+        <p>&nbsp;</p>
+
+        <h2>Sponsors</h2>
         <Text>
-          Check out the agenda and talks from previous years, or hear more about how we do what we do on our blog.
+          We are currently looking for sponsors! If you'd like to explore sponsorship opportunities, please{' '}
+          <Link href="/sponsorship">check out our sponsorship page</Link> for more information.
         </Text>
       </section>
-      <ImportantDates conference={conference} actions={actions} currentDate={currentDate} />
-      <Keynotes conference={conference} />
-      <Sponsors
-        show={!conference.HideSponsors}
-        sponsors={conference.Sponsors}
-        hideUpsell={conference.HideSponsorshipUpsell}
-      />
     </Main>
   )
 }

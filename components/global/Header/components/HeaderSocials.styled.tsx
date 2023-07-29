@@ -3,6 +3,7 @@ import { calcRem } from 'components/utils/styles/calcRem'
 import { SafeLink } from 'components/global/safeLink'
 import { srOnly } from 'components/utils/styles/accessibility'
 import { breakpoint } from 'components/utils/styles/breakpoints'
+import { theme } from 'components/utils/styles/theme'
 
 export const StyledSocialList = styled('ul')(({ theme }) => ({
   display: 'none',
@@ -14,6 +15,24 @@ export const StyledSocialList = styled('ul')(({ theme }) => ({
     display: 'flex',
   },
 }))
+
+const getSocialColorFromDDDMelbColors = () => {
+  const randomValue = Math.floor(Math.random() * 3)
+  switch (randomValue) {
+    case 0: {
+      return theme.colors.dddblue
+    }
+    case 1: {
+      return theme.colors.dddpink
+    }
+    case 2: {
+      return theme.colors.dddorange
+    }
+    default: {
+      return theme.colors.dddblue
+    }
+  }
+}
 
 export const StyledSafeLink = styled(SafeLink)(({ theme }) => ({
   display: 'flex',
@@ -32,7 +51,7 @@ export const StyledSafeLink = styled(SafeLink)(({ theme }) => ({
 
   '&:hover, &:focus': {
     svg: {
-      fill: theme.colors.dddpink,
+      fill: getSocialColorFromDDDMelbColors(),
     },
   },
 }))

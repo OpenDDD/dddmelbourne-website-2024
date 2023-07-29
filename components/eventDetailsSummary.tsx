@@ -34,9 +34,9 @@ export const EventDetailsSummary = ({ primaryAction, className }: EventDetailsSu
         {conference.SellingPoints.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
-        <li>Only {conference.TicketPrice}</li>
+        {/*<li>Only {conference.TicketPrice}</li>*/}
       </StyledList>
-      {pathname !== primaryAction.Url && (
+      {primaryAction && pathname !== primaryAction.Url && (
         <div style={{ textAlign: 'center' }}>
           <ActionButton action={primaryAction} />
         </div>

@@ -35,18 +35,17 @@ export default function getConferenceActions(conference: Conference, dates: Date
     })
   }
 
-  let agendaTitle = 'View the agenda'
-  if (!dates.AgendaPublished) {
-    agendaTitle = 'Previous agenda'
+  if (dates.AgendaPublished) {
+    let agendaTitle = 'View the agenda'
+    if (dates.IsComplete) {
+      agendaTitle = `${conference.Instance} agenda`
+    }
+    actions.push({
+      Category: 'agenda',
+      Title: agendaTitle,
+      Url: '/agenda',
+    })
   }
-  if (dates.IsComplete) {
-    agendaTitle = `${conference.Instance} agenda`
-  }
-  actions.push({
-    Category: 'agenda',
-    Title: agendaTitle,
-    Url: '/agenda',
-  })
 
   if (dates.WeekBefore) {
     actions.push({

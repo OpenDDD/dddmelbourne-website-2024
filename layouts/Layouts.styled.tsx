@@ -22,8 +22,7 @@ export const StyledAgenda = styled(StyledMain)(() => ({
 export const StyledSidebarContainer = styled('div')(({ theme }) => ({
   display: 'table',
   tableLayout: 'fixed',
-  marginTop: calcRem(theme.metrics.xl),
-  marginBottom: calcRem(theme.metrics.xl),
+  margin: calcRem(theme.metrics.xl),
 
   ['@supports(display: grid)']: {
     display: 'grid',

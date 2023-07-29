@@ -16,7 +16,7 @@ export const StyledFooter = styled('footer')(({ theme }) => ({
     gridColumn: 2,
   },
 
-  backgroundColor: theme.colors.black,
+  backgroundColor: theme.colors.dddblue,
 }))
 StyledFooter.displayName = 'StyledFooter'
 
@@ -48,9 +48,9 @@ export const StyledSocialLink = styled(SafeLink)(({ theme }) => ({
 
   span: srOnly,
 
-  '&:hover, &:focus': {
+  '&:hover, &:focus :nth-of-type(odd)': {
     svg: {
-      fill: theme.colors.dddpink,
+      fill: Math.floor(Math.random() * 2) === 1 ? theme.colors.dddpink : theme.colors.dddorange,
     },
   },
 }))
@@ -71,14 +71,14 @@ export const StyledFooterContainer = styled('div')(({ theme }) => ({
     gridColumn: '2 / span 2',
     gridRow: 2,
     padding: theme.metrics.lg,
-    backgroundColor: theme.colors.grey800,
+    backgroundColor: theme.colors.dddbluedark,
     textAlign: 'left',
   },
 
   '&::before': {
     gridColumn: '1 / span 1',
     gridRow: 2,
-    backgroundColor: theme.colors.grey800,
+    backgroundColor: theme.colors.dddbluedark,
     content: "' '",
   },
 }))
@@ -91,7 +91,7 @@ export const StyledTopAnchor = styled('a')(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   padding: theme.metrics.lg,
-  backgroundColor: theme.colors.grey800,
+  backgroundColor: theme.colors.dddbluedark,
   color: theme.colors.white,
   textTransform: 'uppercase',
   textDecoration: 'none',

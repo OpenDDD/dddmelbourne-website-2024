@@ -55,20 +55,22 @@ export default function Menu(conference: Conference, dates: Dates): { Top: MenuI
     })
   }
 
-  topMenu.push({
-    href: '/agenda',
-    name: 'Agenda',
-  })
+  if (dates.AgendaPublished) {
+    topMenu.push({
+      href: '/agenda',
+      name: 'Agenda',
+    })
+  }
 
   topMenu.push({
     href: '/faq',
     name: 'FAQs',
   })
 
-  topMenu.push({
-    href: '/covid-policy',
-    name: 'COVID-19 Policy',
-  })
+  // topMenu.push({
+  //   href: '/covid-policy',
+  //   name: 'COVID-19 Policy',
+  // })
 
   if (conference.Socials.Blog) {
     topMenu.push({
@@ -78,10 +80,10 @@ export default function Menu(conference: Conference, dates: Dates): { Top: MenuI
     })
   }
 
-  topMenu.push({
-    href: '/volunteer',
-    name: 'Work With Us',
-  })
+  // topMenu.push({
+  //   href: '/volunteer',
+  //   name: 'Work With Us',
+  // })
 
   return {
     Top: topMenu,

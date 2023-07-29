@@ -3,8 +3,6 @@ import Head from 'next/head'
 import * as analytics from 'components/global/analytics'
 import { useRouter } from 'next/router'
 import { useConfig } from 'Context/Config'
-import getConferenceDates from 'config/dates'
-import dateTimeProvider from 'components/utils/dateTimeProvider'
 import { formatInTimeZone } from 'date-fns-tz'
 
 interface MetaArgs {
@@ -27,11 +25,7 @@ const getTitle = (title: string, date: Date, name: string, showDate: boolean, ti
 export const Meta = ({ pageTitle, pageDescription, pageImage }: MetaArgs) => {
   const { conference, appConfig, dates } = useConfig()
   const { pathname } = useRouter()
-  const conferenceDates = getConferenceDates(conference, dateTimeProvider.now())
-  const ogImage =
-    pageImage || conference.Instance !== '2022' || conferenceDates.IsComplete
-      ? '/static/images/logo.png'
-      : '/static/images/logo-2022-og.jpg'
+  const ogImage = pageImage || '/static/images/logo-dddmelbourne.png'
 
   const title = React.useMemo(
     () =>
@@ -59,7 +53,10 @@ export const Meta = ({ pageTitle, pageDescription, pageImage }: MetaArgs) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+
+      <link rel="icon" href="/static/favicon.ico" sizes="any" />
+      <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+
       <meta name="apple-mobile-web-app-title" content={conference.Name} />
       <title>{title}</title>
       <meta property="og:title" content={title} />

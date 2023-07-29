@@ -8,6 +8,7 @@ export const StyledActionBarContainer = styled('div')(({ theme }) => ({
   alignItems: 'center',
   backgroundColor: theme.colors.grey100,
   borderBottom: `1px solid ${theme.colors.grey300}`,
+  padding: '1rem',
 
   p: {
     display: 'none',

@@ -10,3 +10,7 @@ coverage
 public/_next
 cypress/videos
 cypress/screenshots
+
+# IntelliJ
+.idea
+*.iml
