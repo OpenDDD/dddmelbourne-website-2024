@@ -7,6 +7,7 @@ import { ImportantDateTileInline, ImportantDateTileInlineTBA } from './Important
 import { Text } from 'components/global/text'
 import { isAfter, isBefore } from 'date-fns'
 import { getTimezoneOffset } from 'date-fns-tz'
+import Link from 'next/link'
 
 export type ImportantDateListLayouts = 'inline' | 'calendar'
 
@@ -72,6 +73,9 @@ export const ImportantDatesList = ({
             )
           })}
       </StyledImportantDateList>
+      <p>
+        Can't wait? Then join our regular <Link href="">DDD By Night meetup</Link> to get the vibe!
+      </p>
     </Fragment>
   )
 }
