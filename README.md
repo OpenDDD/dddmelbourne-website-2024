@@ -71,3 +71,4 @@ We use Azure DevOps for CI / CD. This is controlled via [.devops/azure-pipelines
 ## Contributing
 
 So you’re thinking about contributing to the project? You are awesome! It’s **massively** appreciated. Before getting started, please take the time to review the [contribution guidelines](CONTRIBUTING.MD) before sending that epic pull request / bug report.
+
