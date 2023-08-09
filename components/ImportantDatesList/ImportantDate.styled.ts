@@ -166,3 +166,7 @@ export const StyledAbbr = styled('abbr')({
   },
 })
 StyledAbbr.displayName = 'StyledAbbr'
+
+export const StyledImportantDateFooter = styled('p')(({ theme }) => ({
+  padding: calcRem(theme.metrics.md, 0),
+}))

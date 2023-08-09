@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Conference, ImportantDate } from 'config/types'
 import { CurrentDate } from 'components/utils/dateTimeProvider'
-import { StyledImportantDateList } from './ImportantDate.styled'
+import { StyledImportantDateFooter, StyledImportantDateList } from './ImportantDate.styled'
 import { ImportantDateTile, ImportantDateTileTBA } from './ImportantDateTile'
 import { ImportantDateTileInline, ImportantDateTileInlineTBA } from './ImportantDateTileInline'
 import { Text } from 'components/global/text'
@@ -73,9 +73,9 @@ export const ImportantDatesList = ({
             )
           })}
       </StyledImportantDateList>
-      <p>
+      <StyledImportantDateFooter>
         Can't wait? Then join our regular <Link href="">DDD By Night meetup</Link> to get the vibe!
-      </p>
+      </StyledImportantDateFooter>
     </Fragment>
   )
 }
