@@ -7,6 +7,15 @@ import { calcRem } from 'components/utils/styles/calcRem'
 import { theme } from 'components/utils/styles/theme'
 import { workshops } from 'config/workshops'
 import { SafeLink } from './global/safeLink'
+import styled from '@emotion/styled'
+
+const ActionsContainer = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  a: {
+    marginRight: calcRem(theme.metrics.md),
+  },
+}))
 
 export interface ImportantDatesProps {
   conference: Conference
@@ -40,9 +49,11 @@ const ImportantDates = ({ conference, actions, currentDate }: ImportantDatesProp
     {actions && actions.length > 0 && (
       <div style={{ marginTop: calcRem(theme.metrics.lg) }}>
         <h2>What now?</h2>
-        {actions.map((a) => (
-          <ActionButton action={a} key={a.Title} />
-        ))}
+        <ActionsContainer>
+          {actions.map((a) => (
+            <ActionButton action={a} key={a.Title} />
+          ))}
+        </ActionsContainer>
       </div>
     )}
   </React.Fragment>

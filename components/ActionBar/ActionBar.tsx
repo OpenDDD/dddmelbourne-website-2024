@@ -13,20 +13,20 @@ export const ActionBar = (): JSX.Element => {
     <StyledActionBarContainer>
       <p>{conference.TagLine}</p>
       <ul>
-        {secondaryAction && (
-          <li>
-            <Link href={secondaryAction.Url} passHref>
-              <ButtonAnchor kind="secondary" size="lg">
-                {secondaryAction.Title}
-              </ButtonAnchor>
-            </Link>
-          </li>
-        )}
         {primaryAction && (
           <li>
             <Link href={primaryAction.Url} passHref>
               <ButtonAnchor kind="primary" size="lg">
                 {primaryAction.Title}
+              </ButtonAnchor>
+            </Link>
+          </li>
+        )}
+        {secondaryAction && (
+          <li>
+            <Link href={secondaryAction.Url} passHref>
+              <ButtonAnchor kind="secondary" size="lg">
+                {secondaryAction.Title}
               </ButtonAnchor>
             </Link>
           </li>
