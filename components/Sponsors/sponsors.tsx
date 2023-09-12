@@ -120,12 +120,12 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
         {serviceSponsors.length > 0 && (
           <Fragment>
             {serviceSponsors.map((sponsor) => (
-              <div key={sponsor.id}>
+              <Fragment key={sponsor.serviceProvided}>
                 <h2>{sponsor.serviceProvided} by:</h2>
                 <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
                   <StyledSponsorLogo src={sponsor.imageUrl} alt={sponsor.name} loading="lazy" />
                 </StyledSponsorLink>
-              </div>
+              </Fragment>
             ))}
           </Fragment>
         )}
