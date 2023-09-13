@@ -3,7 +3,7 @@ import { Sponsor, SponsorType } from './types'
 const platinumSponsors: Sponsor[] = [
   {
     id: '2024-liberty',
-    imageUrl: '/static/images/sponsors/2024-liberty.svg',
+    imageUrl: '/static/images/sponsors/2024-liberty.png',
     name: 'Liberty',
     type: SponsorType.Platinum,
     url: 'https://www.liberty.com.au/',
