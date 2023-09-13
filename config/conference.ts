@@ -23,7 +23,7 @@ const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
 const currentInstance = date.getFullYear()
 const firstInstance = 2015
-const registrationOpenFrom = zonedTimeToUtc('2023-09-15T08:00:00', tz)
+const registrationOpenFrom = zonedTimeToUtc('2023-09-15T12:00:00', tz)
 const registrationOpenWave2From = zonedTimeToUtc('2023-10-15T08:00:00', tz)
 const registrationOpenUntil = null
 const presentationSubmissionsOpenFrom = zonedTimeToUtc('2023-09-01T08:00:00', tz)
@@ -98,8 +98,8 @@ const Conference: IConference = {
   TicketPrice: 'TBD',
   ChildcarePrice: 'free',
   TicketsProviderId: TicketsProvider.Tito,
-  TicketsProviderAccountId: 'dddmelbourne',
-  TicketsProviderEventId: '2024',
+  TicketsProviderAccountId: 'ddd-melbourne',
+  TicketsProviderEventId: 'ddd-2024',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
   HashTag: 'DDDMelbourne',
