@@ -28,6 +28,7 @@ const TicketPage: NextPage = () => {
       )}
 
       <FaqList faqs={faqs.filter((f) => f.Category === 'tickets')} />
+      {/*TODO: Add not that wave 1 can vote*/}
 
       {conference.TicketsProviderId === TicketsProvider.Eventbrite && (
         <Eventbrite eventId={conference.TicketsProviderEventId} />

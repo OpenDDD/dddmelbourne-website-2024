@@ -52,6 +52,7 @@ export interface Conference {
   DoorsOpenTime: string
   FinishTime: string
   RegistrationOpenFrom: Date
+  Wave2RegistrationOpenFrom?: Date
   RegistrationOpenUntil: Date | null
   PresentationSubmissionsOpenFrom: Date
   PresentationSubmissionsOpenUntil: Date

@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import { SafeLink } from 'components/global/safeLink'
 import Conference from './conference'
-import { Dates, FAQ } from './types'
+import { Dates, FAQ, TicketPurchasingOptions } from './types'
+import { format } from 'date-fns'
 
 export default function getFaqs(dates: Dates): FAQ[] {
   const Faqs: FAQ[] = []
@@ -23,38 +24,34 @@ export default function getFaqs(dates: Dates): FAQ[] {
       }.`,
     })
   }
-  /*
   Faqs.push({
     Question: 'How much does it cost to attend?',
-    Answer: `${
-        Conference.TicketPrice
-    } covers your entry, food and coffee all day and access to the afterparty! Amazing value right!?
+    Answer: `${Conference.TicketPrice} covers your entry, food and coffee all day and access to the afterparty! Amazing value right!?
       We are able to keep the ticket price so low thanks to our generous sponsors.
-      ${
-        Conference.Name
-    } is a non profit event and any excess will be kept as part of a fund for future events and/or donated to charity.`,
+      ${Conference.Name} is a non profit event and any excess will be kept as part of a fund for future events and/or donated to charity.`,
     Category: 'tickets',
   })
-*/
 
-  /*
   Faqs.push({
     Question: "What if I can't afford to attend? [Financial Assistance]",
     AnswerWithoutParagraph: (
-        <div>
-          <p>
-            We’re dedicated to diversity, inclusion and even more so—equal opportunity. We realise that buying a ticket to
-            a conference for many isn’t a trivial expense, but it can be a turning point in someone’s career.
-          </p>
-          <p>
-            That's why we've launched our <a href={'./opportunity-program'}>Opportunity Program</a>. We're committed to
-            bringing in as many individuals who couldn’t attend otherwise as possible.
-          </p>
-        </div>
+      <div>
+        <p>
+          We’re dedicated to diversity, inclusion and even more so—equal opportunity. We realise that buying a ticket to
+          a conference for many isn’t a trivial expense, but it can be a turning point in someone’s career.
+        </p>
+        <p>
+          We're committed to bringing in as many individuals who couldn’t attend otherwise as possible. Please, email us
+          at{' '}
+          <a className="maillink" href={'mailto:' + Conference.ContactEmail}>
+            {Conference.ContactEmail}
+          </a>{' '}
+          and we can work with you to figure out the best way to assist.
+        </p>
+      </div>
     ),
     Category: 'tickets',
   })
- */
 
   Faqs.push({
     Question: 'Is this just for software developers?',
@@ -82,47 +79,50 @@ export default function getFaqs(dates: Dates): FAQ[] {
     })
   }
 
-  /*
   Faqs.push({
     Question: 'Will childcare be available?',
-    Answer:
-        'Yes! We will be providing childcare at this year’s conference. It will be available for the duration of the main conference (not including the afterparty) free of charge! For this year we are limiting it to children 3 years and above, and to a maximum of 20 places on a first come first serve basis. You will be required to provide food for your child for the day.',
+    Answer: (
+      <Fragment>
+        DDD Melbourne will be providing onsite childcare free of charge this year on a first come first served basis for
+        children. Please register your interest at this{' '}
+        <SafeLink href="https://forms.microsoft.com/r/dhhNuqSZZa" target="_blank">
+          link
+        </SafeLink>
+      </Fragment>
+    ),
   })
-*/
 
-  /*
   Faqs.push({
     Question: 'When does registration open?',
     Answer: (
-        <Fragment>
-          {dates.RegistrationOpen ? (
-              <Fragment>
-                Now! Go to <a href="/tickets">the tickets page</a> to register.
-              </Fragment>
-          ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.SoldOut ? (
-              <Fragment>The conference is now sold out.</Fragment>
-          ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.WaitListOpen ? (
-              <Fragment>The conference has an open waitlist for tickets.</Fragment>
-          ) : dates.RegistrationClosed ? (
-              <Fragment>Ticket sales have closed.</Fragment>
-          ) : (
-              <Fragment>
-                Due to the popularity of last years event, we are running 2 separate ticket waves to give everyone an
-                opportunity to obtain a ticket.
-                <br />
-                <br />
-                Wave 1 registration opens on {Conference.Wave1RegistrationOpenFrom.format(dates.DateDisplayFormat)} at{' '}
-                {Conference.Wave1RegistrationOpenFrom.format(dates.TimeDisplayFormat)}.<br />
-                Wave 2 registration opens on {Conference.Wave2RegistrationOpenFrom.format(dates.DateDisplayFormat)} at{' '}
-                {Conference.Wave2RegistrationOpenFrom.format(dates.TimeDisplayFormat)}.<br />
-                <br />
-                The ticket price will stay at {Conference.TicketPrice} for each wave.
-              </Fragment>
-          )}
-        </Fragment>
+      <Fragment>
+        {dates.RegistrationOpen ? (
+          <Fragment>
+            Now! Go to <a href="/tickets">the tickets page</a> to register.
+          </Fragment>
+        ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.SoldOut ? (
+          <Fragment>The conference is now sold out.</Fragment>
+        ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.WaitListOpen ? (
+          <Fragment>The conference has an open waitlist for tickets.</Fragment>
+        ) : dates.RegistrationClosed ? (
+          <Fragment>Ticket sales have closed.</Fragment>
+        ) : (
+          <Fragment>
+            Due to the popularity of last years event, we are running 2 separate ticket waves to give everyone an
+            opportunity to obtain a ticket.
+            <br />
+            <br />
+            Wave 1 registration opens on {format(Conference.RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
+            {format(Conference.RegistrationOpenFrom, dates.TimeDisplayFormat)}.<br />
+            Wave 2 registration opens on {format(Conference.Wave2RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
+            {format(Conference.Wave2RegistrationOpenFrom, dates.TimeDisplayFormat)}.<br />
+            <br />
+            The ticket price will stay at {Conference.TicketPrice} for each wave.
+          </Fragment>
+        )}
+      </Fragment>
     ),
   })
-*/
   Faqs.push({
     Question: 'Can I pay by cheque, invoice, cash, Coinye West?',
     Answer: (
@@ -138,21 +138,19 @@ export default function getFaqs(dates: Dates): FAQ[] {
     Category: 'tickets',
   })
 
-  /*
   Faqs.push({
     Question: 'Can I cancel/give my ticket to someone else?',
     Answer: (
-        <Fragment>
-          You are welcome to send someone else in your place. Please do this through{' '}
-          <SafeLink href="https://ti.to" target="_blank">
-            Ti.to
-          </SafeLink>
-          .
-        </Fragment>
+      <Fragment>
+        You are welcome to send someone else in your place. Please do this through{' '}
+        <SafeLink href="https://ti.to" target="_blank">
+          Ti.to
+        </SafeLink>
+        .
+      </Fragment>
     ),
     Category: 'tickets',
   })
-*/
 
   Faqs.push({
     Question: `What is the hashtag for ${Conference.Name}?`,

@@ -27,6 +27,14 @@ export default function getConferenceActions(conference: Conference, dates: Date
     })
   }
 
+  if (dates.RegistrationOpen) {
+    actions.push({
+      Category: 'training',
+      Title: 'Speaker Training',
+      Url: 'https://forms.office.com/r/pP60PzNTJ6',
+    })
+  }
+
   if (dates.AcceptingFeedback) {
     actions.push({
       Category: 'conference',
