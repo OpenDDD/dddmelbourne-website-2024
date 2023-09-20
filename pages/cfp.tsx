@@ -66,8 +66,12 @@ const CFPPage: NextPage = () => {
           any ideas you have or give safe and constructive feedback.
         </li>
         <li>
-          There will also be <strong>free speaker training and support</strong> for all speakers, so{' '}
-          <strong>first timers, juniors, and everyone else</strong> are all encouraged to submit and will have support!
+          There will also be{' '}
+          <strong>
+            <a href={`mailto:${conference.MentoringEmail}`}>free speaker training and support</a>
+          </strong>{' '}
+          for all speakers, so <strong>first timers, juniors, and everyone else</strong> are all encouraged to submit
+          and will have support!
         </li>
         <li>
           Allowing speakers to opt out of question &amp; answer time at the end of their presentation if they don't feel

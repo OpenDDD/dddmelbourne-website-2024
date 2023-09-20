@@ -31,7 +31,7 @@ export default function getConferenceActions(conference: Conference, dates: Date
     actions.push({
       Category: 'training',
       Title: 'Speaker Training',
-      Url: 'https://forms.office.com/r/pP60PzNTJ6',
+      Url: `mailto:${conference.MentoringEmail}`,
     })
   }
 

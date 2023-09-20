@@ -112,7 +112,7 @@ const Conference: IConference = {
 
   ContactEmail: 'dddmelbourne@gmail.com',
   SponsorshipEmail: 'sponsorship@dddmelbourne.com',
-  MentoringEmail: 'speakers@dddmlebourne.com',
+  MentoringEmail: 'speakers@dddmelbourne.com',
   EmergencyContactName: 'Rob Moore',
   EmergencyContactPhoneNumber: '0400 777 763',
   MediaOfficerName: 'Rebecca Waters',
