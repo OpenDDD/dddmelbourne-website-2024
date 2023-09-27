@@ -32,11 +32,14 @@ const ContactPage: NextPage = () => {
             </SafeLink>
           </li>
         )}
+        {/*
         <li>
           <strong>Emergency contact:</strong>{' '}
           {conference.EmergencyContactName + ' on ' + conference.EmergencyContactPhoneNumber}
         </li>
+        */}
       </StyledList>
+      {/*
       <h2>DDD WA Inc.</h2>
       <StyledList>
         <li>
@@ -46,6 +49,7 @@ const ContactPage: NextPage = () => {
           <strong>Postal Address:</strong> PO Box 7550, Perth WA 6000
         </li>
       </StyledList>
+      */}
     </PageWithSidebar>
   )
 }

@@ -73,7 +73,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
       <StyledSponsorsContainer>
         {platinumSponsors.length > 0 && (
           <Fragment>
-            <h2>Platinum Sponsors</h2>
+            <h2>Diamond Sponsors</h2>
             {platinumSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
                 <StyledSponsorLogo
