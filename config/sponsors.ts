@@ -20,7 +20,7 @@ const goldSponsors: Sponsor[] = [
   },
   {
     id: 'netwealth',
-    imageUrl: '/static/images/sponsors/2024-netwealth.png',
+    imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
     name: 'Netwealth',
     type: SponsorType.Gold,
     url: 'https://netwealth.com.au',
