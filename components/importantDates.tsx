@@ -47,7 +47,7 @@ const ImportantDates = ({ conference, actions, currentDate }: ImportantDatesProp
     )}
 
     {actions && actions.length > 0 && (
-      <div style={{ marginTop: calcRem(theme.metrics.lg) }}>
+      <div style={{ marginTop: calcRem(theme.metrics.lg), overflow: 'auto' }}>
         <h2>What now?</h2>
         <ActionsContainer>
           {actions.map((a) => (
