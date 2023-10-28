@@ -42,10 +42,10 @@ export default function Menu(conference: Conference, dates: Dates): { Top: MenuI
   }
 
   if (dates.VotingOpen) {
-    topMenu.push({
-      href: '/vote',
-      name: 'Vote',
-    })
+    // topMenu.push({
+    //   href: '/vote',
+    //   name: 'Vote',
+    // })
   }
 
   if (dates.WeekBefore) {

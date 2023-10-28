@@ -52,6 +52,8 @@ async function postPair(winningSessionId: string, losingSessionId: string, isDra
     LoserSessionId: losingSessionId,
     IsDraw: isDraw,
     VoterSessionId: getSessionId(),
+    VoterTicket: Cookies.get('vote-ticket'),
+    VoterLastname: Cookies.get('vote-lastname'),
   }
 
   try {
