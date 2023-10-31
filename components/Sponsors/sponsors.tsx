@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { Fragment } from 'react'
 import { Sponsor, SponsorType } from 'config/types'
-import { StyledSponsorsContainer, StyledSponsorLogo, StyledSponsorLink } from './Sponsors.styled'
+import { StyledSponsorsContainer, StyledSponsorLink } from './Sponsors.styled'
 
 interface SponsorsProps {
   sponsors: Sponsor[]
@@ -80,12 +80,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Diamond Sponsors</h2>
             {diamondSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <StyledSponsorLogo
-                  level={SponsorType.Platinum}
-                  src={imgUrl(sponsor.imageUrl, 300)}
-                  alt={sponsor.name}
-                  loading="lazy"
-                />
+                <img src={imgUrl(sponsor.imageUrl, 300)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -96,7 +91,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Platinum Sponsors</h2>
             {platinumSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 260)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 260)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -107,7 +102,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Gold Sponsors</h2>
             {goldSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 240)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 240)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -118,7 +113,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Silver Sponsors</h2>
             {silverSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 200)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 200)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -129,7 +124,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Coffee Cart by:</h2>
             {coffeeCartSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 180)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 180)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -141,7 +136,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
               <Fragment key={sponsor.serviceProvided}>
                 <h2>{sponsor.serviceProvided} by:</h2>
                 <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                  <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
+                  <img src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
                 </StyledSponsorLink>
               </Fragment>
             ))}
@@ -153,7 +148,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Community Partners</h2>
             {communitySponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -175,7 +170,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
           <h2>Prize Sponsors</h2>
           {standardSponsors.map((sponsor) => (
             <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-              <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
+              <img src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
             </StyledSponsorLink>
           ))}
         </StyledSponsorsContainer>

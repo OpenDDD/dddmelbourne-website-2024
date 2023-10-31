@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { calcRem } from 'components/utils/styles/calcRem'
-import { SponsorType } from 'config/types'
 import { SafeLink } from 'components/global/safeLink'
 
 export const StyledSponsorsContainer = styled('section')(({ theme }) => ({
@@ -17,10 +16,6 @@ export const StyledSponsorsContainer = styled('section')(({ theme }) => ({
 }))
 StyledSponsorsContainer.displayName = 'StyledSponsorsContainer'
 
-interface StyledSponsorLogoProps {
-  level?: SponsorType
-}
-
 export const StyledSponsorLink = styled(SafeLink)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
@@ -33,16 +28,3 @@ export const StyledSponsorLink = styled(SafeLink)(({ theme }) => ({
   },
 }))
 StyledSponsorLink.displayName = 'StyledSponsorLink'
-
-export const StyledSponsorLogo = styled('img')<StyledSponsorLogoProps>(
-  {
-    maxWidth: calcRem(200),
-    maxHeight: calcRem(150),
-  },
-  ({ level }) =>
-    level === SponsorType.Platinum && {
-      maxWidth: calcRem(300),
-      maxHeight: calcRem(200),
-    },
-)
-StyledSponsorLogo.displayName = 'StyledSponsorLogo'
