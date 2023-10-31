@@ -40,7 +40,7 @@ describe('<ActionBar />', () => {
     expect(screen.getByText(/submit presentation/i)).toBeInTheDocument()
   })
 
-  test.skip('Show link when voting opens', () => {
+  test('Show link when voting opens', () => {
     renderActionBar(add(conference.VotingOpenFrom, { minutes: 1 }))
 
     expect(screen.getByText(/vote for/i)).toBeInTheDocument()

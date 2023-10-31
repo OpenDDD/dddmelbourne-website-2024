@@ -11,19 +11,19 @@ export default function getConferenceActions(conference: Conference, dates: Date
     })
   }
 
-  if (dates.VotingOpen) {
-    // actions.push({
-    //   Category: 'voting',
-    //   Title: 'Vote for agenda',
-    //   Url: '/vote',
-    // })
-  }
-
   if (dates.RegistrationOpen) {
     actions.push({
       Category: 'tickets',
       Title: 'Purchase a ticket',
       Url: '/tickets',
+    })
+  }
+
+  if (dates.VotingOpen) {
+    actions.push({
+      Category: 'voting',
+      Title: 'Vote for agenda',
+      Url: '/vote',
     })
   }
 

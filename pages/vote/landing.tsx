@@ -3,7 +3,6 @@ import { Main } from 'layouts/main'
 import { GetServerSideProps } from 'next'
 import { getCommonServerSideProps } from 'components/utils/getCommonServerSideProps'
 import { Text } from 'components/global/text'
-// import { useRouter } from 'next/router'
 import { PRIVACY_ACCEPTED } from '../../components/Voting/VoteConst'
 import Cookies from 'js-cookie'
 import {
@@ -22,6 +21,7 @@ import { DialogOverlay } from '@reach/dialog'
 import { Button } from '../../components/global/Button/Button'
 import '@reach/dialog/styles.css'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 type VoteLandingProps = {
   instance: string
@@ -33,16 +33,16 @@ const BUTTON_LABEL = 'Start Voting!'
 // export default function VoteLanding({ instance, votingFinished }: VoteLandingProps): JSX.Element {
 export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element {
   const { conference } = useConfig()
-  //const router = useRouter()
+  const router = useRouter()
 
   function onSubmitForm(e: FormEvent) {
     e.preventDefault()
     const formData = new FormData(e.target as HTMLFormElement)
 
-    // Cookies.set(PRIVACY_ACCEPTED, 'true', { expires: 90 });
+    Cookies.set(PRIVACY_ACCEPTED, 'true', { expires: 90 })
     Cookies.set('vote-ticket', formData.get('ticket'), { expires: 90 })
     Cookies.set('vote-lastname', formData.get('lastname'), { expires: 90 })
-    // router.push(`/vote/voting`);
+    router.push(`/vote/voting`)
   }
 
   const [showDialog, setShowDialog] = React.useState(true)
