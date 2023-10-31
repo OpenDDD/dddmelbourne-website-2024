@@ -31,6 +31,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
     )
   }
 
+  const diamondSponsors: Sponsor[] = []
   const platinumSponsors: Sponsor[] = []
   const goldSponsors: Sponsor[] = []
   const silverSponsors: Sponsor[] = []
@@ -41,6 +42,9 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
 
   for (const sponsor of sponsors) {
     switch (sponsor.type) {
+      case SponsorType.Diamond:
+        diamondSponsors.push(sponsor)
+        break
       case SponsorType.Platinum:
         platinumSponsors.push(sponsor)
         break
@@ -71,10 +75,10 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
   return (
     <Fragment>
       <StyledSponsorsContainer>
-        {platinumSponsors.length > 0 && (
+        {diamondSponsors.length > 0 && (
           <Fragment>
             <h2>Diamond Sponsors</h2>
-            {platinumSponsors.map((sponsor) => (
+            {diamondSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
                 <StyledSponsorLogo
                   level={SponsorType.Platinum}
@@ -82,6 +86,17 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
                   alt={sponsor.name}
                   loading="lazy"
                 />
+              </StyledSponsorLink>
+            ))}
+          </Fragment>
+        )}
+
+        {platinumSponsors.length > 0 && (
+          <Fragment>
+            <h2>Platinum Sponsors</h2>
+            {platinumSponsors.map((sponsor) => (
+              <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
+                <StyledSponsorLogo src={imgUrl(sponsor.imageUrl, 260)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>

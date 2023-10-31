@@ -181,6 +181,7 @@ export enum SponsorType {
   CoffeeCart,
   Service,
   Community,
+  Diamond,
 }
 
 export interface Sponsor {

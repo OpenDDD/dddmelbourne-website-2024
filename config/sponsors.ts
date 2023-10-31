@@ -1,12 +1,22 @@
 import { Sponsor, SponsorType } from './types'
 
-const platinumSponsors: Sponsor[] = [
+const diamondSponsors: Sponsor[] = [
   {
     id: '2024-liberty',
     imageUrl: '/static/images/sponsors/2024-liberty.png',
     name: 'Liberty',
-    type: SponsorType.Platinum,
+    type: SponsorType.Diamond,
     url: 'https://www.liberty.com.au/',
+  },
+]
+
+const platinumSponsors: Sponsor[] = [
+  {
+    id: '2024-DevExpress',
+    imageUrl: '/static/images/sponsors/2024-devexpress.png',
+    name: 'DevExpress',
+    type: SponsorType.Platinum,
+    url: 'https://www.devexpress.com/',
   },
 ]
 
@@ -27,7 +37,15 @@ const goldSponsors: Sponsor[] = [
   },
 ]
 
-const silverSponsors: Sponsor[] = []
+const silverSponsors: Sponsor[] = [
+  {
+    id: 'qoria',
+    imageUrl: '/static/images/sponsors/2024-qoria.png',
+    name: 'Qoria',
+    type: SponsorType.Silver,
+    url: 'https://qoria.com/',
+  },
+]
 
 const coffeeCartSponsors: Sponsor[] = [
   {
@@ -41,18 +59,27 @@ const coffeeCartSponsors: Sponsor[] = [
 
 const serviceSponsors: Sponsor[] = [
   {
-    id: '2022-luminary',
+    id: '2024-luminary',
     imageUrl: '/static/images/sponsors/2024-luminary.png',
     name: 'Luminary',
     type: SponsorType.Service,
     serviceProvided: 'Wi-Fi',
     url: 'https://luminary.com/',
   },
+  {
+    id: '2024-ssw',
+    imageUrl: '/static/images/sponsors/2024-ssw.png',
+    name: 'SSW',
+    type: SponsorType.Service,
+    serviceProvided: 'Childcare',
+    url: 'https://www.ssw.com.au/',
+  },
 ]
 
 const communityPartners: Sponsor[] = []
 
 const Sponsors: Sponsor[] = [
+  ...diamondSponsors,
   ...platinumSponsors,
   ...goldSponsors,
   ...silverSponsors,
