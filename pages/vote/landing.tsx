@@ -91,7 +91,7 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
             <li>No ticket? Just press ‘Start voting!’ to begin. (Buying a ticket helps your vote count more!)</li>
             <li>
               You’ll see two talks next. Read the session information and pick your favourite of the two. If you can’t
-              decide, choose, “It’s a draw!”{' '}
+              decide, choose “It’s a draw!”
             </li>
             <li>Once you’ve made your selection, you’ll get two new talks to pick from. </li>
             <li>
@@ -99,7 +99,12 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
               your votes will be saved.
             </li>
           </ol>
-          Voting closes at {formatInTimeZone(conference.VotingOpenUntil, conference.TimeZone, 'MMMM d hh:mma')}
+          <p>
+            <strong>
+              Voting closes on{' '}
+              {formatInTimeZone(conference.VotingOpenUntil, conference.TimeZone, "iiii, d MMMM 'at' hh:mma")}
+            </strong>
+          </p>
           <StyledForm onSubmit={onSubmitForm}>
             <StyledFormRow>
               <label htmlFor="ticket">Ticket: </label>
