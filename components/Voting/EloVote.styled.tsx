@@ -24,6 +24,7 @@ export const StyledEloVoteContainer = styled('div')<StyledEloVoteContainerProps>
     marginInlineStart: 'auto',
     marginInlineEnd: 'auto',
     maxBlockSize: '65vh',
+    minHeight: '70vh',
   }),
   ({ variant }) => ({
     [breakpointMax('md')]: {
