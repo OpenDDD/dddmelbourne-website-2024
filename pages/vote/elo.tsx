@@ -199,6 +199,10 @@ export default function Elo({ sessions, votingSessionId, userDefinedLayout = 'ex
           Change layout? <span>{layoutVariant === 'stacked' ? 'Expand abstracts' : 'Stack talks'}</span>
         </StyledLayoutLabel>
         <div style={{ minHeight: 50 }}>{loading && <span dangerouslySetInnerHTML={{ __html: spinner }} />}</div>
+        <small>
+          Keep voting for as many talks as you like. You can leave and come back any time until the closing date and
+          your votes will be saved.
+        </small>
       </StyledEloVoteFooter>
     </Main>
   )

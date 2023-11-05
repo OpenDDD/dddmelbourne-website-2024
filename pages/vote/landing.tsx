@@ -88,7 +88,10 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
           <StyledIntro>Here's how voting works:</StyledIntro>
           <ol>
             <li>Enter your {conference.Name} ticket number and last name, then press ‘Start voting!’. </li>
-            <li>No ticket? Just press ‘Start voting!’ to begin. (Buying a ticket helps your vote count more!)</li>
+            <li>
+              No ticket? Just press ‘Start voting!’ to begin. (<Link href="/tickets">Buying a ticket</Link> helps your
+              vote count more!)
+            </li>
             <li>
               You’ll see two talks next. Read the session information and pick your favourite of the two. If you can’t
               decide, choose “It’s a draw!”
