@@ -18,7 +18,7 @@ import {
 import { formatInTimeZone } from 'date-fns-tz'
 import React, { FormEvent, Fragment } from 'react'
 import { DialogOverlay } from '@reach/dialog'
-import { Button } from '../../components/global/Button/Button'
+import { Button, ButtonAnchor } from '../../components/global/Button/Button'
 import '@reach/dialog/styles.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -69,16 +69,28 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
             </Fragment>
           )}
           {showBuyTicket && (
-            <Text>
-              Did you know that ticket holder votes count more? You can buy your ticket{' '}
-              <Link href="/tickets">here</Link> for only {conference.TicketPrice}.
-            </Text>
+            <Fragment>
+              <Text>
+                Did you know that ticket holder votes count more? You can buy your ticket{' '}
+                <Link href="/tickets">here</Link> for only {conference.TicketPrice}.
+              </Text>
+              <StyledOverlayButtons>
+                <ButtonAnchor kind="primary" href="/tickets">
+                  Get Ticket
+                </ButtonAnchor>
+                <Button kind="secondary" onClick={() => close()}>
+                  Be Like That
+                </Button>
+              </StyledOverlayButtons>
+            </Fragment>
           )}
-          {showBoughtTicket && <Text>Wonderful! Enjoy voting! :)</Text>}
-          {(showBoughtTicket || showBuyTicket) && (
-            <Button kind="primary" onClick={() => close()}>
-              Close
-            </Button>
+          {showBoughtTicket && (
+            <Fragment>
+              <Text>Wonderful! Enjoy voting! :)</Text>
+              <Button kind="primary" onClick={() => close()}>
+                Close
+              </Button>
+            </Fragment>
           )}
         </StyledDialogContent>
       </DialogOverlay>
