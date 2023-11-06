@@ -129,6 +129,7 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
               <label htmlFor="lastname">Last Name: </label>
               <input type="text" id="lastname" name="lastname" />
             </StyledFormRow>
+            <img src="/static/voting/ticket-example.png" alt="Ticket number example" />
             <StyledButton kind="primary" type="submit">
               {BUTTON_LABEL}
             </StyledButton>

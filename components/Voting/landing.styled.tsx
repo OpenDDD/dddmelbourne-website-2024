@@ -31,6 +31,7 @@ export const StyledButton = styled(Button)({
   display: 'block',
   marginInlineStart: 'auto',
   marginInlineEnd: 'auto',
+  marginTop: calcRem(20),
 })
 
 export const StyledOverlayButtons = styled('div')(() => ({
