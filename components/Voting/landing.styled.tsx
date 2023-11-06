@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import { Button } from 'components/global/Button/Button'
 import { Text } from 'components/global/text'
 import { calcRem } from 'components/utils/styles/calcRem'
+import { DialogContent } from '@reach/dialog'
+import { breakpointMax } from '../utils/styles/breakpoints'
 
 export const StyledLandingContainer = styled('div')(() => ({
   inlineSize: '100%',
@@ -29,4 +31,31 @@ export const StyledButton = styled(Button)({
   display: 'block',
   marginInlineStart: 'auto',
   marginInlineEnd: 'auto',
+  marginTop: calcRem(20),
+})
+
+export const StyledOverlayButtons = styled('div')(() => ({
+  padding: calcRem(20),
+  '*:first-of-type': {
+    marginRight: calcRem(20),
+  },
+}))
+
+export const StyledForm = styled('form')(() => ({
+  padding: `${calcRem(20)} 0`,
+  label: {
+    display: 'inline-block',
+    width: 100,
+  },
+  input: '100%',
+}))
+
+export const StyledFormRow = styled('div')({
+  marginBottom: calcRem(30),
+})
+
+export const StyledDialogContent = styled(DialogContent)({
+  [breakpointMax('sm')]: {
+    width: '100%',
+  },
 })
