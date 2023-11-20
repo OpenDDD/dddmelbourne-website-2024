@@ -45,6 +45,13 @@ const silverSponsors: Sponsor[] = [
     type: SponsorType.Silver,
     url: 'https://qoria.com/',
   },
+  {
+    id: 'sizzle',
+    imageUrl: '/static/images/sponsors/2024-sizzle.png',
+    name: 'The Sizzle',
+    type: SponsorType.Silver,
+    url: 'https://thesizzle.com.au/',
+  },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
