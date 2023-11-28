@@ -67,7 +67,7 @@ export const ImportantDatesList = ({
               <Component
                 key={importantDate.Description}
                 importantDate={importantDate}
-                isFinished
+                isFinished={true}
                 tz={conference.TimeZone}
               />
             )
