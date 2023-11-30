@@ -110,7 +110,7 @@ export const CurrentAgenda = ({
                   </AgendaSession>
                 </StyledAgendaRow>
                 <StyledAgendaRow>
-                  <AgendaTime time={set(date, { hours: 8, minutes: 40 })} />
+                  <AgendaTime time={set(date, { hours: 8, minutes: 45 })} />
                   <AgendaSession room={0} alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Welcome and Housekeeping</StyledTrackHeader>
                   </AgendaSession>
@@ -168,7 +168,7 @@ export const CurrentAgenda = ({
                   <AgendaSession room={3} sessionId="563680" />
                 </StyledAgendaRow>
                 <StyledAgendaRow>
-                  <AgendaTime time={set(date, { hours: 10, minutes: 55 })} />
+                  <AgendaTime time={set(date, { hours: 12, minutes: 35 })} />
                   <AgendaSession room="" alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Lunch</StyledTrackHeader>
                   </AgendaSession>
@@ -228,13 +228,7 @@ export const CurrentAgenda = ({
                   />
                 </StyledAgendaRow>
                 <StyledAgendaRow>
-                  <AgendaTime time={set(date, { hours: 17, minutes: 30 })} />
-                  <AgendaSession room={0} alwaysShowRoom fullWidth>
-                    <StyledTrackHeader>Prize Draw</StyledTrackHeader>
-                  </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
-                  <AgendaTime time={set(date, { hours: 17, minutes: 45 })} />
+                  <AgendaTime time={set(date, { hours: 17, minutes: 15 })} />
                   <AgendaSession room={0} alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Closing</StyledTrackHeader>
                   </AgendaSession>
