@@ -131,7 +131,7 @@ export const CurrentAgenda = ({
                 <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 9, minutes: 45 })} />
                   <AgendaSession fullWidth>
-                    <StyledTrackHeader>Changeover</StyledTrackHeader>
+                    <StyledTrackHeader>Morning Tea</StyledTrackHeader>
                   </AgendaSession>
                 </StyledAgendaRow>
                 <StyledAgendaRow>
@@ -198,7 +198,7 @@ export const CurrentAgenda = ({
                 <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 15, minutes: 15 })} />
                   <AgendaSession fullWidth>
-                    <StyledTrackHeader>Changeover</StyledTrackHeader>
+                    <StyledTrackHeader>Afternoon Tea</StyledTrackHeader>
                   </AgendaSession>
                 </StyledAgendaRow>
                 <StyledAgendaRow>
