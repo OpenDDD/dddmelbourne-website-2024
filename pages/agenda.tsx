@@ -1,10 +1,9 @@
 import React from 'react'
-import AllAgendas from 'components/allAgendas'
 import { CurrentAgenda } from 'components/currentAgenda'
 import { Sponsors } from 'components/Sponsors/sponsors'
 import { fetchSessions } from 'components/utils/useSessions'
 import Conference from 'config/conference'
-import { Session, SponsorType } from 'config/types'
+import { Session } from 'config/types'
 import { Main } from 'layouts/agendaWide'
 import { GetServerSideProps, NextPage } from 'next'
 import { useConfig } from 'Context/Config'
@@ -42,22 +41,11 @@ const AgendaPage: NextPage<AgendaPageProps> = ({ sessions, sessionId }) => {
             selectedSessionId={sessionId}
           />
         )}
-        {conference.Handbook && (
-          <React.Fragment>
-            <h2>Handbook</h2>
-            <p>
-              <a className="btn btn-pdf" href={'/static/docs/' + conference.Handbook}>
-                Download handbook (PDF)
-              </a>
-            </p>
-          </React.Fragment>
-        )}
         <Sponsors
           show={!conference.HideSponsors}
           hideUpsell={conference.HideSponsorshipUpsell}
-          sponsors={conference.Sponsors.filter((s) => s.type === SponsorType.Gold || s.type === SponsorType.Platinum)}
+          sponsors={conference.Sponsors}
         />
-        <AllAgendas conference={conference} conferenceInstance={conference.Instance} dates={dates} />
       </div>
     </Main>
   )

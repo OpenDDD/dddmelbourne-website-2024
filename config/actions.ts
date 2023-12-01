@@ -19,6 +19,18 @@ export default function getConferenceActions(conference: Conference, dates: Date
     })
   }
 
+  if (dates.AgendaPublished) {
+    let agendaTitle = 'View the agenda'
+    if (dates.IsComplete) {
+      agendaTitle = `${conference.Instance} agenda`
+    }
+    actions.push({
+      Category: 'agenda',
+      Title: agendaTitle,
+      Url: '/agenda',
+    })
+  }
+
   if (dates.VotingOpen) {
     actions.push({
       Category: 'voting',
@@ -40,18 +52,6 @@ export default function getConferenceActions(conference: Conference, dates: Date
       Category: 'conference',
       Title: 'Give feedback',
       Url: '/feedback',
-    })
-  }
-
-  if (dates.AgendaPublished) {
-    let agendaTitle = 'View the agenda'
-    if (dates.IsComplete) {
-      agendaTitle = `${conference.Instance} agenda`
-    }
-    actions.push({
-      Category: 'agenda',
-      Title: agendaTitle,
-      Url: '/agenda',
     })
   }
 

@@ -12,8 +12,6 @@ import {
   StyledSpeakerBioHeader,
   StyledTagList,
 } from './SessionDetails.styled'
-import { YouTubeIcon } from 'components/global/Icons/Youtube'
-import { StyledLivestreamLink } from './SessionDetails.styled'
 
 interface SessionDetailsProps {
   session: Session
@@ -30,7 +28,6 @@ export const SessionDetails = ({
   hideTags = false,
   hideLevelAndFormat = false,
   showBio,
-  livestream,
 }: SessionDetailsProps) => {
   return (
     <Fragment>
@@ -39,7 +36,10 @@ export const SessionDetails = ({
         session.Presenters.map((presenter) => (
           <StyledBioFigure key={presenter.Name.replace(/\s/g, '-')}>
             <StyledBioProfile
-              src={presenter.ProfilePhotoUrl || '/static/images/profile-image-blank.jpg'}
+              src={
+                `https://pixboost.com/api/2/img/${presenter.ProfilePhotoUrl}/optimise?auth=MjMyNzUwMTg3Nw__` ||
+                '/static/images/profile-image-blank.jpg'
+              }
               alt={`${presenter.Name} profile photo`}
               loading="lazy"
             />
@@ -72,14 +72,6 @@ export const SessionDetails = ({
             )}
           </StyledBioFigure>
         ))}
-      {livestream && (
-        <StyledLivestreamLink>
-          <SafeLink href={livestream} target="_blank">
-            <YouTubeIcon />
-            Watch Livestream
-          </SafeLink>
-        </StyledLivestreamLink>
-      )}
       <StyledPreWrappedParagraph>{session.Abstract}</StyledPreWrappedParagraph>
 
       {(!hideLevelAndFormat || !hideTags) && (

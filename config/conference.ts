@@ -30,7 +30,7 @@ const presentationSubmissionsOpenFrom = zonedTimeToUtc('2023-09-01T08:00:00', tz
 const presentationSubmissionsOpenUntil = zonedTimeToUtc('2023-11-01T23:59:59', tz)
 const votingOpenFrom = zonedTimeToUtc('2023-11-08T00:00:00', tz)
 const votingOpenUntil = zonedTimeToUtc('2023-11-20T23:59:59', tz)
-const agendaPublishedFrom = zonedTimeToUtc('2023-12-01T17:00:00', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2023-12-01T16:00:00', tz)
 const feedbackOpenFrom = toDate(date)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
@@ -199,17 +199,7 @@ const Conference: IConference = {
 
   Keynotes: [],
 
-  RoomNames: [
-    'Kwoka (Quokka)',
-    'Kwonding (Quandong)',
-    'Yoorn (Bobtail)',
-    'Mangatj (Banksia)',
-    'Yiibi (Black Cockatoo)',
-    'Mari (Red Gum)',
-    'Djakal-Ngakal (Galah)',
-    'Bilya (River)',
-    'Maali (Black Swan)',
-  ],
+  RoomNames: ['Main Hall', 'Supper Room', 'Yarra Room', 'Hoddle Room'],
 
   Livestreams: [
     'https://youtu.be/ovEA5PaOdWo?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',

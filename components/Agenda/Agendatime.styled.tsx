@@ -6,7 +6,7 @@ import { tableLayoutBreakpointFrom } from './layout'
 export const StyledAgendaTime = styled('div')(({ theme }) => ({
   gridColumn: `1 / -1`,
   padding: calcRem(10),
-  backgroundColor: theme.colors.primary,
+  backgroundColor: theme.colors.secondary,
   color: '#fff',
   fontWeight: theme.weights.semiBold,
 
