@@ -215,7 +215,7 @@ export const CurrentAgenda = ({
                   </AgendaSession>
                 </StyledAgendaRow>
                 <StyledAgendaRow>
-                  <AgendaTime time={set(date, { hours: 16, minutes: 40 })} duration={30} />
+                  <AgendaTime time={set(date, { hours: 16, minutes: 45 })} duration={30} />
                   <AgendaSession
                     sessionId="547732"
                     room={0}
