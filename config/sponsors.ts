@@ -18,6 +18,13 @@ const platinumSponsors: Sponsor[] = [
     type: SponsorType.Platinum,
     url: 'https://www.devexpress.com/',
   },
+  {
+    id: '2024-OctopusDeploy',
+    imageUrl: '/static/images/sponsors/2024-octopus-deploy.png',
+    name: 'DevExpress',
+    type: SponsorType.Platinum,
+    url: 'https://octopus.com/',
+  },
 ]
 
 const goldSponsors: Sponsor[] = [
