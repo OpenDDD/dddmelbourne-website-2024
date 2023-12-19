@@ -102,7 +102,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Gold Sponsors</h2>
             {goldSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 240)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 220)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
