@@ -10,7 +10,7 @@ export const StyledSponsorsContainer = styled('section')(({ theme }) => ({
 
   h2: {
     width: '100%',
-    marginTop: calcRem(theme.metrics.lg),
+    marginTop: calcRem(theme.metrics.xxl),
     textAlign: 'center',
   },
 }))
