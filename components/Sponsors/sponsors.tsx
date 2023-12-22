@@ -9,8 +9,8 @@ interface SponsorsProps {
   hideUpsell?: boolean
 }
 
-const imgUrl = (img, width) =>
-  `https://pixboost.com/api/2/img/dddmelbourne${img}/resize?size=${width}&auth=MjMyNzUwMTg3Nw__`
+const imgUrl = (img, height) =>
+  `https://pixboost.com/api/2/img/dddmelbourne${img}/resize?size=x${height}&trim-border&auth=MjMyNzUwMTg3Nw__`
 
 export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
   const showSponsors = show && sponsors.length > 0
@@ -80,7 +80,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Diamond Sponsors</h2>
             {diamondSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 300)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 90)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -91,7 +91,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Platinum Sponsors</h2>
             {platinumSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 260)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 65)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -102,7 +102,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Gold Sponsors</h2>
             {goldSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 220)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 60)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -113,7 +113,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Silver Sponsors</h2>
             {silverSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 170)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 30)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -124,7 +124,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Coffee Cart by:</h2>
             {coffeeCartSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 180)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 25)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -136,7 +136,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
               <Fragment key={sponsor.serviceProvided}>
                 <h2>{sponsor.serviceProvided} by:</h2>
                 <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                  <img src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
+                  <img src={imgUrl(sponsor.imageUrl, 25)} alt={sponsor.name} loading="lazy" />
                 </StyledSponsorLink>
               </Fragment>
             ))}
@@ -148,7 +148,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
             <h2>Community Partners</h2>
             {communitySponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, 160)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, 25)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
