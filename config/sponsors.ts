@@ -64,7 +64,7 @@ const silverSponsors: Sponsor[] = [
 const coffeeCartSponsors: Sponsor[] = [
   {
     id: 'kodez',
-    imageUrl: '/static/images/sponsors/2024-kodez.png',
+    imageUrl: '/static/images/sponsors/2024-kodez-2.png',
     name: 'Kodez',
     type: SponsorType.CoffeeCart,
     url: 'https://kodez.com.au',

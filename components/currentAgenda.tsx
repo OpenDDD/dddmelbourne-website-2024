@@ -138,7 +138,7 @@ export const CurrentAgenda = ({
                   <AgendaTime time={set(date, { hours: 10, minutes: 15 })} duration={45} />
                   <AgendaSession room={0} sessionId="564855" />
                   <AgendaSession room={1} sessionId="566636" />
-                  <AgendaSession room={2} sessionId="565783" />
+                  <AgendaSession room={2} sessionId="537623" />
                   <AgendaSession room={3} sessionId="567126" />
                 </StyledAgendaRow>
                 <StyledAgendaRow>
@@ -152,7 +152,7 @@ export const CurrentAgenda = ({
                   <AgendaSession room={0} sessionId="559141" />
                   <AgendaSession room={1} sessionId="555691" />
                   <AgendaSession room={2} sessionId="537420" />
-                  <AgendaSession room={3} sessionId="550303" />
+                  <AgendaSession room={3} sessionId="554319" />
                 </StyledAgendaRow>
                 <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 12, minutes: 0 })} />
@@ -178,7 +178,7 @@ export const CurrentAgenda = ({
                   <AgendaSession room={0} sessionId="537416" />
                   <AgendaSession room={1} sessionId="540385" />
                   <AgendaSession room={2} sessionId="541314" />
-                  <AgendaSession room={3} sessionId="566870" />
+                  <AgendaSession room={3} />
                 </StyledAgendaRow>
 
                 <StyledAgendaRow>
@@ -238,7 +238,7 @@ export const CurrentAgenda = ({
                     time={set(date, { hours: 18, minutes: 0 })}
                     endTime={set(date, { hours: 20, minutes: 30 })}
                   />
-                  <AgendaSession room="TBD" alwaysShowRoom fullWidth>
+                  <AgendaSession room="Beer Deluxe, Federation Square" alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Afterparty</StyledTrackHeader>
                   </AgendaSession>
                 </StyledAgendaRow>
