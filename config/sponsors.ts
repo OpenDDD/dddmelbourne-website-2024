@@ -42,6 +42,20 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://netwealth.com.au',
   },
+  {
+    id: 'insight',
+    imageUrl: '/static/images/sponsors/2024-insight.jpg',
+    name: 'Insight',
+    type: SponsorType.Gold,
+    url: 'https://au.insight.com/',
+  },
+  {
+    id: 'github',
+    imageUrl: '/static/images/sponsors/2024-github.png',
+    name: 'GitHub',
+    type: SponsorType.Gold,
+    url: 'https://github.com',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
@@ -58,6 +72,13 @@ const silverSponsors: Sponsor[] = [
     name: 'The Sizzle',
     type: SponsorType.Silver,
     url: 'https://thesizzle.com.au/',
+  },
+  {
+    id: 'kaleida',
+    imageUrl: '/static/images/sponsors/2024-kaleida.png',
+    name: 'Kaleida',
+    type: SponsorType.Silver,
+    url: 'https://www.kaleida.team/',
   },
 ]
 
