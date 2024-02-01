@@ -55,6 +55,7 @@ const goldSponsors: Sponsor[] = [
     name: 'GitHub',
     type: SponsorType.Gold,
     url: 'https://github.com',
+    logoSize: '50',
   },
 ]
 
