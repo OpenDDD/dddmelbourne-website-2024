@@ -36,18 +36,18 @@ const goldSponsors: Sponsor[] = [
     url: 'https://webjet.com.au',
   },
   {
-    id: 'netwealth',
-    imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
-    name: 'Netwealth',
-    type: SponsorType.Gold,
-    url: 'https://netwealth.com.au',
-  },
-  {
     id: 'insight',
     imageUrl: '/static/images/sponsors/2024-insight.jpg',
     name: 'Insight',
     type: SponsorType.Gold,
     url: 'https://au.insight.com/',
+  },
+  {
+    id: 'netwealth',
+    imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
+    name: 'Netwealth',
+    type: SponsorType.Gold,
+    url: 'https://netwealth.com.au',
   },
   {
     id: 'github',
@@ -79,6 +79,7 @@ const silverSponsors: Sponsor[] = [
     name: 'Kaleida',
     type: SponsorType.Silver,
     url: 'https://www.kaleida.team/',
+    logoSize: '60',
   },
 ]
 

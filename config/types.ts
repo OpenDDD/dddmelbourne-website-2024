@@ -192,6 +192,7 @@ export interface Sponsor {
   type: SponsorType
   url: string
   serviceProvided?: string
+  logoSize?: string
 }
 
 export interface MenuItem {

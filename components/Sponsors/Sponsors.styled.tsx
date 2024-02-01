@@ -20,7 +20,7 @@ export const StyledSponsorLink = styled(SafeLink)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  margin: calcRem(theme.metrics.md),
+  margin: [calcRem(theme.metrics.md), calcRem(theme.metrics.lg)],
   transition: 'transform 0.3s ease',
 
   '&:hover, &:focus': {
