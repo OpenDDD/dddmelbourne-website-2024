@@ -96,20 +96,22 @@ const coffeeCartSponsors: Sponsor[] = [
 
 const serviceSponsors: Sponsor[] = [
   {
-    id: '2024-luminary',
-    imageUrl: '/static/images/sponsors/2024-luminary.png',
-    name: 'Luminary',
-    type: SponsorType.Service,
-    serviceProvided: 'Wi-Fi',
-    url: 'https://luminary.com/',
-  },
-  {
     id: '2024-ssw',
     imageUrl: '/static/images/sponsors/2024-ssw.png',
     name: 'SSW',
     type: SponsorType.Service,
     serviceProvided: 'Childcare',
     url: 'https://www.ssw.com.au/',
+    logoSize: '58',
+  },
+  {
+    id: '2024-luminary',
+    imageUrl: '/static/images/sponsors/2024-luminary.png',
+    name: 'Luminary',
+    type: SponsorType.Service,
+    serviceProvided: 'Wi-Fi',
+    url: 'https://luminary.com/',
+    logoSize: '40',
   },
 ]
 

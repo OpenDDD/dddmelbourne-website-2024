@@ -108,12 +108,25 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
           </Fragment>
         )}
 
-        {silverSponsors.length > 0 && (
+        {serviceSponsors.length > 0 && (
           <Fragment>
-            <h2>Silver Sponsors</h2>
-            {silverSponsors.map((sponsor) => (
+            {serviceSponsors.map((sponsor) => (
+              <Fragment key={sponsor.serviceProvided}>
+                <h2>{sponsor.serviceProvided} by:</h2>
+                <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
+                  <img src={imgUrl(sponsor.imageUrl, sponsor.logoSize || 40)} alt={sponsor.name} loading="lazy" />
+                </StyledSponsorLink>
+              </Fragment>
+            ))}
+          </Fragment>
+        )}
+
+        {communitySponsors.length > 0 && (
+          <Fragment>
+            <h2>Community Partners</h2>
+            {communitySponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                <img src={imgUrl(sponsor.imageUrl, sponsor.logoSize || 30)} alt={sponsor.name} loading="lazy" />
+                <img src={imgUrl(sponsor.imageUrl, sponsor.logoSize || 40)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
             ))}
           </Fragment>
@@ -130,23 +143,10 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
           </Fragment>
         )}
 
-        {serviceSponsors.length > 0 && (
+        {silverSponsors.length > 0 && (
           <Fragment>
-            {serviceSponsors.map((sponsor) => (
-              <Fragment key={sponsor.serviceProvided}>
-                <h2>{sponsor.serviceProvided} by:</h2>
-                <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
-                  <img src={imgUrl(sponsor.imageUrl, sponsor.logoSize || 25)} alt={sponsor.name} loading="lazy" />
-                </StyledSponsorLink>
-              </Fragment>
-            ))}
-          </Fragment>
-        )}
-
-        {communitySponsors.length > 0 && (
-          <Fragment>
-            <h2>Community Partners</h2>
-            {communitySponsors.map((sponsor) => (
+            <h2>Silver Sponsors</h2>
+            {silverSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
                 <img src={imgUrl(sponsor.imageUrl, sponsor.logoSize || 25)} alt={sponsor.name} loading="lazy" />
               </StyledSponsorLink>
