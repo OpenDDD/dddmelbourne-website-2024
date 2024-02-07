@@ -137,7 +137,7 @@ export const CurrentAgenda = ({
                 <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 10, minutes: 15 })} duration={45} />
                   <AgendaSession room={0} sessionId="564855" />
-                  <AgendaSession room={1} sessionId="566636" />
+                  <AgendaSession room={1} sessionId="566071" />
                   <AgendaSession room={2} sessionId="537623" />
                   <AgendaSession room={3} sessionId="567126" />
                 </StyledAgendaRow>
