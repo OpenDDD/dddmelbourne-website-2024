@@ -82,6 +82,14 @@ const silverSponsors: Sponsor[] = [
     url: 'https://www.kaleida.team/',
     logoSize: '60',
   },
+  {
+    id: 'umbraco',
+    imageUrl: '/static/images/sponsors/2024-umbraco.png',
+    name: 'Umbraco',
+    type: SponsorType.Silver,
+    url: 'https://umbraco.com/',
+    logoSize: '60',
+  },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
