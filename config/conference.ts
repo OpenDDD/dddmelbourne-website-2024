@@ -167,6 +167,7 @@ const Conference: IConference = {
     Email: 'dddmelbourne@gmail.com',
     GitHub: 'OpenDDD',
     Instagram: 'dddmelb',
+    RedBubble: 'https://www.redbubble.com/people/DDDMelbourne/shop?asc=u',
   },
 
   ImportantContacts: {

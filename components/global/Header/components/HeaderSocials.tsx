@@ -4,6 +4,7 @@ import { FacebookIcon } from 'components/global/Icons/Facebook'
 import { InstagramIcon } from 'components/global/Icons/Instagram'
 import { TwitterIcon } from 'components/global/Icons/Twitter'
 import { LinkedinIcon } from 'components/global/Icons/Linkedin'
+import { RedBubbleIcon } from 'components/global/Icons/RedBubble'
 import { useConfig } from 'Context/Config'
 
 export const HeaderSocials = (): JSX.Element => {
@@ -50,6 +51,14 @@ export const HeaderSocials = (): JSX.Element => {
           >
             <LinkedinIcon />
             <span>LinkedIn, opens in new window</span>
+          </StyledSafeLink>
+        </li>
+      )}
+      {socials.RedBubble && (
+        <li>
+          <StyledSafeLink href={`${socials.RedBubble}`} target="_blank" rel="noopener nofollow">
+            <RedBubbleIcon />
+            <span>RedBubble, opens in new window</span>
           </StyledSafeLink>
         </li>
       )}

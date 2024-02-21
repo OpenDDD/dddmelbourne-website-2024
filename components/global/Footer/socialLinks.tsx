@@ -10,6 +10,7 @@ import { MediumIcon } from 'components/global/Icons/Medium'
 import { YouTubeIcon } from 'components/global/Icons/Youtube'
 import { GitHubIcon } from 'components/global/Icons/GitHub'
 import { EmailIcon } from 'components/global/Icons/Email'
+import { RedBubbleIcon } from '../Icons/RedBubble'
 
 interface SocialLinksArgs {
   socials: Socials
@@ -94,6 +95,14 @@ export const SocialLinks = ({ socials }: SocialLinksArgs) => (
         <StyledSocialLink href={`mailto:${socials.Email}`} target="_blank" rel="noopener nofollow">
           <EmailIcon />
           <span>Email, will open in system default mail app</span>
+        </StyledSocialLink>
+      </li>
+    )}
+    {socials.RedBubble && (
+      <li>
+        <StyledSocialLink href={`${socials.RedBubble}`} target="_blank" rel="noopener nofollow">
+          <RedBubbleIcon />
+          <span>RedBubble, will open in a new window</span>
         </StyledSocialLink>
       </li>
     )}

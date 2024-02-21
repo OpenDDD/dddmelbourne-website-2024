@@ -158,6 +158,7 @@ export interface Socials {
   Email?: string
   MailingList?: string
   Linkedin?: string
+  RedBubble?: string
 }
 
 export interface ImportantContacts {
