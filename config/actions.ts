@@ -19,6 +19,14 @@ export default function getConferenceActions(conference: Conference, dates: Date
     })
   }
 
+  if (dates.RegistrationClosed) {
+    actions.push({
+      Category: 'swag',
+      Title: 'Get Swag',
+      Url: conference.Socials.RedBubble,
+    })
+  }
+
   if (dates.AgendaPublished) {
     let agendaTitle = 'View the agenda'
     if (dates.IsComplete) {
