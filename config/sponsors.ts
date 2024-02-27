@@ -100,6 +100,13 @@ const coffeeCartSponsors: Sponsor[] = [
     type: SponsorType.CoffeeCart,
     url: 'https://kodez.com.au',
   },
+  {
+    id: 'justdigitalpeople',
+    imageUrl: '/static/images/sponsors/2024-justdigitalpeople.png',
+    name: 'Just Digital People',
+    type: SponsorType.CoffeeCart,
+    url: 'http://www.justdigitalpeople.com.au/',
+  },
 ]
 
 const serviceSponsors: Sponsor[] = [
