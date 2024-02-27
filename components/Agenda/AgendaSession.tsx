@@ -8,6 +8,7 @@ import {
   StyledSection,
   StyledSponsor,
 } from './AgendaSession.styled'
+import Conference from 'config/conference'
 
 interface AgendaSessionProps {
   sessionId?: string
@@ -45,6 +46,7 @@ export const AgendaSession = ({
           type="button"
           isKeynote={isKeynote}
           onClick={() => onSelect(session, sponsor, getLivestream(room))}
+          color={Conference.RoomColors[getRoom(room)]}
         >
           {renderPresenters ? (
             renderPresenters(presenters)

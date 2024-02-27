@@ -20,9 +20,10 @@ StyledSection.displayName = 'StyledSection'
 
 interface StyledAgendaButtonProps {
   isKeynote?: boolean
+  color?: string
 }
 
-export const StyledAgendaButton = styled('button')<StyledAgendaButtonProps>(({ isKeynote, theme }) => ({
+export const StyledAgendaButton = styled('button')<StyledAgendaButtonProps>(({ isKeynote, theme, color }) => ({
   display: 'flex',
   width: '100%',
   height: '100%',
@@ -30,7 +31,7 @@ export const StyledAgendaButton = styled('button')<StyledAgendaButtonProps>(({ i
   margin: 0,
   flexDirection: 'column',
   alignItems: 'stretch',
-  backgroundColor: '#FFF',
+  backgroundColor: color || '#FFF',
   border: 0,
   cursor: 'pointer',
   textAlign: isKeynote ? 'center' : 'left',
