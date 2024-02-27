@@ -201,6 +201,12 @@ const Conference: IConference = {
   Keynotes: [],
 
   RoomNames: ['Main Hall', 'Supper Room', 'Yarra Room', 'Hoddle Room'],
+  RoomColors: {
+    'Main Hall': '#c6effc',
+    'Supper Room': '#d8edd6',
+    'Yarra Room': '#f8d3d0',
+    'Hoddle Room': '#ffe2cc',
+  },
 
   Livestreams: [
     'https://youtu.be/ovEA5PaOdWo?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',

@@ -100,7 +100,9 @@ export const CurrentAgenda = ({
                 <StyledAgendaRowList>
                   <li>Time</li>
                   {Conference.RoomNames.map((name) => (
-                    <li key={name}>{name}</li>
+                    <li style={{ backgroundColor: `${Conference.RoomColors[name]}`, color: 'inherit' }} key={name}>
+                      {name}
+                    </li>
                   ))}
                 </StyledAgendaRowList>
                 <StyledAgendaRow>
