@@ -11,7 +11,7 @@ export const StyledHeader = styled('div')(({ theme }) => ({
   marginBlockStart: calcRem(-theme.metrics.xl),
   marginBlockEnd: calcRem(60),
   gap: '1rem',
-  backgroundColor: theme.colors.dddblue,
+  backgroundColor: theme.colors.dddpurple,
 }))
 
 export const StyledColumnLayout = styled('div')(({ theme }) => ({
@@ -146,7 +146,7 @@ export const MoreInfoButton = styled('a')(({ theme }) => ({
 
   '&:hover, &:focus': {
     backgroundColor: theme.colors.white,
-    color: theme.colors.dddblue,
+    color: theme.colors.dddpurple,
   },
 }))
 

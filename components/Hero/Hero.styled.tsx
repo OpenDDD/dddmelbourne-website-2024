@@ -23,7 +23,7 @@ export const HeroContentWrapper = styled('div')(({ theme }) => ({
   '::before': {
     width: '100%',
     height: '100%',
-    backgroundColor: theme.colors.dddblue,
+    backgroundColor: theme.colors.dddpurple,
     position: 'absolute',
     opacity: 0.8,
     content: '""',
