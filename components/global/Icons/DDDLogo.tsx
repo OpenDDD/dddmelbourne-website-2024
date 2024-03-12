@@ -16,7 +16,7 @@ export const DDDLogo = () => {
       width="296"
       height="35"
       alt={`${conference.Name} logo`}
-      src="/static/images/header-logo-melb-ddd-temp24.png"
+      src="/static/images/logo-dddmelbourne-2024.png"
     />
   )
 }

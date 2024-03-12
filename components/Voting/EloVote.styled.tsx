@@ -109,7 +109,7 @@ export const StyledVoteButton = styled(Button)<StyledVoteButtonProps>(({ theme, 
   },
 
   '&:focus': {
-    boxShadow: `0 0 0 ${calcRem(theme.metrics.xs)} ${theme.colors.dddblue}`,
+    boxShadow: `0 0 0 ${calcRem(theme.metrics.xs)} ${theme.colors.dddpurple}`,
   },
 }))
 
@@ -148,7 +148,7 @@ export const StyledLayoutLabel = styled('label')(({ theme }) => ({
   input: srOnly,
 
   span: {
-    color: theme.colors.dddblue,
+    color: theme.colors.dddpurple,
     textDecoration: 'underline',
   },
 

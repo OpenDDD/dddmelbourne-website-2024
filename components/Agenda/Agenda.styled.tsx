@@ -74,7 +74,7 @@ export const StyledAgendaRowList = styled('ul')(({ theme }) => ({
 
   li: {
     padding: calcRem(theme.metrics.md),
-    backgroundColor: theme.colors.dddblue,
+    backgroundColor: theme.colors.dddpurple,
     color: theme.colors.white,
     fontSize: calcRem(20),
     fontWeight: theme.weights.bold,
