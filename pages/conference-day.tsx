@@ -9,11 +9,28 @@ import { fetchSessions } from 'components/utils/useSessions'
 import { useSessionGroups } from 'components/utils/useSessionGroups'
 import { Text } from 'components/global/text'
 import { roomLocations } from 'components/venueMapData'
+import { Image } from 'pixboost-react'
+import styled from '@emotion/styled'
 
 interface ConferencePageProps {
   sessions?: Session[]
   sessionId?: string
 }
+
+const pixboostConfig = {
+  apiKey: 'MjMyNzUwMTg3Nw__',
+  domain: 'pixboost.com',
+  breakpoints: {
+    lg: { media: '(min-width: 1024px)' },
+    sm: {},
+  },
+}
+
+const StyledImage = styled(Image)(() => ({
+  textAlign: 'center',
+  maxWidth: '100%',
+  height: 'auto',
+}))
 
 const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
   const { conference, dates } = useConfig()
@@ -48,6 +65,15 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
       <h2>Getting here</h2>
       {/*TODO: MAP*/}
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <StyledImage
+          src="dddmelbourne/static/images/map/melbourne-town-hall-map.png"
+          alt={'Melbourne Town Hall Map'}
+          config={pixboostConfig}
+          op={'optimise'}
+          lazy={false}
+        />
+      </div>
 
       <Text>
         Melbourne Town Hall is on the corner of Collins and Swanston Street in the CBD. The address is 90/130 Swanston
