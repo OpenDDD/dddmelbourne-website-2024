@@ -93,5 +93,8 @@
       "npm run format-code",
       "jest --findRelatedTests"
     ]
+  },
+  "engines": {
+    "node": "18.17.1"
   }
 }
