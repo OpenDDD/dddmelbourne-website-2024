@@ -11,6 +11,7 @@ import { Text } from 'components/global/text'
 import { roomLocations } from 'components/venueMapData'
 import { Image } from 'pixboost-react'
 import styled from '@emotion/styled'
+import { SafeLink } from '../components/global/safeLink'
 
 interface ConferencePageProps {
   sessions?: Session[]
@@ -64,15 +65,17 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
       </h1>
 
       <h2>Getting here</h2>
-      {/*TODO: MAP*/}
+
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <StyledImage
-          src="dddmelbourne/static/images/map/melbourne-town-hall-map.png"
-          alt={'Melbourne Town Hall Map'}
-          config={pixboostConfig}
-          op={'optimise'}
-          lazy={false}
-        />
+        <SafeLink href="https://maps.app.goo.gl/JkTzY9dNDGmeAWDD6" target="_blank">
+          <StyledImage
+            src="dddmelbourne/static/images/map/melbourne-town-hall-map.png"
+            alt={'Melbourne Town Hall Map'}
+            config={pixboostConfig}
+            op={'optimise'}
+            lazy={false}
+          />
+        </SafeLink>
       </div>
 
       <Text>
@@ -173,7 +176,16 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
       <h2>After party</h2>
 
-      {/*TODO: Map*/}
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <SafeLink href="https://maps.app.goo.gl/v6XsYvwGmUsVNpiG7" target="_blank">
+          <StyledImage
+            src="dddmelbourne/static/images/map/beer-deluxe-map.png"
+            alt={'Melbourne Town Hall Map'}
+            config={pixboostConfig}
+            op={'optimise'}
+          />
+        </SafeLink>
+      </div>
 
       <Text>
         The DDD Melbourne after party takes place at 6pm at Beer DeLuxe, Federation Square, only a short walk from the
