@@ -16,7 +16,7 @@ export const StyledFooter = styled('footer')(({ theme }) => ({
     gridColumn: 2,
   },
 
-  backgroundColor: theme.colors.dddblue,
+  backgroundColor: theme.colors.dddpurple,
 }))
 StyledFooter.displayName = 'StyledFooter'
 
@@ -50,7 +50,7 @@ export const StyledSocialLink = styled(SafeLink)(({ theme }) => ({
 
   '&:hover, &:focus :nth-of-type(odd)': {
     svg: {
-      fill: Math.floor(Math.random() * 2) === 1 ? theme.colors.dddpink : theme.colors.dddorange,
+      fill: Math.floor(Math.random() * 2) === 1 ? theme.colors.dddbrightorange : theme.colors.dddgreenaqua,
     },
   },
 }))
@@ -71,14 +71,14 @@ export const StyledFooterContainer = styled('div')(({ theme }) => ({
     gridColumn: '2 / span 2',
     gridRow: 2,
     padding: theme.metrics.lg,
-    backgroundColor: theme.colors.dddbluedark,
+    backgroundColor: theme.colors.dddpurpledark,
     textAlign: 'left',
   },
 
   '&::before': {
     gridColumn: '1 / span 1',
     gridRow: 2,
-    backgroundColor: theme.colors.dddbluedark,
+    backgroundColor: theme.colors.dddpurpledark,
     content: "' '",
   },
 }))
@@ -91,7 +91,7 @@ export const StyledTopAnchor = styled('a')(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   padding: theme.metrics.lg,
-  backgroundColor: theme.colors.dddbluedark,
+  backgroundColor: theme.colors.dddpurpledark,
   color: theme.colors.white,
   textTransform: 'uppercase',
   textDecoration: 'none',
