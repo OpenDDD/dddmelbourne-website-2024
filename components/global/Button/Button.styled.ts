@@ -4,6 +4,7 @@ import { calcRem } from 'components/utils/styles/calcRem'
 import { DDDTheme } from 'components/utils/styles/theme'
 import { conditionalStyles } from 'components/utils/styles/conditionalStyles'
 import { ButtonKinds, Size } from './Button'
+import Link from 'next/link'
 
 function shouldStyledButtonForwardProps(prop: string) {
   return !['size', 'kind'].includes(prop)
@@ -63,7 +64,7 @@ interface StyledButtonAnchorProps {
   size?: Size
 }
 
-export const StyledButtonAnchor = styled('a', {
+export const StyledButtonAnchor = styled(Link, {
   shouldForwardProp: shouldStyledButtonForwardProps,
 })<StyledButtonAnchorProps>(({ theme, kind, size }) => ({
   display: 'inline-flex',

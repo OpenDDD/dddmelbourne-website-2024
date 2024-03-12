@@ -109,9 +109,9 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
         Bunnings.
       </Text>
       <div>
-        <Image src="/static/images/sponsors/2021-moqdigital.png" width="100" height="100" />
-        <Image src="/static/images/sponsors/planit_n.png" width="100" height="100" />
-        <Image src="/static/images/sponsors/2022-bunnings.png" width="100" height="100" />
+        <Image src="/static/images/sponsors/2021-moqdigital.png" width="100" height="100" alt="moqdigital" />
+        <Image src="/static/images/sponsors/planit_n.png" width="100" height="100" alt="planit" />
+        <Image src="/static/images/sponsors/2022-bunnings.png" width="100" height="100" alt="bunnings" />
       </div>
       <Text>
         Morning Tea, Lunch, and Afternoon Tea will be provided and will be served in the Northern, Southern and

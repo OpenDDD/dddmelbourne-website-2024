@@ -38,6 +38,7 @@ function stylesFromKind(kind: StyledAlertProps['kind'], theme: DDDTheme) {
   }
 }
 
+// @ts-ignore
 export const StyledAlert = styled(Alert, {
   shouldForwardProp: (prop) => prop !== 'kind',
 })<StyledAlertProps>(({ kind, theme }) => ({
