@@ -1,7 +1,5 @@
 import React from 'react'
 import { GetServerSideProps, NextPage } from 'next'
-import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'
 import { Session } from 'config/types'
@@ -9,12 +7,8 @@ import { Main } from 'layouts/main'
 import { getCommonServerSideProps } from 'components/utils/getCommonServerSideProps'
 import { fetchSessions } from 'components/utils/useSessions'
 import { useSessionGroups } from 'components/utils/useSessionGroups'
-import { StyledList, Text } from 'components/global/text'
-import { SafeLink } from 'components/global/safeLink'
+import { Text } from 'components/global/text'
 import { roomLocations } from 'components/venueMapData'
-import Image from 'next/image'
-
-const VenueMap = dynamic(() => import('components/venueMap'), { ssr: false })
 
 interface ConferencePageProps {
   sessions?: Session[]
@@ -52,176 +46,136 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
         {conference.Name} {format(conference.Date, 'y')} Conference Day Information
       </h1>
 
-      <h2>Getting There</h2>
-      <Text>
-        Our <SafeLink href="/venue">Venue</SafeLink> page has more information on how to get to the conference.
-      </Text>
-      <h2>Agenda</h2>
-      <Text>
-        {conference.Name} {format(conference.Date, 'y')} consists of nine tracks, which will be run out of the Riverside
-        Theatre, and Meeting Rooms 1 through to 8. The Keynote and Locknote will take place in the Riverside Theatre.
-        You can <SafeLink href="/agenda">view the full agenda</SafeLink> online.
-      </Text>
-      <Text>
-        Rooms will be clearly marked on the day, as well as screens outside the rooms indicating upcoming sessions.
-        Rooms have no particular theme, attend whichever sessions most interest you at each time slot. Note: We have a
-        mix of 45 minute and 20 minute sessions. If you wish to move around while sessions are in progress then feel
-        free to do so, however take care to be respectful towards our presenters.
-      </Text>
-      <h2>Around the Venue</h2>
-      <Text>
-        We are located on level 2 near the Riverside Theatre through to the Northern and Southern Foyers. We also have a
-        treasure hunt running - get your checklist from the DDD Help Desk and complete the hunt for your chance to win a
-        prize at the end of the day!
-      </Text>
-      <div style={{ zIndex: 200 }}>
-        <VenueMap roomLocationData={roomLocations} />
-      </div>
+      <h2>Getting here</h2>
+      {/*TODO: MAP*/}
 
-      <h3>Toilets</h3>
       <Text>
-        The above floorplan shows where the toilets are located on level 2. They will be "Access all toilets", which
-        means that they are open to anyone to use regardless of disability, gender identity or any other personal
-        attribute. We encourage you to use the most appropriate and comfortable toilet for you and not to feel pressured
-        to use the "Access all toilets" on level 2.
-      </Text>
-      <h3>Childcare</h3>
-      <Text>
-        Childcare is located in Meeting Room 11, opposite the DDD Perth Help Desk on Level 2. Please let us know during
-        registration that you have a Childcare ticket and one of our organisers will help you. An email with more
-        information is sent to all registered parents and guardians before the conference starts.
-      </Text>
-      <h3>Private baby-feeding and pumping area</h3>
-      <Text>
-        Level 1 has an optional baby changing and feeding room with all the facilities, close to the lifts. You are
-        welcome to pump or feed your baby anywhere you feel comfortable, and if anyone makes you feel otherwise please
-        let a volunteer or organiser know as per our code of conduct.
-      </Text>
-      <h3>WiFi</h3>
-      <Text>
-        PCEC has free wifi for all attendees limited to 512Kb download speed that needs to be renewed every hour. We
-        make no guarantees about the quality or speed of the wifi.
+        Melbourne Town Hall is on the corner of Collins and Swanston Street in the CBD. The address is 90/130 Swanston
+        Street, Melbourne VIC 3000.
       </Text>
 
-      <h3>Food and Drink</h3>
       <Text>
-        Tea and coffee will be available throughout the day at the Coffee Carts sponsored by Planit, MOQDigital and
-        Bunnings.
+        The closest train station to the Town Hall is Flinders Street Station. The closest tram stop is Town
+        Hall/Collins Street which is serviced by trams 109, 48, 12, 11 and 6.
       </Text>
-      <div>
-        <Image src="/static/images/sponsors/2021-moqdigital.png" width="100" height="100" alt="moqdigital" />
-        <Image src="/static/images/sponsors/planit_n.png" width="100" height="100" alt="planit" />
-        <Image src="/static/images/sponsors/2022-bunnings.png" width="100" height="100" alt="bunnings" />
-      </div>
+
       <Text>
-        Morning Tea, Lunch, and Afternoon Tea will be provided and will be served in the Northern, Southern and
-        Riverside Theatre Foyers. Your name tag should have a sticker with a number indicating your lunch order - if not
-        (or if your number is zero), please see the Help Desk for advice. You can use the interactive map above to
-        locate the food station of your choice: use the Layers icon in the top right to enable the 'Lunch' view.
+        The nearest car park is Wilsons Parking on 172-192 Flinders Lane. Please note that Swanston Street is closed to
+        cars and only vehicles with a special permit can enter Swanston Street. For that reason, we highly recommend
+        public transport as the main mode of transport for attendees. There are drop-off zones on Collins Street that
+        are a short walking distance from the Town Hall Main Entrance.
       </Text>
+
+      <h2>Accessibility</h2>
+
       <Text>
-        <strong>Please bring appropriate precautions (epipen or other)</strong> as the Venue will have a lot of people
-        and they can't guarantee against kitchen contaminants. This applies particularly to nut allergies.
+        Melbourne Town Hall is wheelchair accessible. Enter the venue via the copper doors which are situated on the
+        left-hand side when facing the main entrance and take the lift to Level 1. All Melbourne Town hall rooms are
+        fully accessible.
       </Text>
-      <h3>Afterparty</h3>
+
+      <Text>Melbourne Townhall has accessible restrooms located on the Ground and Third Floor.</Text>
+
+      <h2>Registration and security</h2>
+      {/*TODO: Image*/}
+
       <Text>
-        After the event, we invite you to join us in the foyer adjoining the conference rooms for the afterparty. Some
-        games, food and drink will be provided, while we enjoy the beautiful views over Elizabeth Quay and the Swan
-        River.
+        Town Hall has security personnel stationed at the main entrance on Swanston Street. Please note that it is a
+        venue requirement and condition of entry that all bags are searched by Security.
       </Text>
-      <h2>Code of Conduct</h2>
+
       <Text>
-        Please familiarise yourself with the <Link href="/code-of-conduct">Conference Code of Conduct</Link>.
+        There will be a registration desk located in the Level 1 Foyer, directly up the stairs from the main entrance.
+        You can pick up your badge and lanyard here. Please note that you are required to keep your lanyard on at all
+        times during the conference.
       </Text>
+
+      <h2>Photo policy</h2>
+
       <Text>
-        All attendees, speakers, sponsors and volunteers at our conference are required to agree with the code of
-        conduct. Organisers and volunteers will enforce this code throughout the event. We are expecting cooperation
-        from all participants to help ensuring a safe, welcoming environment for everybody.
+        We will have a videographer and photographer roaming on the day. If you are not comfortable with being filmed or
+        photographed, please let one of our organisers or volunteers know at registration time and they will provide you
+        with a colour-coded lanyard to indicate this.
       </Text>
-      <h3>What to do if someone makes a complaint about you?</h3>
-      <StyledList>
-        <li>DDD Perth organisers and volunteers will have a conversation with you, and listen to you.</li>
+
+      <h2>Prize draw</h2>
+
+      <Text>
+        This image is a collage featuring promotional materials for an event. On the left, there are various
+        gaming-related prizes, including an Xbox console with 'Diablo' artwork, a Nintendo Switch with 'Zelda' imagery,
+        a LEGO 'Raiders Lost Tomb' set, Webjet gift cards, and Bose headphones. On the right, there's a photo of a
+        crowded event hall with attendees, the logo of DDD Melbourne, and a call to action to use the hashtag '#DDDMelb'
+        on Twitter, alongside the official Twitter handle '@DDDMelb' and a snapshot of the account profile
+      </Text>
+
+      <Text>
+        At registration time, you can pick up your sponsor bingo card, which allows you to collect a stamp from each
+        vendor booth you visit. You can submit your completed card in a raffle on the day for your chance to win amazing
+        prizes!
+      </Text>
+
+      <h2>Sharing your experience</h2>
+
+      <Text>We’ll be live-posting from the DDD Melbourne X channel on the day, so don’t forget to follow us here.</Text>
+
+      <Text>
+        We’d also love for you to share your conference experience on social media! Whether you’re taking selfies,
+        sharing your key takeaways from the sessions, or taking Instagram-worthy shots of the after party, don't forget
+        to tag our channels and use our official conference hashtag #DDDMelb when posting.
+      </Text>
+
+      <h2>Coffee cart</h2>
+
+      <Text>
+        The image is split into two scenes. On the left, an espresso machine pours fresh coffee into two white cups,
+        capturing a moment in a bustling coffee shop with the barista's hand in motion. On the right, an assortment of
+        gourmet canapés is presented on wooden boards, featuring a variety of toppings like smoked salmon, cream cheese,
+        sun-dried tomatoes, and cured meats on toasted bread, suggesting a catering setup for an event.
+      </Text>
+
+      <Text>We will have complimentary barista coffee available on the day from two locations.</Text>
+
+      <ul>
+        <li>Foyer: Coffee and hot drinks will be available all day.</li>
         <li>
-          Listen to the complaint with an open mind and consider the effect rather than intent of the behaviour in
-          question
+          Main hall: Coffee and hot drinks will only be available during mealtimes to avoid disrupting talks that are in
+          session.
         </li>
-        <li>Don't be dismissive of the complainant</li>
-        <li>Understand any advice given on how to act in the future</li>
-        <li>Comply with the directions of the DDD Perth organisers and volunteers</li>
-      </StyledList>
+      </ul>
+
+      <Text>Thank you to our coffee sponsors Kodez and justdigitalpeople!</Text>
+
+      <h2>After party</h2>
+
+      {/*TODO: Map*/}
+
       <Text>
-        We believe everyone here is coming from a good place, and so we expect that you're learning, just like we are.
+        The DDD Melbourne after party takes place at 6pm at Beer DeLuxe, Federation Square, only a short walk from the
+        town hall. Drinks and light canapes will be provided. Free entry to the after party is included with every
+        ticket purchase.
       </Text>
-      <h2>Getting Help</h2>
-      <h3>Issues &amp; Questions</h3>
+
+      <h2>Code of conduct</h2>
+
       <Text>
-        Please feel free to speak to a member of the DDD Perth team who will be easily identifiable by their Volunteer
-        DDD Perth t-shirts.
+        DDD Melbourne is dedicated to providing a harassment-free conference experience for everyone, regardless of but
+        not limited to: gender, gender identity and expression, sexual orientation, disability, physical appearance,
+        body size, race, age or religion. We do not tolerate harassment of conference participants in any form. Sexual
+        language and imagery is not appropriate anywhere. This applies to conference talks also.
       </Text>
+
       <Text>
-        We'll identify the organisers and volunteers during the Welcome, and there will also be a help desk next to
-        registration, attended at all times by members from our wonderful team.
+        Conference participants or anyone interacting with the event violating these rules may be sanctioned or expelled
+        from the conference without a refund at the discretion of the conference organisers. Click here to view the full
+        Code of Conduct.
       </Text>
+
       <Text>
-        You can also send a tweet to @dddperth or email <Link href="mailto:info@dddperth.com">info@dddperth.com</Link>.
+        Please don't hesitate to reach out to any DDD Melbourne organisers and volunteers on the day if you need any
+        assistance.
       </Text>
-      <Text>
-        If you wish to report an issue anonymously, you can do so using{' '}
-        <SafeLink href="https://forms.office.com/Pages/ResponsePage.aspx?id=8IU585acE0S9pvuDhIEiS3674sSFwiFHpg5usp1ihu5URDVGTks2N1VOQVBWWUU1VFJESDZMNlkxNSQlQCN0PWcu">
-          this form
-        </SafeLink>
-        . We can't follow up an anonymous report, but we will fully investigate it and take whatever action we can to
-        prevent a recurrence.
-      </Text>
-      <div>
-        Emergency contact numbers:
-        <StyledList>
-          <li>Alex Colville - 0439 227 330</li>
-          <li>Rebecca Waters - 0405 100 063</li>
-          <li>Matt Ward - 0403 695 863</li>
-        </StyledList>
-      </div>
-      <h2>COVID-19</h2>
-      <Text>
-        Our <SafeLink href="/covid-policy">COVID-19 Policy</SafeLink> explains how we're adhering to WA Government
-        guidelines, and our expectations for attendees to enjoy the conference safely and responsibly.
-      </Text>
-      <h3>Feel Unwell During the Day?</h3>
-      <StyledList>
-        <li>
-          If you don't feel well ahead of DDD Perth, please stay home and tune into the livestreams instead. Please see
-          below for further details.
-        </li>
-        <li>
-          If on the day you feel unwell, please mask up, inform the help desk and leave the event. Provide your details
-          so we can check you're going okay and then seek medical assistance.
-        </li>
-      </StyledList>
-      <h3>Be COVID Safe</h3>
-      <StyledList>
-        <li>Sanitiser will be available throughout the venue. If you need help, speak to a volunteer.</li>
-        <li>
-          During our prize draw, winners have the option of a high five, foot tap, elbow bump, high five “miss” or a
-          wave.
-        </li>
-      </StyledList>
-      <h2>Livestream</h2>
-      <Text>
-        In 2022, DDD Perth will be livestreamed for the first time ever, which will improve accessibility for those in
-        WA regions or those who can't make it to the venue on the day. Each track of the agenda will have its own
-        livestream, which you can access from each session description on the <SafeLink href="/agenda">Agenda</SafeLink>
-        . We also have a{' '}
-        <SafeLink href="https://www.youtube.com/playlist?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx">playlist</SafeLink>{' '}
-        containing all the streams for ease of access.
-      </Text>
-      {conference.Handbook && (
-        <p>
-          You can also download much of the information on this page as a PDF:&nbsp;
-          <a className="btn btn-pdf" href={'/static/docs/' + conference.Handbook}>
-            Download handbook (PDF)
-          </a>
-        </p>
-      )}
+
+      <Text>We look forward to welcoming you this Saturday for an incredible conference experience!</Text>
     </Main>
   )
 }
