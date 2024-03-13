@@ -21,7 +21,7 @@ const platinumSponsors: Sponsor[] = [
   {
     id: '2024-OctopusDeploy',
     imageUrl: '/static/images/sponsors/2024-octopus-deploy.png',
-    name: 'DevExpress',
+    name: 'Octopus Deploy',
     type: SponsorType.Platinum,
     url: 'https://octopus.com/',
   },
