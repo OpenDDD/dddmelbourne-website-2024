@@ -136,6 +136,18 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
         crowded event hall with attendees, the logo of DDD Melbourne, and a call to action to use the hashtag '#DDDMelb'
         on Twitter, alongside the official Twitter handle '@DDDMelb' and a snapshot of the account profile
       </Text>
+      <StyledImage
+        src="dddmelbourne/static/images/prizes.png"
+        alt={
+          '        This image is a collage featuring promotional materials for an event. On the left, there are various\n' +
+          "        gaming-related prizes, including an Xbox console with 'Diablo' artwork, a Nintendo Switch with 'Zelda' imagery,\n" +
+          "        a LEGO 'Raiders Lost Tomb' set, Webjet gift cards, and Bose headphones. On the right, there's a photo of a\n" +
+          "        crowded event hall with attendees, the logo of DDD Melbourne, and a call to action to use the hashtag '#DDDMelb'\n" +
+          "        on Twitter, alongside the official Twitter handle '@DDDMelb' and a snapshot of the account profile\n"
+        }
+        config={pixboostConfig}
+        op={'optimise'}
+      />
 
       <Text>
         At registration time, you can pick up your sponsor bingo card, which allows you to collect a stamp from each
@@ -155,12 +167,17 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
       <h2>Coffee cart</h2>
 
-      <Text>
-        The image is split into two scenes. On the left, an espresso machine pours fresh coffee into two white cups,
-        capturing a moment in a bustling coffee shop with the barista's hand in motion. On the right, an assortment of
-        gourmet canapés is presented on wooden boards, featuring a variety of toppings like smoked salmon, cream cheese,
-        sun-dried tomatoes, and cured meats on toasted bread, suggesting a catering setup for an event.
-      </Text>
+      <StyledImage
+        src="dddmelbourne/static/images/coffee-cart.png"
+        alt={
+          'The image is split into two scenes. On the left, an espresso machine pours fresh coffee into two white cups,\n' +
+          "        capturing a moment in a bustling coffee shop with the barista's hand in motion. On the right, an assortment of\n" +
+          '        gourmet canapés is presented on wooden boards, featuring a variety of toppings like smoked salmon, cream cheese,\n' +
+          '        sun-dried tomatoes, and cured meats on toasted bread, suggesting a catering setup for an event.'
+        }
+        config={pixboostConfig}
+        op={'optimise'}
+      />
 
       <Text>We will have complimentary barista coffee available on the day from two locations.</Text>
 
