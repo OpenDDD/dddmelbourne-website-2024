@@ -236,7 +236,7 @@ const CodeOfConduct: NextPage = () => {
           <strong>Green:</strong> fine to photograph
         </li>
         <li>
-          <strong>Yellow:</strong> do not photograph
+          <strong>Red:</strong> do not photograph
         </li>
       </StyledList>
 
