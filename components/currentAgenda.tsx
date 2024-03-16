@@ -38,17 +38,14 @@ export const CurrentAgenda = ({
     <Fragment>
       <p>Select a session to see more details&hellip;</p>
 
-      {acceptingFeedback && (
-        <StyledFeedbackActions>
-          <ActionButton
-            action={{ Title: 'Conference Feedback', Url: Conference.ConferenceFeedbackLink, Category: 'conference' }}
-          />
-          <ActionButton
-            action={{ Title: 'Session feedback', Url: Conference.SessionFeedbackLink, Category: 'conference' }}
-          />
-        </StyledFeedbackActions>
-      )}
-      <span></span>
+      <StyledFeedbackActions>
+        <ActionButton
+          action={{ Title: 'Conference Feedback', Url: Conference.ConferenceFeedbackLink, Category: 'conference' }}
+        />
+        <ActionButton
+          action={{ Title: 'Session feedback', Url: Conference.SessionFeedbackLink, Category: 'conference' }}
+        />
+      </StyledFeedbackActions>
 
       <Agenda
         sessions={sessions}

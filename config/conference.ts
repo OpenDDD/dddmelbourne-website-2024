@@ -143,8 +143,8 @@ const Conference: IConference = {
   FeedbackOpenFrom: feedbackOpenFrom,
   FeedbackOpenUntil: feedbackOpenUntil,
 
-  ConferenceFeedbackLink: '/conference-feedback',
-  SessionFeedbackLink: '/feedback',
+  ConferenceFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
+  SessionFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
 
   HideDate: hideDate,
   HideSponsors: false,
