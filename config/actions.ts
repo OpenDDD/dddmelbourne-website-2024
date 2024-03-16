@@ -59,7 +59,7 @@ export default function getConferenceActions(conference: Conference, dates: Date
     actions.push({
       Category: 'conference',
       Title: 'Give feedback',
-      Url: '/feedback',
+      Url: conference.ConferenceFeedbackLink,
     })
   }
 
