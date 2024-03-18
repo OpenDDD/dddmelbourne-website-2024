@@ -17,11 +17,10 @@ import {
 } from '../../components/Voting/landing.styled'
 import { formatInTimeZone } from 'date-fns-tz'
 import React, { FormEvent, Fragment } from 'react'
-import { DialogOverlay } from '@reach/dialog'
 import { Button, ButtonAnchor } from '../../components/global/Button/Button'
-import '@reach/dialog/styles.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import ReactModal from 'react-modal'
 
 type VoteLandingProps = {
   instance: string
@@ -52,7 +51,7 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
 
   return (
     <Fragment>
-      <DialogOverlay isOpen={showDialog} onDismiss={close}>
+      <ReactModal isOpen={showDialog} onDismiss={close}>
         <StyledDialogContent style={{ textAlign: 'center' }}>
           {!showBuyTicket && !showBoughtTicket && (
             <Fragment>
@@ -93,7 +92,7 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
             </Fragment>
           )}
         </StyledDialogContent>
-      </DialogOverlay>
+      </ReactModal>
       <Main title="Vote" description={`${conference.Name} voting page.`}>
         <StyledLandingContainer>
           <StyledHeader tag="h1">{`${instance} Conference Voting`}</StyledHeader>

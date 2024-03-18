@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const config = {
   poweredByHeader: false,
-  experimental: {
-    outputStandalone: process.env.STANDALONE_BUILD === 'true',
-  },
   async rewrites() {
     return {
       beforeFiles: [
