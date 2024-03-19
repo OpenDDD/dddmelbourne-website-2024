@@ -10,7 +10,7 @@
     "clean": "rimraf build .next public/_next",
     "build:standalone": "npm run clean && dotenv -v STANDALONE_BUILD=true next build && copyfiles package-lock.json public/**/*.* .next/standalone && cd deploy && copyfiles *.* ../.next/standalone && cd ../.next && copyfiles \"static/**/*\" standalone/public/_next && cd standalone && npm ci --production --ignore-scripts && rimraf node_modules/@next/swc-*",
     "dev": "cross-env NODE_OPTIONS='--inspect' node --require ./load-appinsights.js ./node_modules/.bin/next dev",
-    "build": "next build",
+    "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
     "start": "node --require ./load-appinsights.js ./node_modules/.bin/next start",
     "analyze": "cross-env ANALYZE=true npm run build",
     "format-code": "prettier \"pages/**/*.*\" \"components/**/*.*\" \"layouts/**/*.*\" \"config/**/*.*\" --write",
