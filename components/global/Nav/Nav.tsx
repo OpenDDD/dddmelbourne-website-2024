@@ -1,6 +1,5 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import { MenuItem } from 'config/types'
 import { StyledNav, StyledNavLink, StyledNavList } from './Nav.styled'
 import { useNavigationState, useNavigationDispatch } from './Nav.context'
@@ -94,8 +93,10 @@ export const Nav = ({ menu }: NavProps) => {
     }
 
     if (expanded) {
-      document.addEventListener('click', documentClickHandler)
-      document.addEventListener('touchstart', documentClickHandler)
+      window.setTimeout(() => {
+        document.addEventListener('click', documentClickHandler)
+        document.addEventListener('touchstart', documentClickHandler)
+      }, 0)
     }
 
     return () => {
@@ -116,9 +117,9 @@ export const Nav = ({ menu }: NavProps) => {
                 {item.name}
               </StyledNavLink>
             ) : (
-              <Link href={item.href} passHref={true}>
-                <StyledNavLink active={isFirstBranchMatched(pathname, item.href)}>{item.name}</StyledNavLink>
-              </Link>
+              <StyledNavLink href={item.href} passHref={true} active={isFirstBranchMatched(pathname, item.href)}>
+                {item.name}
+              </StyledNavLink>
             )}
           </li>
         ))}

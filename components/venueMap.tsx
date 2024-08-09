@@ -130,7 +130,7 @@ const MapEvents = () => {
 }
 
 const Map = ({ roomLocationData }) => {
-  const [map, setMap] = useState(null)
+  const [map, _setMap] = useState(null)
   const userLocButton = useRef(null)
 
   useEffect(() => {
@@ -167,7 +167,7 @@ const Map = ({ roomLocationData }) => {
       style={{ height: 700, width: '100%' }}
       minZoom={19}
       maxZoom={22}
-      whenCreated={setMap}
+      //TODO: whenReady={setMap}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
