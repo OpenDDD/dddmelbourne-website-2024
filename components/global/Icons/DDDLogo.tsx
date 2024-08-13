@@ -4,7 +4,7 @@ import { useConfig } from 'Context/Config'
 import styled from '@emotion/styled'
 
 const StyledImage = styled('img')(() => ({
-  height: 25,
+  height: 23,
   width: 'auto',
 }))
 
@@ -16,7 +16,7 @@ export const DDDLogo = () => {
       width="296"
       height="35"
       alt={`${conference.Name} logo`}
-      src="/static/images/logo-dddmelbourne-2024.png"
+      src="/static/images/logo-dddmelbourne-2025.png"
     />
   )
 }

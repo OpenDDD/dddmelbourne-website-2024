@@ -18,19 +18,19 @@ const tagLine = `${name} is an inclusive non-profit conference for the Melbourne
 const tz = 'Australia/Melbourne'
 const hideDate = false
 const ticketPurchasingOptions = TicketPurchasingOptions.OnSale
-const staticDate = '2024-03-16T09:00'
+const staticDate = '2025-02-22T09:00'
 const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
 const currentInstance = date.getFullYear()
 const firstInstance = 2015
-const registrationOpenFrom = zonedTimeToUtc('2023-09-15T12:00:00', tz)
-const registrationOpenWave2From = zonedTimeToUtc('2023-10-15T08:00:00', tz)
-const registrationOpenUntil = zonedTimeToUtc('2024-02-23T00:00:00', tz)
-const presentationSubmissionsOpenFrom = zonedTimeToUtc('2023-09-01T08:00:00', tz)
-const presentationSubmissionsOpenUntil = zonedTimeToUtc('2023-11-01T23:59:59', tz)
-const votingOpenFrom = zonedTimeToUtc('2023-11-08T00:00:00', tz)
-const votingOpenUntil = zonedTimeToUtc('2023-11-20T23:59:59', tz)
-const agendaPublishedFrom = zonedTimeToUtc('2023-12-01T16:00:00', tz)
+const registrationOpenFrom = zonedTimeToUtc('2024-10-01T12:00:00', tz)
+const registrationOpenWave2From = zonedTimeToUtc('2024-10-01T12:00:00', tz)
+const registrationOpenUntil = null
+const presentationSubmissionsOpenFrom = zonedTimeToUtc('2024-09-01T08:00:00', tz)
+const presentationSubmissionsOpenUntil = zonedTimeToUtc('2024-11-01T23:59:59', tz)
+const votingOpenFrom = zonedTimeToUtc('2024-11-08T00:00:00', tz)
+const votingOpenUntil = zonedTimeToUtc('2024-11-20T23:59:59', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2024-12-01T09:00:00', tz)
 const feedbackOpenFrom = toDate(date)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
@@ -46,12 +46,7 @@ const importantDates: ImportantDate[] = [
   },
   {
     Date: registrationOpenFrom,
-    Description: 'Ticket sales wave 1 open',
-    Type: 'tickets',
-  },
-  {
-    Date: registrationOpenWave2From,
-    Description: 'Ticket sales wave 2 open',
+    Description: 'Ticket sales open',
     Type: 'tickets',
   },
   { Description: 'Voting open', Date: votingOpenFrom, Type: 'voting' },

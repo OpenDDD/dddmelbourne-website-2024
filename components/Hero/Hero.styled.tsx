@@ -25,7 +25,7 @@ export const HeroContentWrapper = styled('div')(({ theme }) => ({
     height: '100%',
     backgroundColor: theme.colors.dddpurple,
     position: 'absolute',
-    opacity: 0.8,
+    opacity: 0.7,
     content: '""',
   },
 }))
