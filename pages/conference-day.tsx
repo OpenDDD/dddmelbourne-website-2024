@@ -27,7 +27,7 @@ const pixboostConfig = {
   },
 }
 
-const StyledImage = styled(Image)(() => ({
+const StyledImage = styled(Image)((_) => ({
   textAlign: 'center',
   maxWidth: '100%',
   height: 'auto',
