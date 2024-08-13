@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { breakpointMax } from 'components/utils/styles/breakpoints'
 import { calcRem } from 'components/utils/styles/calcRem'
 
-export const HeroWrapper = styled('div')(() => ({
+export const HeroWrapper = styled('div')((_) => ({
   position: 'relative',
   height: '400px',
   img: {

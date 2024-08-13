@@ -70,7 +70,7 @@ export const StyledSessionTitle = styled('h3')(({ theme }) => ({
   overflow: 'hidden',
 }))
 
-export const StyledSessionAbstract = styled('div')(() => ({
+export const StyledSessionAbstract = styled('div')((_) => ({
   flex: 1,
   overflow: 'hidden',
   overflowY: 'auto',
@@ -136,7 +136,7 @@ export const StyledEloTag = styled('li')(({ theme }) => ({
   color: theme.colors.white,
 }))
 
-export const StyledEloVoteFooter = styled('div')(() => ({
+export const StyledEloVoteFooter = styled('div')((_) => ({
   textAlign: 'center',
 }))
 
