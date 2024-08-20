@@ -1,4 +1,4 @@
-import { Sponsor } from './types'
+import { Sponsor, SponsorType } from './types'
 
 const diamondSponsors: Sponsor[] = [
   // {
@@ -11,52 +11,30 @@ const diamondSponsors: Sponsor[] = [
 ]
 
 const platinumSponsors: Sponsor[] = [
-  // {
-  //   id: '2024-DevExpress',
-  //   imageUrl: '/static/images/sponsors/2024-devexpress.png',
-  //   name: 'DevExpress',
-  //   type: SponsorType.Platinum,
-  //   url: 'https://www.devexpress.com/',
-  // },
-  // {
-  //   id: '2024-OctopusDeploy',
-  //   imageUrl: '/static/images/sponsors/2024-octopus-deploy.png',
-  //   name: 'Octopus Deploy',
-  //   type: SponsorType.Platinum,
-  //   url: 'https://octopus.com/',
-  // },
+  {
+    id: '2024-Microsoft',
+    imageUrl: '/static/images/sponsors/2025-microsoft.png',
+    name: 'Microsoft',
+    type: SponsorType.Platinum,
+    url: 'https://developer.microsoft.com/en-us/advocates/index.html',
+  },
+  {
+    id: '2024-OctopusDeploy',
+    imageUrl: '/static/images/sponsors/2025-octopus-deploy.png',
+    name: 'Octopus Deploy',
+    type: SponsorType.Platinum,
+    url: 'https://octopus.com/',
+  },
 ]
 
 const goldSponsors: Sponsor[] = [
-  // {
-  //   id: 'webjet',
-  //   imageUrl: '/static/images/sponsors/2024-webjet.png',
-  //   name: 'MakerX',
-  //   type: SponsorType.Gold,
-  //   url: 'https://webjet.com.au',
-  // },
-  // {
-  //   id: 'insight',
-  //   imageUrl: '/static/images/sponsors/2024-insight.jpg',
-  //   name: 'Insight',
-  //   type: SponsorType.Gold,
-  //   url: 'https://au.insight.com/',
-  // },
-  // {
-  //   id: 'netwealth',
-  //   imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
-  //   name: 'Netwealth',
-  //   type: SponsorType.Gold,
-  //   url: 'https://netwealth.com.au',
-  // },
-  // {
-  //   id: 'github',
-  //   imageUrl: '/static/images/sponsors/2024-github.png',
-  //   name: 'GitHub',
-  //   type: SponsorType.Gold,
-  //   url: 'https://github.com',
-  //   logoSize: '50',
-  // },
+  {
+    id: 'starrez',
+    imageUrl: '/static/images/sponsors/2025-starrez.png',
+    name: 'StarRez',
+    type: SponsorType.Gold,
+    url: 'https://www.starrez.com/',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
