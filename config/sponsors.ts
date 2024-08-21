@@ -38,36 +38,13 @@ const goldSponsors: Sponsor[] = [
 ]
 
 const silverSponsors: Sponsor[] = [
-  // {
-  //   id: 'qoria',
-  //   imageUrl: '/static/images/sponsors/2024-qoria.png',
-  //   name: 'Qoria',
-  //   type: SponsorType.Silver,
-  //   url: 'https://qoria.com/',
-  // },
-  // {
-  //   id: 'sizzle',
-  //   imageUrl: '/static/images/sponsors/2024-sizzle.png',
-  //   name: 'The Sizzle',
-  //   type: SponsorType.Silver,
-  //   url: 'https://thesizzle.com.au/',
-  // },
-  // {
-  //   id: 'kaleida',
-  //   imageUrl: '/static/images/sponsors/2024-kaleida.png',
-  //   name: 'Kaleida',
-  //   type: SponsorType.Silver,
-  //   url: 'https://www.kaleida.team/',
-  //   logoSize: '60',
-  // },
-  // {
-  //   id: 'umbraco',
-  //   imageUrl: '/static/images/sponsors/2024-umbraco.png',
-  //   name: 'Umbraco',
-  //   type: SponsorType.Silver,
-  //   url: 'https://umbraco.com/',
-  //   logoSize: '60',
-  // },
+  {
+    id: 'qoria',
+    imageUrl: '/static/images/sponsors/2024-qoria.png',
+    name: 'Qoria',
+    type: SponsorType.Silver,
+    url: 'https://qoria.com/',
+  },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
