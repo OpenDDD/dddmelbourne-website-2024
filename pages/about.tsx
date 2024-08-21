@@ -41,9 +41,6 @@ const About: NextPage = () => {
         <li>Focussing on creating a safe and inclusive environment where everyone is welcome</li>
         <li>Providing free childcare options for the duration of the main conference</li>
       </StyledList>
-      <StyledLogoWrapper>
-        <img src="/static/images/logo-dddmelbourne.png" alt="DDD Melbourne logo" loading="lazy" />
-      </StyledLogoWrapper>
       <Text>
         Furthermore, {conference.Name} aims to both create opportunities for underrepresented minorities, juniors and
         first-time speakers to present as well as influence the wider software industry to encourage such opportunities
