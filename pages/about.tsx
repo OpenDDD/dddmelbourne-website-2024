@@ -43,7 +43,6 @@ const About: NextPage = () => {
       </StyledList>
       <StyledLogoWrapper>
         <img src="/static/images/logo-dddmelbourne.png" alt="DDD Melbourne logo" loading="lazy" />
-        <img src="/hero/hero.svg" alt="DDD Melbourne 2024 logo" loading="lazy" />
       </StyledLogoWrapper>
       <Text>
         Furthermore, {conference.Name} aims to both create opportunities for underrepresented minorities, juniors and
