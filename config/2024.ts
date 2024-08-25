@@ -6,29 +6,31 @@ import {
   TicketPurchasingOptions,
   TicketsProvider,
   ImportantDate,
+  Venue,
 } from './types'
 import { zonedTimeToUtc } from 'date-fns-tz'
-import { add, sub, set, toDate } from 'date-fns'
-import { pcec } from './venues/pcec'
+import { add, set, toDate } from 'date-fns'
+import { MelbourneTownHall } from './venues/melbourne-town-hall'
 
-const venue = pcec
-const name = 'DDD Perth'
-const tagLine = `${name} is an inclusive non-profit conference for the Perth software community`
+const name = 'DDD Melbourne'
+const tagLine = `${name} is an inclusive non-profit conference for the Melbourne software community`
 
+const tz = 'Australia/Melbourne'
 const hideDate = false
 const ticketPurchasingOptions = TicketPurchasingOptions.OnSale
-const staticDate = '2022-09-10T07:45'
-const date = zonedTimeToUtc(staticDate, '+08:00')
+const staticDate = '2024-03-16T09:00'
+const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
-const currentInstance = date.getFullYear()
-const firstInstance = 2015
-const registrationOpenFrom = zonedTimeToUtc('2022-05-16T08:00:00', '+08:00')
-const registrationOpenUntil = hideDate ? null : sub(date, { hours: 14, minutes: 45 })
-const presentationSubmissionsOpenFrom = zonedTimeToUtc('2022-04-11T08:00:00', '+08:00')
-const presentationSubmissionsOpenUntil = zonedTimeToUtc('2022-05-13T23:59:59', '+08:00')
-const votingOpenFrom = zonedTimeToUtc('2022-05-27T17:00:00', '+08:00')
-const votingOpenUntil = zonedTimeToUtc('2022-06-10T23:59:59', '+08:00')
-const agendaPublishedFrom = zonedTimeToUtc('2022-07-07T17:00:00', '+08:00')
+const currentInstance = 2024
+const firstInstance = 2024
+const registrationOpenFrom = zonedTimeToUtc('2023-09-15T12:00:00', tz)
+const registrationOpenWave2From = zonedTimeToUtc('2023-10-15T08:00:00', tz)
+const registrationOpenUntil = zonedTimeToUtc('2024-02-23T00:00:00', tz)
+const presentationSubmissionsOpenFrom = zonedTimeToUtc('2023-09-01T08:00:00', tz)
+const presentationSubmissionsOpenUntil = zonedTimeToUtc('2023-11-01T23:59:59', tz)
+const votingOpenFrom = zonedTimeToUtc('2023-11-08T00:00:00', tz)
+const votingOpenUntil = zonedTimeToUtc('2023-11-20T23:59:59', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2023-12-01T16:00:00', tz)
 const feedbackOpenFrom = toDate(date)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
@@ -44,7 +46,12 @@ const importantDates: ImportantDate[] = [
   },
   {
     Date: registrationOpenFrom,
-    Description: 'Ticket sales open',
+    Description: 'Ticket sales wave 1 open',
+    Type: 'tickets',
+  },
+  {
+    Date: registrationOpenWave2From,
+    Description: 'Ticket sales wave 2 open',
     Type: 'tickets',
   },
   { Description: 'Voting open', Date: votingOpenFrom, Type: 'voting' },
@@ -72,44 +79,45 @@ if (!hideDate) {
   })
 }
 
-const Conference: IConference = {
+const venue: Venue | null = MelbourneTownHall
+
+const From2024: IConference = {
   Name: name,
   Instance: currentInstance.toString(),
   PreviousInstance: (currentInstance - 1).toString(),
   PreviousInstances: [...Array(currentInstance - firstInstance).keys()].map((_, i) => (firstInstance + i).toString()),
   Organiser: {
-    Name: 'DDD WA Inc.',
-    Url: 'https://blog.dddperth.com/meet-the-team-35865433cb39',
-    ShirtColour: 'yellow',
+    Name: 'OZ Dev Inc.',
+    Url: 'https://medium.com/ddd-melbourne/the-ddd-melbourne-crew-5f0dd3da09df',
+    ShirtColour: 'TBD',
   },
   TagLine: tagLine,
   SiteDescription: `${tagLine}.`,
   Goal: "Our goal is to create an approachable event that appeals to the whole community, especially people that don't normally get to attend or speak at conferences.",
-  GoogleAnalyticsId: 'UA-60040308-1',
-  TicketPrice: '$60',
+  GoogleAnalyticsId: 'UA-99087610-1',
+  TicketPrice: '$80',
   ChildcarePrice: 'free',
   TicketsProviderId: TicketsProvider.Tito,
-  TicketsProviderAccountId: 'dddperth',
-  TicketsProviderEventId: '2022',
+  TicketsProviderAccountId: 'ddd-melbourne',
+  TicketsProviderEventId: 'ddd-2024',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
-  HashTag: 'DDDPerth',
+  HashTag: 'DDDMelbourne',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
   Handbook: 'handbook2022.pdf',
-  SessionizeUrl: 'https://sessionize.com/ddd-perth-2022',
+  SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2024/',
   SessionizeEditUrl: 'https://sessionize.com/app/speaker/',
   PreviouslySubmittedTopics:
     'Agile, building great teams, UI design, UX, software testing, virtual reality, women in tech, web accessibility, open source software, workplace culture, mental health, unconscious bias, building engaged teams, self-employment tips, mentoring, Scrum, pair programming, bots, IoT, machine learning, neural networks, quantum encryption, security, reverse engineering, blockchain, Assembly language, automated deployments, mobile development, mobile test automation, Domain Driven Design, cloud native, architecture, microservices, serverless, service meshes, stream programming and Rx, APIs, GraphQL, actors, JavaScript, SPAs, TypeScript, authentication, React, UWP, Elm, HTML, HTTP protocol, Git, Docker and pointers',
 
-  ContactEmail: 'info@dddperth.com',
-  SponsorshipEmail: 'sponsorship@dddperth.com',
-  MentoringEmail: 'mentors@dddperth.com',
+  ContactEmail: 'dddmelbourne@gmail.com',
+  SponsorshipEmail: 'sponsorship@dddmelbourne.com',
+  MentoringEmail: 'speakers@dddmelbourne.com',
   EmergencyContactName: 'Rob Moore',
   EmergencyContactPhoneNumber: '0400 777 763',
   MediaOfficerName: 'Rebecca Waters',
 
-  AnonymousReportFormUrl:
-    'https://forms.office.com/Pages/ResponsePage.aspx?id=8IU585acE0S9pvuDhIEiS26sQVnJFzFLm-6XlxI4bCFURDVGTks2N1VOQVBWWUU1VFJESDZMNlkxNS4u',
+  AnonymousReportFormUrl: 'https://forms.gle/7GkewmN8BrHQtwWQA',
 
   AnonymousVoting: true,
   PreferentialVoting: true,
@@ -118,13 +126,14 @@ const Conference: IConference = {
   MaxVotes: 6,
   WaitingListCanVoteWithEmail: true,
 
-  TimeZone: 'Australia/Perth',
+  TimeZone: tz,
   StaticDate: new Date(staticDate),
   Date: date,
   EndDate: endDate,
   DoorsOpenTime: '8:00am',
   FinishTime: '5:30pm',
   RegistrationOpenFrom: registrationOpenFrom,
+  Wave2RegistrationOpenFrom: registrationOpenWave2From,
   RegistrationOpenUntil: registrationOpenUntil,
   PresentationSubmissionsOpenFrom: presentationSubmissionsOpenFrom,
   PresentationSubmissionsOpenUntil: presentationSubmissionsOpenUntil,
@@ -134,8 +143,8 @@ const Conference: IConference = {
   FeedbackOpenFrom: feedbackOpenFrom,
   FeedbackOpenUntil: feedbackOpenUntil,
 
-  ConferenceFeedbackLink: '/conference-feedback',
-  SessionFeedbackLink: '/feedback',
+  ConferenceFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
+  SessionFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
 
   HideDate: hideDate,
   HideSponsors: false,
@@ -143,47 +152,45 @@ const Conference: IConference = {
   HideVenue: venue === null,
   HasAfterParty: false,
   HideAfterpartyVenue: venue === null || venue.Afterparty === null,
-  ShowNextSessions: true,
+  ShowNextSessions: false,
 
   Venue: venue,
 
   Socials: {
     Twitter: {
-      Id: '977876011',
-      Name: 'DDDPerth',
+      Id: '971044039',
+      Name: 'DDDMelb',
     },
-    Facebook: 'DDDPerth',
-    Flickr: 'https://www.flickr.com/photos/135003652@N08/albums',
-    Youtube: 'https://www.youtube.com/channel/UCj4UnNYakbLAh2xTWTjeoAQ',
-    Blog: 'https://blog.dddperth.com/',
-    Email: 'info@dddperth.com',
-    MailingList: 'http://eepurl.com/cRvaSf',
-    GitHub: 'dddwa',
-    Instagram: 'dddperth',
-    Linkedin: 'ddd-wa-inc',
+    Flickr: 'https://www.flickr.com/photos/135717775@N07/albums',
+    Youtube: 'https://www.youtube.com/@dddmelbourne3504',
+    Blog: 'https://medium.com/ddd-melbourne',
+    Email: 'dddmelbourne@gmail.com',
+    GitHub: 'OpenDDD',
+    Instagram: 'dddmelb',
+    RedBubble: 'https://www.redbubble.com/people/DDDMelbourne/shop?asc=u',
   },
 
   ImportantContacts: {
     Police: {
-      Details: '2 Fitzgerald St, Northbridge WA 6003',
-      Phone: '(08) 9422 7111',
+      Details: 'Melbourne West Police Station, 313 Spencer St, Docklands VIC 3008',
+      Phone: null,
       MapUrl:
-        'https://www.google.com.au/maps/place/WA+Police/@-31.9539457,115.8571227,15z/data=!4m8!1m2!2m1!1swa+police!3m4!1s0x2a32bad2aad309a9:0x132b875b4c12ce8a!8m2!3d-31.9465398!4d115.852523',
+        'https://www.google.com/maps/place/Melbourne+West+Police+Station/@-37.813749,144.9488465,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad65d4f44719edf:0xc5a10f192bea4367!8m2!3d-37.8137533!4d144.9510352',
     },
     CentreAgainstSexualAssault: {
       Details: '24 hour line',
       Phone: '1800 806 292',
     },
     EmergencyMedical: {
-      Details: 'Royal Perth Hospital, 197 Wellington St, Perth WA 6000',
+      Details: 'Royal Melbourne Hospital, 300 Grattan St, Melbourne VIC 3000',
       MapUrl:
-        'https://www.google.com.au/maps/place/Royal+Perth+Hospital/@-31.953946,115.8637156,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32bb26d7818b2d:0x31db7aa443eb9c11!8m2!3d-31.953946!4d115.8659043',
+        'https://www.google.com/maps/place/The+Royal+Melbourne+Hospital/@-37.7990618,144.9538002,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad65d2e7f540971:0x9d8b2b9975e322e7!8m2!3d-37.7990618!4d144.9559889',
     },
     NonEmergencyMedical: {
-      Details: 'Perth Medical Centre, 713 Hay St, Perth WA 6000',
-      Phone: '(08) 9481 4342',
+      Details: 'Swanston Street Medical Centre, Level 3, 255 Bourke St, Melbourne VIC 3000',
+      Phone: null,
       MapUrl:
-        'https://www.google.com.au/maps/place/Perth+Medical+Centre/@-31.9539771,115.8552714,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32bad5d00fb27f:0xa93cc014867a5f8b!8m2!3d-31.9539771!4d115.8574654',
+        'https://www.google.com/maps/place/Swanston+Street+Medical+Centre/@-37.8135749,144.9639683,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad642cb0cd76b79:0xd7d3d0b9719c23c0!8m2!3d-37.8135749!4d144.966157',
     },
   },
 
@@ -193,17 +200,13 @@ const Conference: IConference = {
 
   Keynotes: [],
 
-  RoomNames: [
-    'Kwoka (Quokka)',
-    'Kwonding (Quandong)',
-    'Yoorn (Bobtail)',
-    'Mangatj (Banksia)',
-    'Yiibi (Black Cockatoo)',
-    'Mari (Red Gum)',
-    'Djakal-Ngakal (Galah)',
-    'Bilya (River)',
-    'Maali (Black Swan)',
-  ],
+  RoomNames: ['Main Hall', 'Supper Room', 'Yarra Room', 'Hoddle Room'],
+  RoomColors: {
+    'Main Hall': '#c6effc',
+    'Supper Room': '#d8edd6',
+    'Yarra Room': '#f8d3d0',
+    'Hoddle Room': '#ffe2cc',
+  },
 
   Livestreams: [
     'https://youtu.be/ovEA5PaOdWo?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
@@ -271,4 +274,4 @@ const Conference: IConference = {
   VolunteerSubmissionFormId: '9c302d13-e580-4edf-ba13-5bc27eb7b97f',
 }
 
-export default Conference
+export default From2024
