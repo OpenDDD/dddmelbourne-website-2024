@@ -100,7 +100,7 @@ const Conference: IConference = {
   HashTag: 'DDDMelbourne',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
   Handbook: 'handbook2022.pdf',
-  SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2024/',
+  SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2025/',
   SessionizeEditUrl: 'https://sessionize.com/app/speaker/',
   PreviouslySubmittedTopics:
     'Agile, building great teams, UI design, UX, software testing, virtual reality, women in tech, web accessibility, open source software, workplace culture, mental health, unconscious bias, building engaged teams, self-employment tips, mentoring, Scrum, pair programming, bots, IoT, machine learning, neural networks, quantum encryption, security, reverse engineering, blockchain, Assembly language, automated deployments, mobile development, mobile test automation, Domain Driven Design, cloud native, architecture, microservices, serverless, service meshes, stream programming and Rx, APIs, GraphQL, actors, JavaScript, SPAs, TypeScript, authentication, React, UWP, Elm, HTML, HTTP protocol, Git, Docker and pointers',
@@ -108,9 +108,9 @@ const Conference: IConference = {
   ContactEmail: 'dddmelbourne@gmail.com',
   SponsorshipEmail: 'sponsorship@dddmelbourne.com',
   MentoringEmail: 'speakers@dddmelbourne.com',
-  EmergencyContactName: 'Rob Moore',
-  EmergencyContactPhoneNumber: '0400 777 763',
-  MediaOfficerName: 'Rebecca Waters',
+  EmergencyContactName: 'Bron Thulke',
+  EmergencyContactPhoneNumber: '0414 431 474',
+  MediaOfficerName: 'Alicia Cheah',
 
   AnonymousReportFormUrl: 'https://forms.gle/7GkewmN8BrHQtwWQA',
 
