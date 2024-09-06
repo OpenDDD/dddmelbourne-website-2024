@@ -35,6 +35,13 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://www.starrez.com/',
   },
+  {
+    id: 'webjet',
+    imageUrl: '/static/images/sponsors/2024-webjet.png',
+    name: 'Webjet',
+    type: SponsorType.Gold,
+    url: 'https://www.webjet.com.au/',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
@@ -45,16 +52,16 @@ const silverSponsors: Sponsor[] = [
     type: SponsorType.Silver,
     url: 'https://qoria.com/',
   },
+  {
+    id: 'kodez',
+    imageUrl: '/static/images/sponsors/2024-kodez-3.png',
+    name: 'Kodez',
+    type: SponsorType.Silver,
+    url: 'https://kodez.com.au',
+  },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
-  // {
-  //   id: 'kodez',
-  //   imageUrl: '/static/images/sponsors/2024-kodez-3.png',
-  //   name: 'Kodez',
-  //   type: SponsorType.CoffeeCart,
-  //   url: 'https://kodez.com.au',
-  // },
   // {
   //   id: 'justdigitalpeople',
   //   imageUrl: '/static/images/sponsors/2024-justdigitalpeople.png',
