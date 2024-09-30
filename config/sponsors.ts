@@ -1,13 +1,13 @@
 import { Sponsor, SponsorType } from './types'
 
 const diamondSponsors: Sponsor[] = [
-  // {
-  //   id: '2024-liberty',
-  //   imageUrl: '/static/images/sponsors/2024-liberty.png',
-  //   name: 'Liberty',
-  //   type: SponsorType.Diamond,
-  //   url: 'https://www.liberty.com.au/',
-  // },
+  {
+    id: '2025-pinch',
+    imageUrl: '/static/images/sponsors/2025-pinch.png',
+    name: 'Pinch',
+    type: SponsorType.Diamond,
+    url: 'https://getpinch.com.au/',
+  },
 ]
 
 const platinumSponsors: Sponsor[] = [
