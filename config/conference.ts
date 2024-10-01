@@ -94,7 +94,7 @@ const Conference: IConference = {
   ChildcarePrice: 'free',
   TicketsProviderId: TicketsProvider.Tito,
   TicketsProviderAccountId: 'ddd-melbourne',
-  TicketsProviderEventId: 'ddd-2024',
+  TicketsProviderEventId: 'ddd-2025',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
   HashTag: 'DDDMelbourne',
