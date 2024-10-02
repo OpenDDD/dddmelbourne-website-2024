@@ -116,7 +116,7 @@ export default function getFaqs(dates: Dates): FAQ[] {
     ),
   })
   Faqs.push({
-    Question: 'Can I pay by cheque, invoice, cash, Coinye West?',
+    Question: 'Can I pay by cheque, invoice, cash, dollarbucks?',
     Answer: (
       <Fragment>
         Payments can be made with credit card using Ti.to via our tickets page when registrations are open. Companies
