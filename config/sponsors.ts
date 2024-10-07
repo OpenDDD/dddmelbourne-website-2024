@@ -42,6 +42,13 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://www.webjet.com.au/',
   },
+  {
+    id: 'netwealth',
+    imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
+    name: 'Netwealth',
+    type: SponsorType.Gold,
+    url: 'https://www.netwealth.com.au/',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
