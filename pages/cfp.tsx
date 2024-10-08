@@ -104,8 +104,8 @@ const CFPPage: NextPage = () => {
           ; if your presentation gets voted in and you agree to present then this is a serious commitment.
         </li>
         <li>
-          Questions? <a href={`mailto:${conference.ContactEmail}`}>Fire off an email</a> and we'll get right back to you
-          :)
+          Questions? <a href={`mailto:${conference.MentoringEmail}`}>Fire off an email</a> and we'll get right back to
+          you :)
         </li>
       </StyledList>
 
