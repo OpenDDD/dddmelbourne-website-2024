@@ -158,7 +158,6 @@ const Conference: IConference = {
     },
     Flickr: 'https://www.flickr.com/photos/135717775@N07/albums',
     Youtube: 'https://www.youtube.com/@dddmelb',
-    Blog: 'https://medium.com/ddd-melbourne',
     Email: 'dddmelbourne@gmail.com',
     GitHub: 'OpenDDD',
     Instagram: 'dddmelb',
