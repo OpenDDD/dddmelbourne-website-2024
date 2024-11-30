@@ -30,7 +30,7 @@ const presentationSubmissionsOpenFrom = zonedTimeToUtc('2024-09-01T08:00:00', tz
 const presentationSubmissionsOpenUntil = zonedTimeToUtc('2024-11-01T23:59:59', tz)
 const votingOpenFrom = zonedTimeToUtc('2024-11-08T00:00:00', tz)
 const votingOpenUntil = zonedTimeToUtc('2024-11-20T23:59:59', tz)
-const agendaPublishedFrom = zonedTimeToUtc('2024-12-01T09:00:00', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2024-11-30T09:00:00', tz)
 const feedbackOpenFrom = toDate(date)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
@@ -194,12 +194,13 @@ const Conference: IConference = {
 
   Keynotes: [],
 
-  RoomNames: ['Main Hall', 'Supper Room', 'Yarra Room', 'Hoddle Room'],
+  RoomNames: ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Workshops'],
   RoomColors: {
     'Main Hall': '#c6effc',
     'Supper Room': '#d8edd6',
     'Yarra Room': '#f8d3d0',
     'Hoddle Room': '#ffe2cc',
+    Workshops: '#ffe2cc',
   },
 
   Livestreams: [
