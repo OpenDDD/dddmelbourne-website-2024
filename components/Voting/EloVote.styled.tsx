@@ -70,7 +70,7 @@ export const StyledSessionTitle = styled('h3')(({ theme }) => ({
   overflow: 'hidden',
 }))
 
-export const StyledSessionAbstract = styled('div')(() => ({
+export const StyledSessionAbstract = styled('div')((_) => ({
   flex: 1,
   overflow: 'hidden',
   overflowY: 'auto',
@@ -109,7 +109,7 @@ export const StyledVoteButton = styled(Button)<StyledVoteButtonProps>(({ theme, 
   },
 
   '&:focus': {
-    boxShadow: `0 0 0 ${calcRem(theme.metrics.xs)} ${theme.colors.dddblue}`,
+    boxShadow: `0 0 0 ${calcRem(theme.metrics.xs)} ${theme.colors.dddpurple}`,
   },
 }))
 
@@ -136,7 +136,7 @@ export const StyledEloTag = styled('li')(({ theme }) => ({
   color: theme.colors.white,
 }))
 
-export const StyledEloVoteFooter = styled('div')(() => ({
+export const StyledEloVoteFooter = styled('div')((_) => ({
   textAlign: 'center',
 }))
 
@@ -148,7 +148,7 @@ export const StyledLayoutLabel = styled('label')(({ theme }) => ({
   input: srOnly,
 
   span: {
-    color: theme.colors.dddblue,
+    color: theme.colors.dddpurple,
     textDecoration: 'underline',
   },
 

@@ -13,6 +13,11 @@ export const theme = {
     dddblue: '#4450A2',
     dddbluedark: '#6A79C6',
     dddorange: '#F8A23B',
+
+    dddbrightorange: '#FF7432',
+    dddpurple: '#AC96ED',
+    dddpurpledark: '#4B2AAD',
+    dddgreenaqua: '#5DF1C2',
     ///////////////////////////
     primary: '#008554',
     primary150: '#003924',

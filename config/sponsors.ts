@@ -2,25 +2,25 @@ import { Sponsor, SponsorType } from './types'
 
 const diamondSponsors: Sponsor[] = [
   {
-    id: '2024-liberty',
-    imageUrl: '/static/images/sponsors/2024-liberty.png',
-    name: 'Liberty',
+    id: '2025-pinch',
+    imageUrl: '/static/images/sponsors/2025-pinch.png',
+    name: 'Pinch',
     type: SponsorType.Diamond,
-    url: 'https://www.liberty.com.au/',
+    url: 'https://getpinch.com.au/',
   },
 ]
 
 const platinumSponsors: Sponsor[] = [
   {
-    id: '2024-DevExpress',
-    imageUrl: '/static/images/sponsors/2024-devexpress.png',
-    name: 'DevExpress',
+    id: '2024-Microsoft',
+    imageUrl: '/static/images/sponsors/2025-microsoft.png',
+    name: 'Microsoft',
     type: SponsorType.Platinum,
-    url: 'https://www.devexpress.com/',
+    url: 'https://developer.microsoft.com/en-us/advocates/index.html',
   },
   {
     id: '2024-OctopusDeploy',
-    imageUrl: '/static/images/sponsors/2024-octopus-deploy.png',
+    imageUrl: '/static/images/sponsors/2025-octopus-deploy.png',
     name: 'Octopus Deploy',
     type: SponsorType.Platinum,
     url: 'https://octopus.com/',
@@ -28,6 +28,13 @@ const platinumSponsors: Sponsor[] = [
 ]
 
 const goldSponsors: Sponsor[] = [
+  {
+    id: 'starrez',
+    imageUrl: '/static/images/sponsors/2025-starrez.png',
+    name: 'StarRez',
+    type: SponsorType.Gold,
+    url: 'https://www.starrez.com/',
+  },
   {
     id: 'webjet',
     imageUrl: '/static/images/sponsors/2024-webjet.png',
@@ -68,66 +75,43 @@ const silverSponsors: Sponsor[] = [
     url: 'https://qoria.com/',
   },
   {
-    id: 'sizzle',
-    imageUrl: '/static/images/sponsors/2024-sizzle.png',
-    name: 'The Sizzle',
+    id: 'kodez',
+    imageUrl: '/static/images/sponsors/2024-kodez-3.png',
+    name: 'Kodez',
     type: SponsorType.Silver,
-    url: 'https://thesizzle.com.au/',
-  },
-  {
-    id: 'kaleida',
-    imageUrl: '/static/images/sponsors/2024-kaleida.png',
-    name: 'Kaleida',
-    type: SponsorType.Silver,
-    url: 'https://www.kaleida.team/',
-    logoSize: '60',
-  },
-  {
-    id: 'umbraco',
-    imageUrl: '/static/images/sponsors/2024-umbraco.png',
-    name: 'Umbraco',
-    type: SponsorType.Silver,
-    url: 'https://umbraco.com/',
-    logoSize: '60',
+    url: 'https://kodez.com.au',
   },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
-  {
-    id: 'kodez',
-    imageUrl: '/static/images/sponsors/2024-kodez-3.png',
-    name: 'Kodez',
-    type: SponsorType.CoffeeCart,
-    url: 'https://kodez.com.au',
-  },
-  {
-    id: 'justdigitalpeople',
-    imageUrl: '/static/images/sponsors/2024-justdigitalpeople.png',
-    name: 'Just Digital People',
-    type: SponsorType.CoffeeCart,
-    url: 'http://www.justdigitalpeople.com.au/',
-  },
+  // {
+  //   id: 'justdigitalpeople',
+  //   imageUrl: '/static/images/sponsors/2024-justdigitalpeople.png',
+  //   name: 'Just Digital People',
+  //   type: SponsorType.CoffeeCart,
+  //   url: 'http://www.justdigitalpeople.com.au/',
+  // },
 ]
 
 const serviceSponsors: Sponsor[] = [
-  {
-    id: '2024-ssw',
-    imageUrl: '/static/images/sponsors/2024-ssw.png',
-    name: 'SSW',
-    type: SponsorType.Service,
-    serviceProvided: 'Childcare',
-    url: 'https://www.ssw.com.au/',
-    logoSize: '58',
-  },
-  {
-    id: '2024-luminary',
-    imageUrl: '/static/images/sponsors/2024-luminary.png',
-    name: 'Luminary',
-    type: SponsorType.Service,
-    serviceProvided: 'Wi-Fi',
-    url: 'https://luminary.com/',
-    logoSize: '40',
-  },
+  // {
+  //   id: '2024-ssw',
+  //   imageUrl: '/static/images/sponsors/2024-ssw.png',
+  //   name: 'SSW',
+  //   type: SponsorType.Service,
+  //   serviceProvided: 'Childcare',
+  //   url: 'https://www.ssw.com.au/',
+  //   logoSize: '58',
+  // },
+  // {
+  //   id: '2024-luminary',
+  //   imageUrl: '/static/images/sponsors/2024-luminary.png',
+  //   name: 'Luminary',
+  //   type: SponsorType.Service,
+  //   serviceProvided: 'Wi-Fi',
+  //   url: 'https://luminary.com/',
+  //   logoSize: '40',
+  // },
 ]
 
 const communityPartners: Sponsor[] = []

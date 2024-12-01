@@ -20,16 +20,16 @@ const getSocialColorFromDDDMelbColors = () => {
   const randomValue = Math.floor(Math.random() * 3)
   switch (randomValue) {
     case 0: {
-      return theme.colors.dddblue
+      return theme.colors.dddbrightorange
     }
     case 1: {
-      return theme.colors.dddpink
+      return theme.colors.dddpurple
     }
     case 2: {
-      return theme.colors.dddorange
+      return theme.colors.dddgreenaqua
     }
     default: {
-      return theme.colors.dddblue
+      return theme.colors.dddpurple
     }
   }
 }

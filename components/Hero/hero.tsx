@@ -38,7 +38,7 @@ export const Hero = (): JSX.Element => {
           }}
           minWidth={300}
           maxWidth={3000}
-          src="dddmelbourne/hero/dddmelb-hero.jpg"
+          src="dddmelbourne/hero/dddmelb-hero-25-b.jpg"
           sizes={{
             lg: '100vw',
             sm: '100vw',

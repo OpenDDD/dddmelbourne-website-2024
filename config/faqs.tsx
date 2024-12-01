@@ -108,23 +108,15 @@ export default function getFaqs(dates: Dates): FAQ[] {
           <Fragment>Ticket sales have closed.</Fragment>
         ) : (
           <Fragment>
-            Due to the popularity of last years event, we are running 2 separate ticket waves to give everyone an
-            opportunity to obtain a ticket.
-            <br />
-            <br />
-            Wave 1 registration opens on {format(Conference.RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
+            Registration opens on {format(Conference.RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
             {format(Conference.RegistrationOpenFrom, dates.TimeDisplayFormat)}.<br />
-            Wave 2 registration opens on {format(Conference.Wave2RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
-            {format(Conference.Wave2RegistrationOpenFrom, dates.TimeDisplayFormat)}.<br />
-            <br />
-            The ticket price will stay at {Conference.TicketPrice} for each wave.
           </Fragment>
         )}
       </Fragment>
     ),
   })
   Faqs.push({
-    Question: 'Can I pay by cheque, invoice, cash, Coinye West?',
+    Question: 'Can I pay by cheque, invoice, cash, dollarbucks?',
     Answer: (
       <Fragment>
         Payments can be made with credit card using Ti.to via our tickets page when registrations are open. Companies

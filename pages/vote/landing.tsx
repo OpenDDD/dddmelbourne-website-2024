@@ -39,8 +39,8 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
     const formData = new FormData(e.target as HTMLFormElement)
 
     Cookies.set(PRIVACY_ACCEPTED, 'true', { expires: 90 })
-    Cookies.set('vote-ticket', formData.get('ticket'), { expires: 90 })
-    Cookies.set('vote-lastname', formData.get('lastname'), { expires: 90 })
+    Cookies.set('vote-ticket', formData.get('ticket').toString(), { expires: 90 })
+    Cookies.set('vote-lastname', formData.get('lastname').toString(), { expires: 90 })
     router.push(`/vote/voting`)
   }
 

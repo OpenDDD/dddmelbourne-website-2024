@@ -5,10 +5,10 @@ import { fetchSessions } from 'components/utils/useSessions'
 import Conference from 'config/conference'
 import { Session } from 'config/types'
 import { Main } from 'layouts/agendaWide'
-import { GetServerSideProps, NextPage } from 'next'
+import { NextPage } from 'next'
 import { useConfig } from 'Context/Config'
-import { getCommonServerSideProps } from 'components/utils/getCommonServerSideProps'
 import { formatInTimeZone } from 'date-fns-tz'
+import AllAgendas from '../components/allAgendas'
 
 interface AgendaPageProps {
   sessions?: Session[]
@@ -17,6 +17,10 @@ interface AgendaPageProps {
 
 const AgendaPage: NextPage<AgendaPageProps> = ({ sessions, sessionId }) => {
   const { conference, dates } = useConfig()
+  if (!sessionId && typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search)
+    sessionId = urlParams.get('sessionId')
+  }
 
   return (
     <Main title="Agenda" description={conference.Name + ' agenda.'}>
@@ -29,6 +33,7 @@ const AgendaPage: NextPage<AgendaPageProps> = ({ sessions, sessionId }) => {
             {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.DateDisplayFormat)}{' '}
             {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.TimeDisplayFormat)}. In the
             meantime, check out our previous agendas below.
+            <AllAgendas dates={dates} conference={conference} conferenceInstance={conference.Instance} />
           </p>
         )}
         {dates.AgendaPublished && (
@@ -51,20 +56,12 @@ const AgendaPage: NextPage<AgendaPageProps> = ({ sessions, sessionId }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { dates } = getCommonServerSideProps(context)
-
-  if (!dates.VotingFinished) {
-    return { redirect: { destination: `/agenda/${Conference.PreviousInstance}`, permanent: false } }
-  }
-
+export const getStaticProps = async () => {
   const sessions = await fetchSessions(process.env.NEXT_PUBLIC_GET_AGENDA_URL)
-  const sessionId = context.query.sessionId
 
   return {
     props: {
       ...(sessions ? { sessions } : {}),
-      ...(sessionId ? { sessionId } : {}),
     },
   }
 }

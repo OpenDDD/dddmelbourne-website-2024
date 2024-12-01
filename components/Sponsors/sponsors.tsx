@@ -77,7 +77,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
       <StyledSponsorsContainer>
         {diamondSponsors.length > 0 && (
           <Fragment>
-            <h2>Diamond Sponsors</h2>
+            <h2>Diamond Sponsor</h2>
             {diamondSponsors.map((sponsor) => (
               <StyledSponsorLink href={sponsor.url} target="_blank" key={sponsor.name} title={sponsor.name}>
                 <img src={imgUrl(sponsor.imageUrl, sponsor.logoSize || 90)} alt={sponsor.name} loading="lazy" />

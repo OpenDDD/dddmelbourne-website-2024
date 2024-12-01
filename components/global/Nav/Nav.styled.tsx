@@ -54,7 +54,7 @@ export const StyledNavLink = styled(Link)<StyledNavLinkProps>(({ theme, active }
   },
 
   '&:hover': {
-    backgroundColor: active ? theme.colors.grey800 : theme.colors.dddblue,
+    backgroundColor: active ? theme.colors.grey800 : theme.colors.dddpurple,
     color: theme.colors.white,
   },
 
