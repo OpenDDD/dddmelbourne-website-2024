@@ -5,7 +5,8 @@ import { SafeLink } from 'components/global/safeLink'
 import { SessionGroup, useSessionGroups } from 'components/utils/useSessionGroups'
 import { StyledCenteredParagraph, StyledSponsorLogo } from 'components/Agenda/Agenda.styled'
 import { SessionDetails } from 'components/Agenda/SessionDetails'
-import { StyledCloseButton, StyledDialogContent, StyledDialogOverlay } from 'components/Agenda/SessionDetails.styled'
+import { StyledCloseButton, StyledDialogContent } from 'components/Agenda/SessionDetails.styled'
+import ReactModal from 'react-modal'
 export type onSelectCallback = (session: Session, sponsor: Sponsor, livestream: string) => void
 
 interface AgendaProps {
@@ -96,7 +97,7 @@ export const Agenda = ({ sessions, ...props }: AgendaProps) => {
     <React.Fragment>
       {props.render(sessions, nextSessionGroup, onSelectHandler)}
 
-      <StyledDialogOverlay isOpen={sessionState.showModal} onDismiss={onDismissHandler}>
+      <ReactModal isOpen={sessionState.showModal} onDismiss={onDismissHandler}>
         <StyledDialogContent>
           <StyledCloseButton type="button" className="close-button" onClick={onDismissHandler} aria-label="Close">
             <span aria-hidden>×</span>
@@ -137,7 +138,7 @@ export const Agenda = ({ sessions, ...props }: AgendaProps) => {
             </Fragment>
           )}
         </StyledDialogContent>
-      </StyledDialogOverlay>
+      </ReactModal>
     </React.Fragment>
   )
 }

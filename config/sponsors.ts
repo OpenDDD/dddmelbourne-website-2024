@@ -38,16 +38,31 @@ const goldSponsors: Sponsor[] = [
   {
     id: 'webjet',
     imageUrl: '/static/images/sponsors/2024-webjet.png',
-    name: 'Webjet',
+    name: 'MakerX',
     type: SponsorType.Gold,
-    url: 'https://www.webjet.com.au/',
+    url: 'https://webjet.com.au',
+  },
+  {
+    id: 'insight',
+    imageUrl: '/static/images/sponsors/2024-insight.jpg',
+    name: 'Insight',
+    type: SponsorType.Gold,
+    url: 'https://au.insight.com/',
   },
   {
     id: 'netwealth',
     imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
     name: 'Netwealth',
     type: SponsorType.Gold,
-    url: 'https://www.netwealth.com.au/',
+    url: 'https://netwealth.com.au',
+  },
+  {
+    id: 'github',
+    imageUrl: '/static/images/sponsors/2024-github.png',
+    name: 'GitHub',
+    type: SponsorType.Gold,
+    url: 'https://github.com',
+    logoSize: '50',
   },
 ]
 

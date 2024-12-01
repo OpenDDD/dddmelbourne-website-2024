@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 import { Action } from 'config/types'
 import { ButtonAnchor } from 'components/global/Button/Button'
@@ -8,8 +7,8 @@ interface ActionButtonProps {
 }
 
 export const ActionButton = ({ action }: ActionButtonProps) => (
-  <Link href={action.Url} passHref>
-    <ButtonAnchor kind="primary">{action.Title}</ButtonAnchor>
-  </Link>
+  <ButtonAnchor kind="primary" href={action.Url}>
+    {action.Title}
+  </ButtonAnchor>
 )
 ActionButton.displayName = 'ActionButton'
