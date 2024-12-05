@@ -49,6 +49,13 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://www.netwealth.com.au/',
   },
+  {
+    id: 'ndcmelb',
+    imageUrl: '/static/images/sponsors/2025-ndcmelb.png',
+    name: 'NDC Melbourne',
+    type: SponsorType.Gold,
+    url: 'https://ndcmelbourne.com/',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
