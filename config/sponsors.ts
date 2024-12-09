@@ -95,15 +95,15 @@ const serviceSponsors: Sponsor[] = [
   //   url: 'https://www.ssw.com.au/',
   //   logoSize: '58',
   // },
-  // {
-  //   id: '2024-luminary',
-  //   imageUrl: '/static/images/sponsors/2024-luminary.png',
-  //   name: 'Luminary',
-  //   type: SponsorType.Service,
-  //   serviceProvided: 'Wi-Fi',
-  //   url: 'https://luminary.com/',
-  //   logoSize: '40',
-  // },
+  {
+    id: '2024-luminary',
+    imageUrl: '/static/images/sponsors/2024-luminary.png',
+    name: 'Luminary',
+    type: SponsorType.Service,
+    serviceProvided: 'Wi-Fi',
+    url: 'https://luminary.com/',
+    logoSize: '40',
+  },
 ]
 
 const communityPartners: Sponsor[] = []
