@@ -51,7 +51,7 @@ export default function VoteLanding({ instance }: VoteLandingProps): JSX.Element
 
   return (
     <Fragment>
-      <ReactModal isOpen={showDialog} onDismiss={close}>
+      <ReactModal isOpen={showDialog} onRequestClose={close}>
         <StyledDialogContent style={{ textAlign: 'center' }}>
           {!showBuyTicket && !showBoughtTicket && (
             <Fragment>

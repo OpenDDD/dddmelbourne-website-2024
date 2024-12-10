@@ -6,6 +6,9 @@ import { globalCSS } from 'components/utils/styles/global'
 import { ConfigProvider } from 'Context/Config'
 import { AppProps } from 'next/app'
 import Script from 'next/script'
+import ReactModal from 'react-modal'
+
+ReactModal.setAppElement('#content')
 
 function CustomApp({ Component, pageProps }: AppProps): JSX.Element {
   return (

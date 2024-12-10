@@ -2,8 +2,9 @@ import { breakpoint, breakpointMax } from 'components/utils/styles/breakpoints'
 import { calcRem } from 'components/utils/styles/calcRem'
 import styled from '@emotion/styled'
 import { zIndex } from 'components/utils/styles/zindex'
+import ReactModal from 'react-modal'
 
-export const StyledDialogOverlay = styled('div')({
+export const StyledDialogOverlay = styled(ReactModal)({
   position: 'fixed',
   top: 0,
   right: 0,

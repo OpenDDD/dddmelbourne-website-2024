@@ -67,6 +67,7 @@
     "@types/react-beautiful-dnd": "^13.1.2",
     "@types/react-dom": "18.2.x",
     "@types/react-leaflet": "^2.8.2",
+    "@types/react-modal": "^3.16.3",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
