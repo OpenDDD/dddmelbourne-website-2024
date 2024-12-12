@@ -1,7 +1,6 @@
 import { breakpoint, breakpointMax } from 'components/utils/styles/breakpoints'
 import { calcRem } from 'components/utils/styles/calcRem'
 import styled from '@emotion/styled'
-import { zIndex } from 'components/utils/styles/zindex'
 import ReactModal from 'react-modal'
 
 export const StyledDialogOverlay = styled(ReactModal)({
@@ -11,7 +10,6 @@ export const StyledDialogOverlay = styled(ReactModal)({
   bottom: 0,
   left: 0,
   overflow: 'auto',
-  zIndex: zIndex.agendaOverlay,
   background: `hsla(0, 0%, 0%, 0.33)`,
 })
 StyledDialogOverlay.displayName = 'StyledDialogOverlay'

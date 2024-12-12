@@ -7,8 +7,15 @@ import { ConfigProvider } from 'Context/Config'
 import { AppProps } from 'next/app'
 import Script from 'next/script'
 import ReactModal from 'react-modal'
+import { zIndex } from '../components/utils/styles/zindex'
 
 ReactModal.setAppElement('#content')
+ReactModal.defaultStyles = {
+  overlay: {
+    zIndex: zIndex.agendaOverlay,
+    position: 'fixed',
+  },
+}
 
 function CustomApp({ Component, pageProps }: AppProps): JSX.Element {
   return (

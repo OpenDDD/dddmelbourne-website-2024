@@ -38,31 +38,23 @@ const goldSponsors: Sponsor[] = [
   {
     id: 'webjet',
     imageUrl: '/static/images/sponsors/2024-webjet.png',
-    name: 'MakerX',
+    name: 'Webjet',
     type: SponsorType.Gold,
-    url: 'https://webjet.com.au',
-  },
-  {
-    id: 'insight',
-    imageUrl: '/static/images/sponsors/2024-insight.jpg',
-    name: 'Insight',
-    type: SponsorType.Gold,
-    url: 'https://au.insight.com/',
+    url: 'https://www.webjet.com.au/',
   },
   {
     id: 'netwealth',
     imageUrl: '/static/images/sponsors/2024-netwealth.jpg',
     name: 'Netwealth',
     type: SponsorType.Gold,
-    url: 'https://netwealth.com.au',
+    url: 'https://www.netwealth.com.au/',
   },
   {
-    id: 'github',
-    imageUrl: '/static/images/sponsors/2024-github.png',
-    name: 'GitHub',
+    id: 'ndcmelb',
+    imageUrl: '/static/images/sponsors/2025-ndcmelb.png',
+    name: 'NDC Melbourne',
     type: SponsorType.Gold,
-    url: 'https://github.com',
-    logoSize: '50',
+    url: 'https://ndcmelbourne.com/',
   },
 ]
 
@@ -103,15 +95,15 @@ const serviceSponsors: Sponsor[] = [
   //   url: 'https://www.ssw.com.au/',
   //   logoSize: '58',
   // },
-  // {
-  //   id: '2024-luminary',
-  //   imageUrl: '/static/images/sponsors/2024-luminary.png',
-  //   name: 'Luminary',
-  //   type: SponsorType.Service,
-  //   serviceProvided: 'Wi-Fi',
-  //   url: 'https://luminary.com/',
-  //   logoSize: '40',
-  // },
+  {
+    id: '2024-luminary',
+    imageUrl: '/static/images/sponsors/2024-luminary.png',
+    name: 'Luminary',
+    type: SponsorType.Service,
+    serviceProvided: 'Wi-Fi',
+    url: 'https://luminary.com/',
+    logoSize: '40',
+  },
 ]
 
 const communityPartners: Sponsor[] = []
