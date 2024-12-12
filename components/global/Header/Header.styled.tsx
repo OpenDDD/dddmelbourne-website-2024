@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { calcRem } from 'components/utils/styles/calcRem'
 import { breakpoint } from 'components/utils/styles/breakpoints'
 import { zIndex } from 'components/utils/styles/zindex'
+import Link from 'next/link'
 
 export const StyledHeader = styled('header')(({ theme }) => ({
   position: 'sticky',
@@ -15,7 +16,7 @@ export const StyledHeader = styled('header')(({ theme }) => ({
   zIndex: zIndex.stickyHeader,
 }))
 
-export const StyledAnchor = styled('a')({
+export const StyledAnchor = styled(Link)({
   display: 'flex',
   margin: 0,
   marginRight: 'auto',

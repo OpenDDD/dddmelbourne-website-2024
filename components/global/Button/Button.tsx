@@ -13,7 +13,8 @@ export interface ButtonProps
 export const Button = (props: ButtonProps) => {
   const Component = props.kind !== 'link' ? StyledButton : StyledLinkButton
   return (
-    <Component type="button" {...props}>
+    // @ts-ignore
+    <Component type="button" kind={props.kind} {...props}>
       {props.children}
     </Component>
   )
@@ -25,8 +26,8 @@ interface ButtonAnchorProps
   size?: Size
 }
 
-export const ButtonAnchor = ({ children, kind = 'secondary', size = 'normal', ...props }: ButtonAnchorProps) => (
-  <StyledButtonAnchor kind={kind} size={size} {...props}>
+export const ButtonAnchor = ({ children, kind = 'secondary', size = 'normal', href, ...props }: ButtonAnchorProps) => (
+  <StyledButtonAnchor kind={kind} size={size} href={href} {...props}>
     {children}
   </StyledButtonAnchor>
 )
