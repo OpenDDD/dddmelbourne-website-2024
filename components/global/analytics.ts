@@ -1,13 +1,11 @@
-import * as ReactGA from 'react-ga'
-
 declare global {
   interface Window {
     appInsights: any
   }
 }
 
-export const init = (googleAnalyticsId: string): void => {
-  ReactGA.initialize(googleAnalyticsId)
+export const init = (_googleAnalyticsId: string): void => {
+  //   TODO
 }
 
 export const getSessionId = (): string | null => {
@@ -17,8 +15,7 @@ export const getSessionId = (): string | null => {
 }
 
 export const logPageView = (): void => {
-  ReactGA.set({ page: window.location.pathname })
-  ReactGA.pageview(window.location.pathname)
+  //   TODO
   if (window.appInsights) {
     window.appInsights.trackPageView()
   }
@@ -44,7 +41,7 @@ export const logEvent = (category: string, action: string, data: any, measuremen
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const logException = (description: string, exception: Error, data: any): void => {
   if (description) {
-    ReactGA.exception({ description, exception: exception.toString() })
+    //   TODO
     if (window.appInsights && window.appInsights.trackException) {
       window.appInsights.trackException(exception, 'unhandled', {
         description,

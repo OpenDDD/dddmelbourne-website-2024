@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyledHeader, StyledAnchor } from './Header.styled'
-import Link from 'next/link'
 import { DDDLogo } from 'components/global/Icons/DDDLogo'
 import { HeaderSocials } from './components/HeaderSocials'
 import { NavToggle } from 'components/global/Nav/components/NavToggle'
@@ -12,11 +11,9 @@ export const Header = (): JSX.Element => {
   return (
     <StyledHeader>
       <NavToggle />
-      <Link passHref={true} href="/">
-        <StyledAnchor aria-label={conference.Name}>
-          <DDDLogo />
-        </StyledAnchor>
-      </Link>
+      <StyledAnchor aria-label={conference.Name} passHref={true} href="/">
+        <DDDLogo />
+      </StyledAnchor>
       <HeaderSocials />
     </StyledHeader>
   )

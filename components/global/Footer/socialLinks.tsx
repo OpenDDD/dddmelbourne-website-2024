@@ -18,14 +18,6 @@ interface SocialLinksArgs {
 
 export const SocialLinks = ({ socials }: SocialLinksArgs) => (
   <StyledSocialLinks>
-    {socials.Twitter.Name && (
-      <li>
-        <StyledSocialLink href={`https://twitter.com/${socials.Twitter.Name}`} target="_blank" rel="noopener nofollow">
-          <TwitterIcon />
-          <span>Twitter, opens in new window</span>
-        </StyledSocialLink>
-      </li>
-    )}
     {socials.Facebook && (
       <li>
         <StyledSocialLink href={`https://facebook.com/${socials.Facebook}`} target="_blank" rel="noopener nofollow">
@@ -103,6 +95,14 @@ export const SocialLinks = ({ socials }: SocialLinksArgs) => (
         <StyledSocialLink href={`${socials.RedBubble}`} target="_blank" rel="noopener nofollow">
           <RedBubbleIcon />
           <span>RedBubble, will open in a new window</span>
+        </StyledSocialLink>
+      </li>
+    )}
+    {socials.Twitter.Name && (
+      <li>
+        <StyledSocialLink href={`https://twitter.com/${socials.Twitter.Name}`} target="_blank" rel="noopener nofollow">
+          <TwitterIcon />
+          <span>Twitter, opens in new window</span>
         </StyledSocialLink>
       </li>
     )}

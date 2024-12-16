@@ -24,7 +24,8 @@
     "@typescript-eslint/array-type": [1, { "default": "array-simple" }],
     "@typescript-eslint/no-unused-vars": 0,
     "no-console": "warn",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   },
   "overrides": [
     {
