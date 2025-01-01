@@ -9,7 +9,7 @@ import {
   Venue,
 } from './types'
 import { zonedTimeToUtc } from 'date-fns-tz'
-import { add, set, toDate } from 'date-fns'
+import { add, set } from 'date-fns'
 import { MelbourneTownHall } from './venues/melbourne-town-hall'
 
 const name = 'DDD Melbourne'
@@ -31,7 +31,7 @@ const presentationSubmissionsOpenUntil = zonedTimeToUtc('2024-11-01T23:59:59', t
 const votingOpenFrom = zonedTimeToUtc('2024-11-08T00:00:00', tz)
 const votingOpenUntil = zonedTimeToUtc('2024-11-20T23:59:59', tz)
 const agendaPublishedFrom = zonedTimeToUtc('2024-11-30T09:00:00', tz)
-const feedbackOpenFrom = toDate(date)
+const feedbackOpenFrom = zonedTimeToUtc('2024-11-08T00:00:00', tz)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
   {
@@ -138,8 +138,8 @@ const Conference: IConference = {
   FeedbackOpenFrom: feedbackOpenFrom,
   FeedbackOpenUntil: feedbackOpenUntil,
 
-  ConferenceFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
-  SessionFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
+  ConferenceFeedbackLink: '/conference-feedback',
+  SessionFeedbackLink: '/feedback',
 
   HideDate: hideDate,
   HideSponsors: false,

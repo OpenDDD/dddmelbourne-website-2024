@@ -82,9 +82,7 @@ const ConferenceFeedback: NextPage = () => {
         </h1>
         <p>
           If you would like to leave feedback for a session please use{' '}
-          <Link href={conference.SessionFeedbackLink}>
-            <a>the session feedback page</a>
-          </Link>
+          <Link href={conference.SessionFeedbackLink}>the session feedback page</Link>
         </p>
 
         <StyledForm onSubmit={handleSubmit}>
