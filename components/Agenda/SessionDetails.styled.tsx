@@ -41,6 +41,7 @@ export const StyledCloseButton = styled('button')(({ theme }) => ({
   fontSize: calcRem(30),
   fontWeight: theme.weights.bold,
   lineHeight: 1,
+  cursor: 'pointer',
 
   '&:focus, &:hover': {
     color: '#808080',
