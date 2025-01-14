@@ -113,11 +113,15 @@ export const Nav = ({ menu }: NavProps) => {
         {menu.map((item) => (
           <li key={item.href}>
             {item.href.indexOf('http') !== -1 ? (
-              <StyledNavLink href={item.href} active={isFirstBranchMatched(pathname, item.href)}>
+              <StyledNavLink href={item.href} active={isFirstBranchMatched(pathname, item.href) ? 'active' : undefined}>
                 {item.name}
               </StyledNavLink>
             ) : (
-              <StyledNavLink href={item.href} passHref={true} active={isFirstBranchMatched(pathname, item.href)}>
+              <StyledNavLink
+                href={item.href}
+                passHref={true}
+                active={isFirstBranchMatched(pathname, item.href) ? 'active' : undefined}
+              >
                 {item.name}
               </StyledNavLink>
             )}

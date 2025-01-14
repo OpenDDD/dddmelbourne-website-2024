@@ -194,13 +194,13 @@ const Conference: IConference = {
 
   Keynotes: [],
 
-  RoomNames: ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Workshops'],
+  RoomNames: ['Main hall', 'Swanston room', 'Supper room', 'Yarra room', 'Hoddle room'],
   RoomColors: {
-    'Main Hall': '#c6effc',
-    'Supper Room': '#d8edd6',
-    'Yarra Room': '#f8d3d0',
-    'Hoddle Room': '#ffe2cc',
-    Workshops: '#ffe2cc',
+    'Main hall': '#c6effc',
+    'Supper room': '#d8edd6',
+    'Yarra room': '#f8d3d0',
+    'Hoddle room': '#ffe2cc',
+    'Swanston room': '#ffe2cc',
   },
 
   Livestreams: [

@@ -34,7 +34,7 @@ export const StyledNavList = styled('ul')(({ theme }) => ({
 StyledNavList.displayName = 'StyledNavList'
 
 interface StyledNavLinkProps {
-  active?: boolean
+  active?: string
 }
 
 export const StyledNavLink = styled(Link)<StyledNavLinkProps>(({ theme, active }) => ({
