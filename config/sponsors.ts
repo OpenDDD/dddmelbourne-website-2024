@@ -62,6 +62,7 @@ const goldSponsors: Sponsor[] = [
     name: 'Datastax',
     type: SponsorType.Gold,
     url: 'https://www.datastax.com/',
+    logoSize: '20',
   },
   {
     id: 'clicksend',
@@ -69,6 +70,7 @@ const goldSponsors: Sponsor[] = [
     name: 'Clicksend',
     type: SponsorType.Gold,
     url: 'https://www.clicksend.com',
+    logoSize: '40',
   },
 ]
 
@@ -103,6 +105,7 @@ const coffeeCartSponsors: Sponsor[] = [
     name: 'Datastax',
     type: SponsorType.CoffeeCart,
     url: 'https://www.datastax.com/',
+    logoSize: '20',
   },
 ]
 

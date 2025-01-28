@@ -8,6 +8,7 @@ import { AppProps } from 'next/app'
 import Script from 'next/script'
 import ReactModal from 'react-modal'
 import { zIndex } from '../components/utils/styles/zindex'
+import Conference from 'config/conference'
 
 ReactModal.setAppElement('#content')
 ReactModal.defaultStyles = {
@@ -17,7 +18,7 @@ ReactModal.defaultStyles = {
   },
 }
 
-function CustomApp({ Component, pageProps }: AppProps): JSX.Element {
+function CustomApp({ Component, pageProps }: AppProps): React.JSX.Element {
   return (
     <ConfigProvider>
       <ThemeProvider theme={theme}>
@@ -41,6 +42,23 @@ function CustomApp({ Component, pageProps }: AppProps): JSX.Element {
           }}
         />
       ) : null}
+      {Conference.GoogleAnalyticsId && (
+        <React.Fragment>
+          <Script async={true} src={`https://www.googletagmanager.com/gtag/js?id=${Conference.GoogleAnalyticsId}`} />
+          <Script
+            id="ga"
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+      
+              gtag('config', '${Conference.GoogleAnalyticsId}');
+              `,
+            }}
+          />
+        </React.Fragment>
+      )}
     </ConfigProvider>
   )
 }

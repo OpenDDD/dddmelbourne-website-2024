@@ -89,7 +89,7 @@ const Conference: IConference = {
   TagLine: tagLine,
   SiteDescription: `${tagLine}.`,
   Goal: "Our goal is to create an approachable event that appeals to the whole community, especially people that don't normally get to attend or speak at conferences.",
-  GoogleAnalyticsId: 'UA-99087610-1',
+  GoogleAnalyticsId: 'G-E5CD021NB4',
   TicketPrice: '$89',
   ChildcarePrice: 'free',
   TicketsProviderId: TicketsProvider.Tito,
