@@ -6,7 +6,6 @@ import { useConfig } from 'Context/Config'
 import { Main } from 'layouts/main'
 import { useEffect, useReducer, useState } from 'react'
 import { getSessionId } from 'components/global/analytics'
-import { logEvent, logException } from 'components/global/analytics'
 import { getCommonServerSideProps } from 'components/utils/getCommonServerSideProps'
 import {
   LayoutVariant,
@@ -64,7 +63,7 @@ async function postPair(winningSessionId: string, losingSessionId: string, isDra
       body: JSON.stringify(body),
     })
   } catch (e) {
-    logException('Error submitting vote', e, { sessionId: body.VoterSessionId })
+    //TODO:
   }
 }
 
@@ -102,7 +101,6 @@ export default function Elo({ sessions, votingSessionId, userDefinedLayout = 'ex
 
   useEffect(() => {
     Cookies.set(LAYOUT_COOKIE, layoutVariant, { expires: conference.VotingOpenUntil })
-    logEvent('voting', 'layout', { variant: layoutVariant })
   }, [layoutVariant, conference.VotingOpenUntil])
 
   useEffect(() => {
@@ -121,15 +119,6 @@ export default function Elo({ sessions, votingSessionId, userDefinedLayout = 'ex
   async function sessionChoiceHandler(winningSession: EloSession, losingSession: EloSession, isDraw = false) {
     setLoading(true)
     await postPair(winningSession.Id, losingSession.Id, isDraw)
-    logEvent('voting', 'vote', {
-      variant: layoutVariant,
-      winningVote: winningSession.Id,
-      losingSession: losingSession.Id,
-      sessionA: sessionPair.SubmissionA.Id,
-      sessionB: sessionPair.SubmissionB.Id,
-      isDraw,
-      votingSessionId,
-    })
 
     if (typeof nextPair !== 'undefined') {
       setSessionPair(nextPair)

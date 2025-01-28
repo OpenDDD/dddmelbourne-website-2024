@@ -56,6 +56,20 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://ndcmelbourne.com/',
   },
+  {
+    id: 'datastax',
+    imageUrl: '/static/images/sponsors/2025-datastax.png',
+    name: 'Datastax',
+    type: SponsorType.Gold,
+    url: 'https://www.datastax.com/',
+  },
+  {
+    id: 'clicksend',
+    imageUrl: '/static/images/sponsors/2025-clicksend.png',
+    name: 'Clicksend',
+    type: SponsorType.Gold,
+    url: 'https://www.clicksend.com',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
@@ -73,16 +87,23 @@ const silverSponsors: Sponsor[] = [
     type: SponsorType.Silver,
     url: 'https://kodez.com.au',
   },
+  {
+    id: 'insight',
+    imageUrl: '/static/images/sponsors/2025-insight.jpg',
+    name: 'Insight',
+    type: SponsorType.Silver,
+    url: 'https://au.insight.com/',
+  },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
-  // {
-  //   id: 'justdigitalpeople',
-  //   imageUrl: '/static/images/sponsors/2024-justdigitalpeople.png',
-  //   name: 'Just Digital People',
-  //   type: SponsorType.CoffeeCart,
-  //   url: 'http://www.justdigitalpeople.com.au/',
-  // },
+  {
+    id: 'datastax',
+    imageUrl: '/static/images/sponsors/2025-datastax.png',
+    name: 'Datastax',
+    type: SponsorType.CoffeeCart,
+    url: 'https://www.datastax.com/',
+  },
 ]
 
 const serviceSponsors: Sponsor[] = [

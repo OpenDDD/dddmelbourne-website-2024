@@ -15,7 +15,6 @@ import {
 import { postFeedback } from 'components/Feedback/FeedbackFetch'
 import { defaultFormState, formReducer } from 'components/Feedback/FormReducers'
 import { Alert } from 'components/global/Alert/Alert'
-import { logException } from 'components/global/analytics'
 import { StyledContainer } from 'components/global/Container/Container.styled'
 import { getLocalStoredName, storageKey, StorageKeys } from 'components/utils/storageKey'
 import { useDeviceId } from 'components/utils/useDeviceId'
@@ -61,7 +60,6 @@ const ConferenceFeedback: NextPage = () => {
           dispatch('error')
         })
     } catch (e) {
-      logException('Error when submitting conference feedback', e, { deviceId })
       dispatch('error')
     }
   }

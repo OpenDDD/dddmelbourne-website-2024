@@ -20,7 +20,6 @@ import { FeedbackTimeTesting } from 'components/Feedback/FeedbackTimeTesting'
 import { defaultFormState, formReducer } from 'components/Feedback/FormReducers'
 import { SessionInput } from 'components/Feedback/SessionInput'
 import { Alert } from 'components/global/Alert/Alert'
-import { logException } from 'components/global/analytics'
 import { StyledContainer } from 'components/global/Container/Container.styled'
 import { getLocalStoredName, storageKey, StorageKeys } from 'components/utils/storageKey'
 import { useDeviceId } from 'components/utils/useDeviceId'
@@ -78,7 +77,6 @@ const Feedback: NextPage<FeedbackProps> = ({ sessions }) => {
           dispatch('error')
         })
     } catch (e) {
-      logException('Error when submitting session feedback', e, { deviceId })
       dispatch('error')
     }
   }

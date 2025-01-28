@@ -44,7 +44,6 @@ export const Meta = ({ pageTitle, pageDescription, pageImage }: MetaArgs) => {
       analytics.init(conference.GoogleAnalyticsId)
       window.GA_INITIALIZED = true
     }
-    analytics.logPageView()
   }, [conference.GoogleAnalyticsId])
 
   return (
