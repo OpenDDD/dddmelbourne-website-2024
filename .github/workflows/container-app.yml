@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - feat/next-13
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
 
 permissions:
   id-token: write
