@@ -95,6 +95,7 @@ const silverSponsors: Sponsor[] = [
     name: 'Insight',
     type: SponsorType.Silver,
     url: 'https://au.insight.com/',
+    logoSize: '35',
   },
 ]
 
