@@ -114,6 +114,7 @@ const coffeeCartSponsors: Sponsor[] = [
     name: 'REAGroup',
     type: SponsorType.CoffeeCart,
     url: 'https://www.realestate.com.au/',
+    logoSize: '60',
   },
 ]
 
