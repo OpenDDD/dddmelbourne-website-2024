@@ -108,6 +108,13 @@ const coffeeCartSponsors: Sponsor[] = [
     url: 'https://www.datastax.com/',
     logoSize: '20',
   },
+  {
+    id: 'rea',
+    imageUrl: '/static/images/sponsors/2025-rea.png',
+    name: 'REAGroup',
+    type: SponsorType.CoffeeCart,
+    url: 'https://www.realestate.com.au/',
+  },
 ]
 
 const serviceSponsors: Sponsor[] = [
