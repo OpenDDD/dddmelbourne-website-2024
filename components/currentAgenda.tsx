@@ -118,19 +118,16 @@ export const CurrentAgenda = ({
                 </StyledAgendaRow>
                 <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 9, minutes: 0 })} duration={45} />
-                  {/*<AgendaSession*/}
-                  {/*  sessionId="581840"*/}
-                  {/*  room={0}*/}
-                  {/*  renderPresenters={(presenters) => (*/}
-                  {/*    <StyledAgendaPresenter isKeynote>Keynote: {presenters}</StyledAgendaPresenter>*/}
-                  {/*  )}*/}
-                  {/*  fullWidth*/}
-                  {/*  isKeynote*/}
-                  {/*  alwaysShowRoom*/}
-                  {/*/>*/}
-                  <AgendaSession fullWidth>
-                    <StyledTrackHeader>Key Note TBD</StyledTrackHeader>
-                  </AgendaSession>
+                  <AgendaSession
+                    sessionId="852916"
+                    room={0}
+                    renderPresenters={(presenters) => (
+                      <StyledAgendaPresenter isKeynote>Keynote: {presenters}</StyledAgendaPresenter>
+                    )}
+                    fullWidth
+                    isKeynote
+                    alwaysShowRoom
+                  />
                 </StyledAgendaRow>
                 <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 9, minutes: 45 })} />

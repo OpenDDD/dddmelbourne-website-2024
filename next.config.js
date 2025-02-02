@@ -16,6 +16,9 @@ const config = {
           destination: '/vote/landing',
         },      
     ]}
+  },
+  compiler: {
+    emotion: true,
   }
 }
 
