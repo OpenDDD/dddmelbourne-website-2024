@@ -26,6 +26,8 @@ interface CurrentAgendaProps {
   selectedSessionId?: string
 }
 
+export const revalidate = 3600
+
 export const CurrentAgenda = ({
   date,
   sessions = [],
