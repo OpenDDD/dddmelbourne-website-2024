@@ -200,7 +200,7 @@ const Conference: IConference = {
     'Supper room': '#d8edd6',
     'Yarra room': '#f8d3d0',
     'Hoddle room': '#ffe2cc',
-    'Swanston room': '#ffe2cc',
+    'Swanston room': '#fff5cc',
   },
 
   Livestreams: [
