@@ -92,6 +92,7 @@ const Conference: IConference = {
   GoogleAnalyticsId: 'G-E5CD021NB4',
   TicketPrice: '$89',
   ChildcarePrice: 'free',
+  ChildcareRegistrationLink: 'https://ti.to/ddd-melbourne/ddd-2025-childcare',
   TicketsProviderId: TicketsProvider.Tito,
   TicketsProviderAccountId: 'ddd-melbourne',
   TicketsProviderEventId: 'ddd-2025',

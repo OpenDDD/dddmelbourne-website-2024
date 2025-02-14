@@ -14,6 +14,7 @@ export interface Conference {
   GoogleAnalyticsId: string
   TicketPrice: string
   ChildcarePrice: string
+  ChildcareRegistrationLink: string | null
   TicketsProviderId: TicketsProvider
   TicketsProviderAccountId: string
   TicketsProviderEventId: string

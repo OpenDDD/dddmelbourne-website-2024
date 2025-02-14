@@ -3,6 +3,7 @@ import { SafeLink } from 'components/global/safeLink'
 import Conference from './conference'
 import { Dates, FAQ, TicketPurchasingOptions } from './types'
 import { format } from 'date-fns'
+import conference from './conference'
 
 export default function getFaqs(dates: Dates): FAQ[] {
   const Faqs: FAQ[] = []
@@ -84,10 +85,11 @@ export default function getFaqs(dates: Dates): FAQ[] {
     Answer: (
       <Fragment>
         DDD Melbourne will be providing onsite childcare free of charge this year on a first come first served basis for
-        children. Please register your interest at this{' '}
-        <SafeLink href="https://forms.microsoft.com/r/dhhNuqSZZa" target="_blank">
+        children. Please register at this link{' '}
+        <SafeLink href={conference.ChildcareRegistrationLink} target="_blank">
           link
         </SafeLink>
+        .
       </Fragment>
     ),
   })
