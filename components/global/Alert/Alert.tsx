@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { Kind } from './Alert.styled'
+import { Kind, StyledAlert } from './Alert.styled'
 
 interface AlertProps {
   kind: Kind
@@ -8,10 +8,5 @@ interface AlertProps {
 }
 
 export const Alert = (props: AlertProps) => {
-  return (
-    <div>
-      Alert HERE
-      {props.children}
-    </div>
-  )
+  return <StyledAlert>{props.children}</StyledAlert>
 }
