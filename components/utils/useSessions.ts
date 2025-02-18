@@ -2,7 +2,7 @@ import { Session } from 'config/types'
 import { mapSessions } from './mapSession'
 
 export async function fetchSessions(sessionsAPI: string): Promise<false | Session[]> {
-  const response = await fetch(sessionsAPI)
+  const response = await fetch(sessionsAPI, { next: { revalidate: 3600 } })
   if (!response.ok) {
     return false
   }
