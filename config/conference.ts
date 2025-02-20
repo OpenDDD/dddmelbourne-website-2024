@@ -113,7 +113,7 @@ const Conference: IConference = {
   EmergencyContactPhoneNumber: '0414 431 474',
   MediaOfficerName: 'Alicia Cheah',
 
-  AnonymousReportFormUrl: 'https://forms.gle/7GkewmN8BrHQtwWQA',
+  AnonymousReportFormUrl: 'https://forms.office.com/r/adraBbhH8T',
 
   AnonymousVoting: true,
   PreferentialVoting: true,
@@ -159,10 +159,15 @@ const Conference: IConference = {
     },
     Flickr: 'https://www.flickr.com/photos/135717775@N07/albums',
     Youtube: 'https://www.youtube.com/@dddmelb',
-    Email: 'dddmelbourne@gmail.com',
+    Email: 'info@dddmelbourne.com',
     GitHub: 'OpenDDD',
     Instagram: 'dddmelb',
     RedBubble: 'https://www.redbubble.com/people/DDDMelbourne/shop?asc=u',
+    Linkedin: 'dddmelbourne',
+    Bluesky: {
+      Id: '3lcw5viisjg22',
+      Name: 'dddmelbourne.bsky.social',
+    },
   },
 
   ImportantContacts: {

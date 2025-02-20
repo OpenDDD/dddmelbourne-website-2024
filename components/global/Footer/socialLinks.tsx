@@ -3,7 +3,7 @@ import { Socials } from 'config/types'
 import { StyledSocialLinks, StyledSocialLink } from './Footer.styled'
 import { FacebookIcon } from 'components/global/Icons/Facebook'
 import { InstagramIcon } from 'components/global/Icons/Instagram'
-import { TwitterIcon } from 'components/global/Icons/Twitter'
+import { BlueskyIcon } from 'components/global/Icons/Bluesky'
 import { LinkedinIcon } from 'components/global/Icons/Linkedin'
 import { FlickrIcon } from 'components/global/Icons/Flickr'
 import { MediumIcon } from 'components/global/Icons/Medium'
@@ -18,23 +18,23 @@ interface SocialLinksArgs {
 
 export const SocialLinks = ({ socials }: SocialLinksArgs) => (
   <StyledSocialLinks>
+    {socials.Bluesky?.Name && (
+      <li>
+        <StyledSocialLink
+          href={`https://bsky.app/profile/${socials.Bluesky.Name}`}
+          target="_blank"
+          rel="noopener nofollow"
+        >
+          <BlueskyIcon />
+          <span>Blueksy, opens in new window</span>
+        </StyledSocialLink>
+      </li>
+    )}
     {socials.Facebook && (
       <li>
         <StyledSocialLink href={`https://facebook.com/${socials.Facebook}`} target="_blank" rel="noopener nofollow">
           <FacebookIcon />
           <span>Facebook, will open in a new window</span>
-        </StyledSocialLink>
-      </li>
-    )}
-    {socials.Instagram && (
-      <li>
-        <StyledSocialLink
-          href={`https://www.instagram.com/${socials.Instagram}`}
-          target="_blank"
-          rel="noopener nofollow"
-        >
-          <InstagramIcon />
-          <span>Instagram, opens in new window</span>
         </StyledSocialLink>
       </li>
     )}
@@ -47,6 +47,18 @@ export const SocialLinks = ({ socials }: SocialLinksArgs) => (
         >
           <LinkedinIcon />
           <span>LinkedIn, will open in a new window</span>
+        </StyledSocialLink>
+      </li>
+    )}
+    {socials.Instagram && (
+      <li>
+        <StyledSocialLink
+          href={`https://www.instagram.com/${socials.Instagram}`}
+          target="_blank"
+          rel="noopener nofollow"
+        >
+          <InstagramIcon />
+          <span>Instagram, opens in new window</span>
         </StyledSocialLink>
       </li>
     )}
@@ -95,14 +107,6 @@ export const SocialLinks = ({ socials }: SocialLinksArgs) => (
         <StyledSocialLink href={`${socials.RedBubble}`} target="_blank" rel="noopener nofollow">
           <RedBubbleIcon />
           <span>RedBubble, will open in a new window</span>
-        </StyledSocialLink>
-      </li>
-    )}
-    {socials.Twitter.Name && (
-      <li>
-        <StyledSocialLink href={`https://twitter.com/${socials.Twitter.Name}`} target="_blank" rel="noopener nofollow">
-          <TwitterIcon />
-          <span>Twitter, opens in new window</span>
         </StyledSocialLink>
       </li>
     )}

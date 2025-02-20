@@ -24,11 +24,11 @@ const ContactPage: NextPage = () => {
             {conference.SponsorshipEmail}
           </a>
         </li>
-        {conference.Socials.Twitter.Name && (
+        {conference.Socials.Bluesky && (
           <li>
-            <strong>Twitter:</strong>{' '}
-            <SafeLink href={'https://twitter.com/' + conference.Socials.Twitter.Name} target="_blank">
-              @{conference.Socials.Twitter.Name}
+            <strong>Bluesky:</strong>{' '}
+            <SafeLink href={'https://bsky.app/profile/' + conference.Socials.Bluesky.Name} target="_blank">
+              @{conference.Socials.Bluesky.Name}
             </SafeLink>
           </li>
         )}
