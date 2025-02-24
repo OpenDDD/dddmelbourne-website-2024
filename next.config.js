@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const config = {
+  output: 'standalone',
   poweredByHeader: false,
   async rewrites() {
     return {
@@ -13,8 +14,15 @@ const config = {
           /** Rewrite for Elo voting */
           source: '/vote',
           destination: '/vote/landing',
-        },      
+        },
+        {
+          source: "/2025/:path*", // The new public route
+          destination: "/shh-dont-look-here/:path*", // The actual path in the file system
+        },
     ]}
+  },
+  compiler: {
+    emotion: true,
   }
 }
 

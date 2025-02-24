@@ -130,26 +130,6 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
       <h2>Prize draw</h2>
 
       <Text>
-        This image is a collage featuring promotional materials for an event. On the left, there are various
-        gaming-related prizes, including an Xbox console with 'Diablo' artwork, a Nintendo Switch with 'Zelda' imagery,
-        a LEGO 'Raiders Lost Tomb' set, Webjet gift cards, and Bose headphones. On the right, there's a photo of a
-        crowded event hall with attendees, the logo of DDD Melbourne, and a call to action to use the hashtag '#DDDMelb'
-        on Twitter, alongside the official Twitter handle '@DDDMelb' and a snapshot of the account profile
-      </Text>
-      <StyledImage
-        src="dddmelbourne/static/images/prizes.png"
-        alt={
-          '        This image is a collage featuring promotional materials for an event. On the left, there are various\n' +
-          "        gaming-related prizes, including an Xbox console with 'Diablo' artwork, a Nintendo Switch with 'Zelda' imagery,\n" +
-          "        a LEGO 'Raiders Lost Tomb' set, Webjet gift cards, and Bose headphones. On the right, there's a photo of a\n" +
-          "        crowded event hall with attendees, the logo of DDD Melbourne, and a call to action to use the hashtag '#DDDMelb'\n" +
-          "        on Twitter, alongside the official Twitter handle '@DDDMelb' and a snapshot of the account profile\n"
-        }
-        config={pixboostConfig}
-        op={'optimise'}
-      />
-
-      <Text>
         At registration time, you can pick up your sponsor bingo card, which allows you to collect a stamp from each
         vendor booth you visit. You can submit your completed card in a raffle on the day for your chance to win amazing
         prizes!
@@ -157,7 +137,9 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
       <h2>Sharing your experience</h2>
 
-      <Text>We’ll be live-posting from the DDD Melbourne X channel on the day, so don’t forget to follow us here.</Text>
+      <Text>
+        We’ll be live-posting from the DDD Melbourne Bluesky channel on the day, so don’t forget to follow us here.
+      </Text>
 
       <Text>
         We’d also love for you to share your conference experience on social media! Whether you’re taking selfies,
@@ -183,13 +165,10 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
       <ul>
         <li>Foyer: Coffee and hot drinks will be available all day.</li>
-        <li>
-          Main hall: Coffee and hot drinks will only be available during mealtimes to avoid disrupting talks that are in
-          session.
-        </li>
+        <li>Collins Foyer (out the back of the Main Hall): Coffee and hot drinks will be available all day.</li>
       </ul>
 
-      <Text>Thank you to our coffee sponsors Kodez and justdigitalpeople!</Text>
+      <Text>Thank you to our coffee sponsors REA Group and Datastax!</Text>
 
       <h2>After party</h2>
 
@@ -221,8 +200,8 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
       <Text>
         Conference participants or anyone interacting with the event violating these rules may be sanctioned or expelled
-        from the conference without a refund at the discretion of the conference organisers. Click here to view the full
-        Code of Conduct.
+        from the conference without a refund at the discretion of the conference organisers.{' '}
+        <a href="/code-of-conduct">Click here to view the full Code of Conduct.</a>
       </Text>
 
       <Text>

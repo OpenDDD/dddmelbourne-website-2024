@@ -7,4 +7,6 @@ interface AlertProps {
   type?: 'assertive' | 'polite'
 }
 
-export const Alert = (props: AlertProps) => <StyledAlert {...props} />
+export const Alert = (props: AlertProps) => {
+  return <StyledAlert>{props.children}</StyledAlert>
+}

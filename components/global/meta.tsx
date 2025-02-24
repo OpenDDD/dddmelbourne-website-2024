@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import * as analytics from 'components/global/analytics'
 import { useRouter } from 'next/router'
 import { useConfig } from 'Context/Config'
 import { formatInTimeZone } from 'date-fns-tz'
@@ -9,12 +8,6 @@ interface MetaArgs {
   pageTitle: string
   pageDescription?: string
   pageImage?: string
-}
-
-declare global {
-  interface Window {
-    GA_INITIALIZED: boolean
-  }
 }
 
 const getTitle = (title: string, date: Date, name: string, showDate: boolean, timezone: string) =>
@@ -38,14 +31,6 @@ export const Meta = ({ pageTitle, pageDescription, pageImage }: MetaArgs) => {
       ),
     [pageTitle, dates.IsComplete, conference.HideDate, conference.Name, conference.Date, conference.TimeZone],
   )
-
-  React.useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      analytics.init(conference.GoogleAnalyticsId)
-      window.GA_INITIALIZED = true
-    }
-    analytics.logPageView()
-  }, [conference.GoogleAnalyticsId])
 
   return (
     <Head>

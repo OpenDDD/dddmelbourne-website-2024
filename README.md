@@ -1,8 +1,6 @@
-[![Build status](https://dev.azure.com/dddwa/DDD%20Perth%20Website/_apis/build/status/dddwa.dddperth-website?branchName=main)](https://dev.azure.com/dddwa/DDD%20Perth%20Website/_build/latest?definitionId=4)
+# DDD Melbourne Website
 
-# DDD Perth Website
-
-The DDD Perth website is deployed to https://dddperth.com and is built using [Next.js](https://github.com/zeit/next.js/).
+The DDD Melbourne website is deployed to https://dddmelbourne.com and is built using [Next.js](https://github.com/zeit/next.js/).
 
 ## Getting started
 
@@ -19,6 +17,21 @@ The DDD Perth website is deployed to https://dddperth.com and is built using [Ne
 - Run `npm run build`
 - Grab the `.next` directory and deploy to the destination
 - Run `npm` in the deploy folder and deploy all files from there alongside the `.next` directory (the web.config file is targeted towards Azure Web Apps)
+
+## Special Note for current deployment
+
+We are now running the site on to Azure Container Apps (see `.github/workflows/container-app.yml`)
+
+Currently there is no automatic deployemnt of new Docker image once it has been updated, as the full setup of the Azure credentials is a WIP. To deploy a new image:
+
+1. Grab the new image SHA (find it in the completed Action under the Build and Push Docker image, where it says `#22 naming to ghcr.io/*******:sha-b5602ed done`)
+2. Go to your Azure Portal > Container Apps > and into the right container
+3. Go to Application > Containers
+4. Click "Edit and Deploy"
+5. In the Containers table, click on the desired container and in the sidebar that pops up, change teh "Image and tag" to have the correct SHA at the end
+6. Click Save and then Create
+
+After this, it should deploy the new image to the container.
 
 ## Code organisation
 
@@ -71,4 +84,3 @@ We use Azure DevOps for CI / CD. This is controlled via [.devops/azure-pipelines
 ## Contributing
 
 So you’re thinking about contributing to the project? You are awesome! It’s **massively** appreciated. Before getting started, please take the time to review the [contribution guidelines](CONTRIBUTING.MD) before sending that epic pull request / bug report.
-

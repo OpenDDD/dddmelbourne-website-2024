@@ -9,7 +9,7 @@ import {
   Venue,
 } from './types'
 import { zonedTimeToUtc } from 'date-fns-tz'
-import { add, set, toDate } from 'date-fns'
+import { add, set } from 'date-fns'
 import { MelbourneTownHall } from './venues/melbourne-town-hall'
 
 const name = 'DDD Melbourne'
@@ -31,7 +31,7 @@ const presentationSubmissionsOpenUntil = zonedTimeToUtc('2024-11-01T23:59:59', t
 const votingOpenFrom = zonedTimeToUtc('2024-11-08T00:00:00', tz)
 const votingOpenUntil = zonedTimeToUtc('2024-11-20T23:59:59', tz)
 const agendaPublishedFrom = zonedTimeToUtc('2024-11-30T09:00:00', tz)
-const feedbackOpenFrom = toDate(date)
+const feedbackOpenFrom = zonedTimeToUtc('2024-11-08T00:00:00', tz)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
   {
@@ -84,14 +84,15 @@ const Conference: IConference = {
   Organiser: {
     Name: 'OZ Dev Inc.',
     Url: 'https://medium.com/ddd-melbourne/the-ddd-melbourne-crew-5f0dd3da09df',
-    ShirtColour: 'TBD',
+    ShirtColour: 'bright blue',
   },
   TagLine: tagLine,
   SiteDescription: `${tagLine}.`,
   Goal: "Our goal is to create an approachable event that appeals to the whole community, especially people that don't normally get to attend or speak at conferences.",
-  GoogleAnalyticsId: 'UA-99087610-1',
+  GoogleAnalyticsId: 'G-E5CD021NB4',
   TicketPrice: '$89',
   ChildcarePrice: 'free',
+  ChildcareRegistrationLink: 'https://ti.to/ddd-melbourne/ddd-2025-childcare',
   TicketsProviderId: TicketsProvider.Tito,
   TicketsProviderAccountId: 'ddd-melbourne',
   TicketsProviderEventId: 'ddd-2025',
@@ -99,20 +100,20 @@ const Conference: IConference = {
   TicketPurchasingOptions: ticketPurchasingOptions,
   HashTag: 'DDDMelbourne',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
-  Handbook: 'handbook2022.pdf',
+  Handbook: '',
   SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2025/',
   SessionizeEditUrl: 'https://sessionize.com/app/speaker/',
   PreviouslySubmittedTopics:
     'Agile, building great teams, UI design, UX, software testing, virtual reality, women in tech, web accessibility, open source software, workplace culture, mental health, unconscious bias, building engaged teams, self-employment tips, mentoring, Scrum, pair programming, bots, IoT, machine learning, neural networks, quantum encryption, security, reverse engineering, blockchain, Assembly language, automated deployments, mobile development, mobile test automation, Domain Driven Design, cloud native, architecture, microservices, serverless, service meshes, stream programming and Rx, APIs, GraphQL, actors, JavaScript, SPAs, TypeScript, authentication, React, UWP, Elm, HTML, HTTP protocol, Git, Docker and pointers',
 
-  ContactEmail: 'dddmelbourne@gmail.com',
+  ContactEmail: 'info@dddmelbourne.com',
   SponsorshipEmail: 'sponsorship@dddmelbourne.com',
   MentoringEmail: 'speakers@dddmelbourne.com',
   EmergencyContactName: 'Bron Thulke',
   EmergencyContactPhoneNumber: '0414 431 474',
   MediaOfficerName: 'Alicia Cheah',
 
-  AnonymousReportFormUrl: 'https://forms.gle/7GkewmN8BrHQtwWQA',
+  AnonymousReportFormUrl: 'https://forms.office.com/r/adraBbhH8T',
 
   AnonymousVoting: true,
   PreferentialVoting: true,
@@ -138,8 +139,8 @@ const Conference: IConference = {
   FeedbackOpenFrom: feedbackOpenFrom,
   FeedbackOpenUntil: feedbackOpenUntil,
 
-  ConferenceFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
-  SessionFeedbackLink: 'https://forms.office.com/r/kSHPH4zqZ5',
+  ConferenceFeedbackLink: '/conference-feedback',
+  SessionFeedbackLink: '/feedback',
 
   HideDate: hideDate,
   HideSponsors: false,
@@ -158,10 +159,15 @@ const Conference: IConference = {
     },
     Flickr: 'https://www.flickr.com/photos/135717775@N07/albums',
     Youtube: 'https://www.youtube.com/@dddmelb',
-    Email: 'dddmelbourne@gmail.com',
+    Email: 'info@dddmelbourne.com',
     GitHub: 'OpenDDD',
     Instagram: 'dddmelb',
     RedBubble: 'https://www.redbubble.com/people/DDDMelbourne/shop?asc=u',
+    Linkedin: 'dddmelbourne',
+    Bluesky: {
+      Id: '3lcw5viisjg22',
+      Name: 'dddmelbourne.bsky.social',
+    },
   },
 
   ImportantContacts: {
@@ -194,13 +200,13 @@ const Conference: IConference = {
 
   Keynotes: [],
 
-  RoomNames: ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Workshops'],
+  RoomNames: ['Main hall', 'Swanston room', 'Supper room', 'Yarra room', 'Hoddle room'],
   RoomColors: {
-    'Main Hall': '#c6effc',
-    'Supper Room': '#d8edd6',
-    'Yarra Room': '#f8d3d0',
-    'Hoddle Room': '#ffe2cc',
-    Workshops: '#ffe2cc',
+    'Main hall': '#c6effc',
+    'Supper room': '#d8edd6',
+    'Yarra room': '#f8d3d0',
+    'Hoddle room': '#ffe2cc',
+    'Swanston room': '#fff5cc',
   },
 
   Livestreams: [

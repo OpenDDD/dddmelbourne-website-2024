@@ -63,8 +63,8 @@ const CodeOfConduct: NextPage = () => {
           organiser name tags
         </li>
         <li>
-          <SafeLink href={`https://twitter.com/messages/compose?recipient_id=${conference.Socials.Twitter.Id}`}>
-            Sending a direct message to our Twitter account: {conference.Socials.Twitter.Name}
+          <SafeLink href={`https://bsky.app/messages/${conference.Socials.Bluesky.Id}`}>
+            Sending a direct message to our Bluesky account: {conference.Socials.Bluesky.Name}
           </SafeLink>
         </li>
         <li>
@@ -81,11 +81,10 @@ const CodeOfConduct: NextPage = () => {
       </Text>
 
       <Text>
-        When taking a personal report, <a href={conference.Organiser.Url}>our staff</a> will ensure you are safe and
-        cannot be overheard. They may involve other event staff to ensure your report is managed properly. Once safe,
-        we'll ask you to tell us about what happened. This can be upsetting, but we'll handle it as respectfully as
-        possible, and you can bring someone to support you. You won't be asked to confront anyone and we won't tell
-        anyone who you are.
+        When taking a personal report, our organisers and volunteers will ensure you are safe and cannot be overheard.
+        They may involve other event staff to ensure your report is managed properly. Once safe, we'll ask you to tell
+        us about what happened. This can be upsetting, but we'll handle it as respectfully as possible, and you can
+        bring someone to support you. You won't be asked to confront anyone and we won't tell anyone who you are.
       </Text>
 
       <Text>
@@ -256,7 +255,7 @@ const CodeOfConduct: NextPage = () => {
         the <SafeLink href="http://confcodeofconduct.com/">Conference Code of Conduct</SafeLink>
       </Text>
 
-      <Text>Last update: June 7, 2020</Text>
+      <Text>Last update: February 20, 2025</Text>
     </PageWithSidebar>
   )
 }

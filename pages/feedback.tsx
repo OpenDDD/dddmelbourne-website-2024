@@ -20,7 +20,6 @@ import { FeedbackTimeTesting } from 'components/Feedback/FeedbackTimeTesting'
 import { defaultFormState, formReducer } from 'components/Feedback/FormReducers'
 import { SessionInput } from 'components/Feedback/SessionInput'
 import { Alert } from 'components/global/Alert/Alert'
-import { logException } from 'components/global/analytics'
 import { StyledContainer } from 'components/global/Container/Container.styled'
 import { getLocalStoredName, storageKey, StorageKeys } from 'components/utils/storageKey'
 import { useDeviceId } from 'components/utils/useDeviceId'
@@ -50,9 +49,9 @@ const Feedback: NextPage<FeedbackProps> = ({ sessions }) => {
   const { deviceId } = useDeviceId(conference.Instance)
   const { allSessionGroups, ...sessionGroups } = useSessionGroups(sessions)
   const [formState, dispatch] = useReducer(formReducer, defaultFormState)
-  const hasPreviousSessions =
-    sessions && sessionGroups.previousSessionGroup && sessionGroups.previousSessionGroup.sessions.length > 0
-  const showForm = sessions && hasPreviousSessions
+  const hasPreviousSessions = true
+  // sessions && sessionGroups.previousSessionGroup && sessionGroups.previousSessionGroup.sessions.length > 0
+  const showForm = true //sessions && hasPreviousSessions
 
   const formSubmitHandler = async () => {
     dispatch('submitting')
@@ -78,7 +77,6 @@ const Feedback: NextPage<FeedbackProps> = ({ sessions }) => {
           dispatch('error')
         })
     } catch (e) {
-      logException('Error when submitting session feedback', e, { deviceId })
       dispatch('error')
     }
   }
@@ -99,9 +97,7 @@ const Feedback: NextPage<FeedbackProps> = ({ sessions }) => {
         </h1>
         <p>
           If you would like to leave feedback about the conference please use{' '}
-          <Link href={conference.ConferenceFeedbackLink}>
-            <a>the conference feedback page</a>
-          </Link>
+          <Link href={conference.ConferenceFeedbackLink}>the conference feedback page</Link>
         </p>
 
         {sessions.length === 0 && (
@@ -132,7 +128,7 @@ const Feedback: NextPage<FeedbackProps> = ({ sessions }) => {
             <StyledFormRow>
               <StyledHeadingLabel>Which talk do you want to provide feedback for?</StyledHeadingLabel>
               <StyledSessionList>
-                {sessionGroups.previousSessionGroup.sessions.flat().map((session) => (
+                {sessions.map((session) => (
                   <li key={session.Id}>
                     <SessionInput session={session} checked={values.sessionId === session.Id} onChange={handleChange} />
                   </li>

@@ -96,7 +96,7 @@ export const Agenda = ({ sessions, ...props }: AgendaProps) => {
     <React.Fragment>
       {props.render(sessions, nextSessionGroup, onSelectHandler)}
 
-      <StyledDialogOverlay isOpen={sessionState.showModal} onDismiss={onDismissHandler}>
+      <StyledDialogOverlay isOpen={sessionState.showModal} onRequestClose={onDismissHandler}>
         <StyledDialogContent>
           <StyledCloseButton type="button" className="close-button" onClick={onDismissHandler} aria-label="Close">
             <span aria-hidden>×</span>

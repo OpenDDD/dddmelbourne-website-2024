@@ -14,6 +14,7 @@ export interface Conference {
   GoogleAnalyticsId: string
   TicketPrice: string
   ChildcarePrice: string
+  ChildcareRegistrationLink: string | null
   TicketsProviderId: TicketsProvider
   TicketsProviderAccountId: string
   TicketsProviderEventId: string
@@ -160,6 +161,7 @@ export interface Socials {
   MailingList?: string
   Linkedin?: string
   RedBubble?: string
+  Bluesky?: Bluesky
 }
 
 export interface ImportantContacts {
@@ -228,6 +230,11 @@ export interface Organiser {
 }
 
 export interface Twitter {
+  Id?: string
+  Name: string
+}
+
+export interface Bluesky {
   Id?: string
   Name: string
 }

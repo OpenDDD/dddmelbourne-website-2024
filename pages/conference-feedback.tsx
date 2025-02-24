@@ -15,7 +15,6 @@ import {
 import { postFeedback } from 'components/Feedback/FeedbackFetch'
 import { defaultFormState, formReducer } from 'components/Feedback/FormReducers'
 import { Alert } from 'components/global/Alert/Alert'
-import { logException } from 'components/global/analytics'
 import { StyledContainer } from 'components/global/Container/Container.styled'
 import { getLocalStoredName, storageKey, StorageKeys } from 'components/utils/storageKey'
 import { useDeviceId } from 'components/utils/useDeviceId'
@@ -61,7 +60,6 @@ const ConferenceFeedback: NextPage = () => {
           dispatch('error')
         })
     } catch (e) {
-      logException('Error when submitting conference feedback', e, { deviceId })
       dispatch('error')
     }
   }
@@ -82,9 +80,7 @@ const ConferenceFeedback: NextPage = () => {
         </h1>
         <p>
           If you would like to leave feedback for a session please use{' '}
-          <Link href={conference.SessionFeedbackLink}>
-            <a>the session feedback page</a>
-          </Link>
+          <Link href={conference.SessionFeedbackLink}>the session feedback page</Link>
         </p>
 
         <StyledForm onSubmit={handleSubmit}>

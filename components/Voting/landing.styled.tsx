@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { Button } from 'components/global/Button/Button'
 import { Text } from 'components/global/text'
 import { calcRem } from 'components/utils/styles/calcRem'
-import { DialogContent } from '@reach/dialog'
 import { breakpointMax } from '../utils/styles/breakpoints'
 
 export const StyledLandingContainer = styled('div')(() => ({
@@ -54,7 +53,7 @@ export const StyledFormRow = styled('div')({
   marginBottom: calcRem(30),
 })
 
-export const StyledDialogContent = styled(DialogContent)({
+export const StyledDialogContent = styled('div')({
   [breakpointMax('sm')]: {
     width: '100%',
   },

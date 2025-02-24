@@ -3,11 +3,11 @@ import { StyledToggle } from './NavToggle.styled'
 import { useNavigationState, useNavigationDispatch } from '../Nav.context'
 
 export const NavToggle = () => {
-  const { id, expanded } = useNavigationState()
+  const { expanded } = useNavigationState()
   const dispatch = useNavigationDispatch()
 
   return (
-    <StyledToggle active={expanded} type="button" onClick={() => dispatch('toggle')} aria-controls={id}>
+    <StyledToggle active={expanded} type="button" onClick={() => dispatch('toggle')} aria-controls="nav-id">
       <div aria-hidden="true" role="img" />
       {expanded ? 'Close' : 'Menu'}
     </StyledToggle>

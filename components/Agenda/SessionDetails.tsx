@@ -29,6 +29,10 @@ export const SessionDetails = ({
   hideLevelAndFormat = false,
   showBio,
 }: SessionDetailsProps) => {
+  if (!session) {
+    return <div>Uh Oh</div>
+  }
+
   return (
     <Fragment>
       <StyledSessionTitle>{session.Title}</StyledSessionTitle>

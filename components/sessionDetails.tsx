@@ -10,13 +10,7 @@ interface SessionProps {
   showBio: boolean
 }
 
-const SessionDetails: React.StatelessComponent<SessionProps> = ({
-  session,
-  showBio,
-  showPresenter,
-  hideTags,
-  hideLevelAndFormat,
-}) => (
+const SessionDetails: React.FC<SessionProps> = ({ session, showBio, showPresenter, hideTags, hideLevelAndFormat }) => (
   <Fragment>
     {showPresenter &&
       session.Presenters.map((p) => (

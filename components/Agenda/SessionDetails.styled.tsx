@@ -1,22 +1,20 @@
-import { DialogContent, DialogOverlay } from '@reach/dialog'
 import { breakpoint, breakpointMax } from 'components/utils/styles/breakpoints'
 import { calcRem } from 'components/utils/styles/calcRem'
 import styled from '@emotion/styled'
-import { zIndex } from 'components/utils/styles/zindex'
+import ReactModal from 'react-modal'
 
-export const StyledDialogOverlay = styled(DialogOverlay)({
+export const StyledDialogOverlay = styled(ReactModal)({
   position: 'fixed',
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
   overflow: 'auto',
-  zIndex: zIndex.agendaOverlay,
   background: `hsla(0, 0%, 0%, 0.33)`,
 })
 StyledDialogOverlay.displayName = 'StyledDialogOverlay'
 
-export const StyledDialogContent = styled(DialogContent)({
+export const StyledDialogContent = styled('div')({
   position: 'relative',
   width: '90vw',
   padding: calcRem(15),
@@ -43,6 +41,7 @@ export const StyledCloseButton = styled('button')(({ theme }) => ({
   fontSize: calcRem(30),
   fontWeight: theme.weights.bold,
   lineHeight: 1,
+  cursor: 'pointer',
 
   '&:focus, &:hover': {
     color: '#808080',

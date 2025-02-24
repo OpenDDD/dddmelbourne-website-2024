@@ -1,49 +1,16 @@
 import styled from '@emotion/styled'
-import Alert from '@reach/alert'
-import { calcRem } from 'components/utils/styles/calcRem'
-import { DDDTheme } from 'components/utils/styles/theme'
+import { calcRem } from '../../utils/styles/calcRem'
 
 export type Kind = 'info' | 'success' | 'error' | 'warning'
 
-interface StyledAlertProps {
-  kind: Kind
-}
-
-function stylesFromKind(kind: StyledAlertProps['kind'], theme: DDDTheme) {
-  switch (kind) {
-    case 'error':
-      return {
-        backgroundColor: theme.colors.alerts.error.background,
-        borderColor: theme.colors.alerts.error.border,
-        color: theme.colors.alerts.error.color,
-      }
-    case 'success':
-      return {
-        backgroundColor: theme.colors.alerts.success.background,
-        borderColor: theme.colors.alerts.success.border,
-        color: theme.colors.alerts.success.color,
-      }
-    case 'warning':
-      return {
-        backgroundColor: theme.colors.alerts.warning.background,
-        borderColor: theme.colors.alerts.warning.border,
-        color: theme.colors.alerts.warning.color,
-      }
-    default:
-      return {
-        backgroundColor: theme.colors.alerts.info.background,
-        borderColor: theme.colors.alerts.info.border,
-        color: theme.colors.alerts.info.color,
-      }
-  }
-}
-
-export const StyledAlert = styled(Alert, {
-  shouldForwardProp: (prop) => prop !== 'kind',
-})<StyledAlertProps>(({ kind, theme }) => ({
+export const StyledAlert = styled('div')({
+  position: 'fixed',
+  bottom: 0,
+  right: 0,
+  overflow: 'auto',
+  margin: calcRem(15),
   padding: calcRem(15),
-  margin: calcRem(0, 0, 20),
-  border: '1px solid transparent',
-  borderRadius: calcRem(4),
-  ...stylesFromKind(kind, theme),
-}))
+  background: `hsla(0, 0%, 0%, 0.33)`,
+  color: 'white',
+})
+StyledAlert.displayName = 'StyledAlert'

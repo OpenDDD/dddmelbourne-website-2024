@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { zIndex } from 'components/utils/styles/zindex'
 import { breakpoint } from 'components/utils/styles/breakpoints'
 import { NavStatus } from './Nav'
+import Link from 'next/link'
 
 interface StyleNavProps {
   status: NavStatus
@@ -33,10 +34,10 @@ export const StyledNavList = styled('ul')(({ theme }) => ({
 StyledNavList.displayName = 'StyledNavList'
 
 interface StyledNavLinkProps {
-  active?: boolean
+  active?: string
 }
 
-export const StyledNavLink = styled('a')<StyledNavLinkProps>(({ theme, active }) => ({
+export const StyledNavLink = styled(Link)<StyledNavLinkProps>(({ theme, active }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: calcRem(theme.metrics.lg, theme.metrics.lg),

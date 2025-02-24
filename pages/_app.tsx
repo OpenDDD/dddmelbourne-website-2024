@@ -6,8 +6,19 @@ import { globalCSS } from 'components/utils/styles/global'
 import { ConfigProvider } from 'Context/Config'
 import { AppProps } from 'next/app'
 import Script from 'next/script'
+import ReactModal from 'react-modal'
+import { zIndex } from '../components/utils/styles/zindex'
+import Conference from 'config/conference'
 
-function CustomApp({ Component, pageProps }: AppProps): JSX.Element {
+ReactModal.setAppElement('#content')
+ReactModal.defaultStyles = {
+  overlay: {
+    zIndex: zIndex.agendaOverlay,
+    position: 'fixed',
+  },
+}
+
+function CustomApp({ Component, pageProps }: AppProps): React.JSX.Element {
   return (
     <ConfigProvider>
       <ThemeProvider theme={theme}>
@@ -31,6 +42,23 @@ function CustomApp({ Component, pageProps }: AppProps): JSX.Element {
           }}
         />
       ) : null}
+      {Conference.GoogleAnalyticsId && (
+        <React.Fragment>
+          <Script async={true} src={`https://www.googletagmanager.com/gtag/js?id=${Conference.GoogleAnalyticsId}`} />
+          <Script
+            id="ga"
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+      
+              gtag('config', '${Conference.GoogleAnalyticsId}');
+              `,
+            }}
+          />
+        </React.Fragment>
+      )}
     </ConfigProvider>
   )
 }
