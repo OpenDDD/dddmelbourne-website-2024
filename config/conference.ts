@@ -202,11 +202,11 @@ const Conference: IConference = {
 
   RoomNames: ['Main hall', 'Swanston room', 'Supper room', 'Yarra room', 'Hoddle room'],
   RoomColors: {
-    'Main hall': '#c6effc',
-    'Supper room': '#d8edd6',
-    'Yarra room': '#f8d3d0',
-    'Hoddle room': '#ffe2cc',
-    'Swanston room': '#fff5cc',
+    'Main hall': 'rgb(0, 158, 115)',
+    'Supper room': 'rgb(86, 180, 233)',
+    'Yarra room': 'rgb(240, 228, 66)',
+    'Hoddle room': 'rgb(230, 159, 0)',
+    'Swanston room': 'rgb(204, 121, 167)',
   },
 
   Livestreams: [
