@@ -28,13 +28,13 @@ const AgendaPage: NextPage<AgendaPageProps> = ({ sessions, sessionId }) => {
         <h1>{dates.IsComplete && conference.Instance} Agenda</h1>
 
         {!dates.AgendaPublished && (
-          <p>
+          <div>
             The agenda has not yet been finalised; please come back on{' '}
             {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.DateDisplayFormat)}{' '}
             {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.TimeDisplayFormat)}. In the
             meantime, check out our previous agendas below.
             <AllAgendas dates={dates} conference={conference} conferenceInstance={conference.Instance} />
-          </p>
+          </div>
         )}
         {dates.AgendaPublished && (
           <CurrentAgenda

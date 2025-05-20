@@ -9,13 +9,18 @@ import Script from 'next/script'
 import ReactModal from 'react-modal'
 import { zIndex } from '../components/utils/styles/zindex'
 import Conference from 'config/conference'
+import getConferenceDates from '../config/dates'
+import dateTimeProvider from '../components/utils/dateTimeProvider'
 
-ReactModal.setAppElement('#content')
-ReactModal.defaultStyles = {
-  overlay: {
-    zIndex: zIndex.agendaOverlay,
-    position: 'fixed',
-  },
+const dates = getConferenceDates(Conference, dateTimeProvider.now())
+if (dates.AgendaPublished) {
+  ReactModal.setAppElement('#content')
+  ReactModal.defaultStyles = {
+    overlay: {
+      zIndex: zIndex.agendaOverlay,
+      position: 'fixed',
+    },
+  }
 }
 
 function CustomApp({ Component, pageProps }: AppProps): React.JSX.Element {
