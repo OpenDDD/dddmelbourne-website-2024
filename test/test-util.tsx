@@ -4,7 +4,7 @@ import { ThemeProvider } from '@emotion/react'
 import { theme } from 'components/utils/styles/theme'
 import { ConfigProvider } from 'Context/Config'
 
-function render(ui: React.ReactElement, { ...options } = {}): RenderResult {
+function render(ui: React.ReactElement<any>, { ...options } = {}): RenderResult {
   function Wrapper({ children }) {
     return (
       <ConfigProvider>

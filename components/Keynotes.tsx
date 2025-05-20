@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { Conference } from 'config/types'
 import { SafeLink } from 'components/global/safeLink'
 import SessionDetails from 'components/sessionDetails'

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, type JSX } from 'react'
 import { Footer } from 'components/global/Footer/footer'
 import { Meta } from 'components/global/meta'
 import { SkipToContent } from 'components/SkipToContent/SkipToContent'

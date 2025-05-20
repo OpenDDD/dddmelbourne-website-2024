@@ -15,7 +15,7 @@ interface AgendaProps {
   feedbackLink?: string
   hideTags?: boolean
   hideLevel?: boolean
-  render: (sessions: Session[], nextSessionGroup: SessionGroup, onSelect: onSelectCallback) => React.ReactElement
+  render: (sessions: Session[], nextSessionGroup: SessionGroup, onSelect: onSelectCallback) => React.ReactElement<any>
 }
 
 interface AgendaActionSelect {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, type JSX } from 'react'
 import Conference from 'config/conference'
 import SponsorData from 'config/sponsors'
 import { TicketPurchasingOptions } from 'config/types'

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { Action, Conference } from 'config/types'
 import { ActionButton } from 'components/actionButton'
 import { ImportantDatesList } from 'components/ImportantDatesList/importantDatesList'

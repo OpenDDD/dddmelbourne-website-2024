@@ -1,5 +1,5 @@
 import { Main } from 'layouts/main'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, type JSX } from 'react'
 
 const ShhhHahaPage = (): JSX.Element => {
   const [joke, setJoke] = useState<string>('')

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { StyledHeader, StyledAnchor } from './Header.styled'
 import { DDDLogo } from 'components/global/Icons/DDDLogo'
 import { HeaderSocials } from './components/HeaderSocials'

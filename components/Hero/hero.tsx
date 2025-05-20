@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { StyledConferenceDetails, HeroContentWrapper, HeroWrapper } from './Hero.styled'
 import { formatISO } from 'date-fns'
 import { useConfig } from 'Context/Config'

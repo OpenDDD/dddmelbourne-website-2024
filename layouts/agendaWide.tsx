@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { Template, TemplateProps } from './template'
 import { StyledAgenda } from './Layouts.styled'
 

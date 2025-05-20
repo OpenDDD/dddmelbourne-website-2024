@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { useConfig } from 'Context/Config'
 import { SocialLinks } from './socialLinks'
 import { StyledFooter, StyledFooterContainer, StyledArrowIcon, StyledTopAnchor } from './Footer.styled'
