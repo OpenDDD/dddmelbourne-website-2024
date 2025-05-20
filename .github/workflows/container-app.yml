@@ -3,7 +3,7 @@ name: Container App Deployment
 on:
   push:
     branches:
-      - feat/next-13
+      - main
 
 permissions:
   id-token: write
