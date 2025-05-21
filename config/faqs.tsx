@@ -155,11 +155,8 @@ export default function getFaqs(dates: Dates): FAQ[] {
     Question: `What is the hashtag for ${Conference.Name}?`,
     Answer: (
       <Fragment>
-        The Twitter hashtag is{' '}
-        <SafeLink href={'https://twitter.com/search?q=%23' + Conference.HashTag} target="_blank">
-          #{Conference.HashTag}
-        </SafeLink>
-        .
+        We'd love it if you could use our hashtag #{Conference.HashTag} on all your social media posts, across all the
+        different channels
       </Fragment>
     ),
   })

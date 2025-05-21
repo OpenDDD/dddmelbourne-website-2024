@@ -98,7 +98,7 @@ const Conference: IConference = {
   TicketsProviderEventId: 'ddd-2025',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
-  HashTag: 'DDDMelbourne',
+  HashTag: 'dddmelb',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
   Handbook: '',
   SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2025/',
