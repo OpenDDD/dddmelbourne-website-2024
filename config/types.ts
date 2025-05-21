@@ -97,6 +97,7 @@ export enum TicketPurchasingOptions {
   OnSale,
   WaitListOpen,
   SoldOut,
+  NotOnSale,
 }
 
 export enum TicketsProvider {

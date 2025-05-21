@@ -17,7 +17,7 @@ const tagLine = `${name} is an inclusive non-profit conference for the Melbourne
 
 const tz = 'Australia/Melbourne'
 const hideDate = false
-const ticketPurchasingOptions = TicketPurchasingOptions.WaitListOpen
+const ticketPurchasingOptions = TicketPurchasingOptions.NotOnSale
 const staticDate = '2026-02-26T09:00'
 const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
