@@ -107,6 +107,6 @@ export const theme = {
 export type DDDTheme = typeof theme
 
 declare module '@emotion/react' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+   
   export interface Theme extends DDDTheme {}
 }

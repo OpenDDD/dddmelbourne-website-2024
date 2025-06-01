@@ -8,7 +8,6 @@ import { getCommonServerSideProps } from 'components/utils/getCommonServerSidePr
 import { fetchSessions } from 'components/utils/useSessions'
 import { useSessionGroups } from 'components/utils/useSessionGroups'
 import { Text } from 'components/global/text'
-import { roomLocations } from 'components/venueMapData'
 import { Image } from 'pixboost-react'
 import styled from '@emotion/styled'
 import { SafeLink } from '../components/global/safeLink'
@@ -43,18 +42,12 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
 
   if (currentSessionGroup && currentSessionGroup.sessions.length > 0) {
     // NB: This is quite brittle, as it assumes that the list of current sessions is returned in exactly the same order as the definition of rooms
-    currentSessionGroup.sessions.map(function (session: Session | Session[], i) {
+    currentSessionGroup.sessions.map(function (session: Session | Session[]) {
       const presenters = []
 
       session[0].Presenters.map((p) => {
         presenters.push(p.Name)
       })
-      if (!roomLocations.features[i]) return
-      roomLocations.features[i].properties.currentEvent = {
-        eventId: session[0].Id,
-        eventName: session[0].Title,
-        eventPresenters: presenters.join(', '),
-      }
     })
   }
 

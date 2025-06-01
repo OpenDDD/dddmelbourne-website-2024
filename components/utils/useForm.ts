@@ -1,6 +1,6 @@
 import React from 'react'
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+ 
 export function useForm<T>(callback: () => void, initialState: T) {
   const [values, setValues] = React.useState<T>(initialState)
 
