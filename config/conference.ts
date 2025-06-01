@@ -18,7 +18,7 @@ const tagLine = `${name} is an inclusive non-profit conference for the Melbourne
 const tz = 'Australia/Melbourne'
 const hideDate = false
 const ticketPurchasingOptions = TicketPurchasingOptions.NotOnSale
-const staticDate = '2026-02-26T09:00'
+const staticDate = '2026-02-21T09:00'
 const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
 const currentInstance = 2026
@@ -98,7 +98,7 @@ const Conference: IConference = {
   TicketsProviderEventId: 'ddd-2025',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
-  HashTag: 'dddmelb',
+  HashTag: 'DDDMelb',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
   Handbook: '',
   SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2025/',
