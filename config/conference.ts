@@ -90,7 +90,7 @@ const Conference: IConference = {
   SiteDescription: `${tagLine}.`,
   Goal: "Our goal is to create an approachable event that appeals to the whole community, especially people that don't normally get to attend or speak at conferences.",
   GoogleAnalyticsId: 'G-E5CD021NB4',
-  TicketPrice: '$89',
+  TicketPrice: 'TBC',
   ChildcarePrice: 'free',
   ChildcareRegistrationLink: 'https://ti.to/ddd-melbourne/ddd-2025-childcare',
   TicketsProviderId: TicketsProvider.Tito,
