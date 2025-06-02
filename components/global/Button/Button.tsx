@@ -13,7 +13,7 @@ export interface ButtonProps
 export const Button = (props: ButtonProps) => {
   const Component = props.kind !== 'link' ? StyledButton : StyledLinkButton
   return (
-    // @ts-ignore
+    // @ts-expect-error - TS doesn't like the spread operator here
     <Component type="button" kind={props.kind} {...props}>
       {props.children}
     </Component>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { ButtonAnchor } from 'components/global/Button/Button'
 import { StyledActionBarContainer } from './ActionBar.styled'
 import getConferenceActions from 'config/actions'

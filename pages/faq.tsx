@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { FaqList } from 'components/FAQList/FaqList'
 import getFaqs from 'config/faqs'
 import { PageWithSidebar } from 'layouts/withSidebar'

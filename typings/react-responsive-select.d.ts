@@ -1,5 +1,5 @@
 declare module 'react-responsive-select/dist/ReactResponsiveSelect' {
-  import React from 'react'
+  import React, { type JSX } from 'react'
 
   export interface ReactResponsiveSelectProps {
     name: string

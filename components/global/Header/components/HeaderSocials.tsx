@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { StyledSocialList, StyledSafeLink } from './HeaderSocials.styled'
 import { FacebookIcon } from 'components/global/Icons/Facebook'
 import { InstagramIcon } from 'components/global/Icons/Instagram'

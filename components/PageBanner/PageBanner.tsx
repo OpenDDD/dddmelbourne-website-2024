@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import { StyledPageBanner } from './PageBanner.styled'
 
 interface PageBanner {

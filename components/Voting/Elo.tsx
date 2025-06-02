@@ -10,6 +10,8 @@ import {
   StyledAbstractText,
 } from './EloVote.styled'
 
+import type { JSX } from 'react'
+
 type EloVoteProps = {
   sessionA: EloSession
   sessionB: EloSession

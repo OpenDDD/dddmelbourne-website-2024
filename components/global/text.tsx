@@ -1,6 +1,6 @@
 import { calcRem } from 'components/utils/styles/calcRem'
 import styled from '@emotion/styled'
-import React from 'react'
+import React, { type JSX } from 'react'
 
 export const StyledList = styled('ul')(({ theme }) => ({
   paddingLeft: calcRem(theme.metrics.md),
@@ -35,7 +35,7 @@ type TextProps = {
   children: React.ReactNode
   textAlign?: 'left' | 'center' | 'right'
   className?: string
-  tag?: React.ElementType<any>
+  tag?: React.ElementType
 }
 
 export function Text({ children, textAlign, tag = 'p', className }: TextProps): JSX.Element {

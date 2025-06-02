@@ -76,7 +76,7 @@ export const StyledSessionAbstract = styled('div')((_) => ({
   overflowY: 'auto',
 }))
 
-export const StyledAbstractText = styled(Text)(() => ({
+export const StyledAbstractText = styled(Text)((_) => ({
   whiteSpace: 'pre-wrap',
 }))
 

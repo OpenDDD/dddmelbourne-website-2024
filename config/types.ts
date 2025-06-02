@@ -1,5 +1,7 @@
 import { SessionGroupWithIds } from 'components/utils/useSessionGroups'
 
+import type { JSX } from 'react'
+
 export type Types = 'conference' | 'voting' | 'tickets' | 'agenda' | 'content'
 
 export interface Conference {

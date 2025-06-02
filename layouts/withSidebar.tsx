@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import getConferenceActions from 'config/actions'
 import { TemplateProps, Template } from './template'
 import { StyledSidebarContainer, StyledEventDetailsSummary } from './Layouts.styled'

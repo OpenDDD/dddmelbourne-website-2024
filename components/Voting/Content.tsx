@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type JSX } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Conference, Dates, TicketNumberWhileVoting } from 'config/types'
@@ -143,7 +143,7 @@ export function VoteContent({ conference, dates, submissionCount }: VoteContentP
               <li>
                 Once you have selected the sessions you want to vote for{' '}
                 <strong>you will need to order your votes based on your preference.</strong> We are using a{' '}
-                <a href="https:en.wikipedia.org/wiki/Preferential_voting" target="_blank">
+                <a href="https:en.wikipedia.org/wiki/Preferential_voting" target="_blank" rel="noreferrer">
                   preferential voting system
                 </a>{' '}
                 to maximise the impact of your votes.

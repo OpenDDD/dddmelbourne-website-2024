@@ -3,7 +3,7 @@ const createJestConfig = nextJest({ dir: './' })
 
 const customJestConfig = {
   rootDir: './',
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect', 'jest-axe/extend-expect'],
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts', 'jest-axe/extend-expect'],
   moduleNameMapper: {
     '^components/(.*)$': '<rootDir>/components/$1',
     '^test/(.*)$': '<rootDir>/test/$1',

@@ -22,9 +22,9 @@ function isFocusableElement(element: Element): element is HTMLElement {
 
 export const Nav = ({ menu }: NavProps) => {
   const dispatch = useNavigationDispatch()
-  const containerRef = React.useRef<HTMLDivElement>()
-  const navRef = React.useRef<HTMLUListElement>()
-  const activeElement = React.useRef<Element>()
+  const containerRef = React.useRef<HTMLDivElement>(undefined)
+  const navRef = React.useRef<HTMLUListElement>(undefined)
+  const activeElement = React.useRef<Element>(undefined)
   const { pathname } = useRouter()
   const { id, expanded } = useNavigationState()
   const [status, setStatus] = React.useState<NavStatus>('closed')

@@ -8,8 +8,6 @@ tmp.json
 coverage
 *.tsbuildinfo
 public/_next
-cypress/videos
-cypress/screenshots
 
 # IntelliJ
 .idea

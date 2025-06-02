@@ -1,5 +1,5 @@
 import { Main } from 'layouts/main'
-import React from 'react'
+import React, { type JSX } from 'react'
 
 const ShhhNot2024Page = (): JSX.Element => {
   return (

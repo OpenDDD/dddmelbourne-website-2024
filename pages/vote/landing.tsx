@@ -16,7 +16,7 @@ import {
   StyledOverlayButtons,
 } from '../../components/Voting/landing.styled'
 import { formatInTimeZone } from 'date-fns-tz'
-import React, { FormEvent, Fragment } from 'react'
+import React, { FormEvent, Fragment, type JSX } from 'react'
 import { Button, ButtonAnchor } from '../../components/global/Button/Button'
 import Link from 'next/link'
 import { useRouter } from 'next/router'

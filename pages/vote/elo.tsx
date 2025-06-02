@@ -4,7 +4,7 @@ import { EloVote } from 'components/Voting/Elo'
 import { EloSession } from 'config/types'
 import { useConfig } from 'Context/Config'
 import { Main } from 'layouts/main'
-import { useEffect, useReducer, useState } from 'react'
+import { useEffect, useReducer, useState, type JSX } from 'react'
 import { getSessionId } from 'components/global/analytics'
 import { getCommonServerSideProps } from 'components/utils/getCommonServerSideProps'
 import {
