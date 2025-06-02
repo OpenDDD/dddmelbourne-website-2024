@@ -35,11 +35,8 @@ const CFPPage: NextPage = () => {
       </Text>
       <StyledList>
         <li>
-          Having an enforced{' '}
-          <Link href="/code-of-conduct">
-            <a>code of conduct</a>
-          </Link>{' '}
-          to create a friendly, welcoming atmosphere.
+          Having an enforced <Link href="/code-of-conduct">code of conduct</Link> to create a friendly, welcoming
+          atmosphere.
         </li>
         <li>
           Having <strong>anonymous session voting</strong>; we will only show the title, abstract and tags of a talk to

@@ -18,20 +18,9 @@ The DDD Melbourne website is deployed to https://dddmelbourne.com and is built u
 - Grab the `.next` directory and deploy to the destination
 - Run `npm` in the deploy folder and deploy all files from there alongside the `.next` directory (the web.config file is targeted towards Azure Web Apps)
 
-## Special Note for current deployment
+## Deployment
 
-We are now running the site on to Azure Container Apps (see `.github/workflows/container-app.yml`)
-
-Currently there is no automatic deployemnt of new Docker image once it has been updated, as the full setup of the Azure credentials is a WIP. To deploy a new image:
-
-1. Grab the new image SHA (find it in the completed Action under the Build and Push Docker image, where it says `#22 naming to ghcr.io/*******:sha-b5602ed done`)
-2. Go to your Azure Portal > Container Apps > and into the right container
-3. Go to Application > Containers
-4. Click "Edit and Deploy"
-5. In the Containers table, click on the desired container and in the sidebar that pops up, change teh "Image and tag" to have the correct SHA at the end
-6. Click Save and then Create
-
-After this, it should deploy the new image to the container.
+Watch [this video](https://drive.google.com/file/d/1jyKoGBPxvpw0vb2ZxhZavITTwK8_9Xm5/view) on how to deploy a new version.
 
 ## Code organisation
 
@@ -57,10 +46,6 @@ To re-purpose for another conference:
 5.  Update `pages/about.tsx`, `pages/sponsorship.tsx`, `pages/cfp.tsx` and `pages/agenda/*.tsx` with content specific to your conference
 
 If you want to make tweaks to the pages then inspect the files in the `pages` directory and modify from there.
-
-## CI / CD
-
-We use Azure DevOps for CI / CD. This is controlled via [.devops/azure-pipelines.yml](.devops/azure-pipelines.yml).
 
 ## Tests
 

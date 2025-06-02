@@ -35,12 +35,9 @@ export function VoteContent({ conference, dates, submissionCount }: VoteContentP
           <Heading>Voting</Heading>
 
           <Text>
-            One of the{' '}
-            <Link href="/about">
-              <a>core tenets of {conference.Name}</a>
-            </Link>{' '}
-            is that the agenda is democratically selected. Session voting is the main mechanism that we employ to
-            achieve that. This means that you (collectively) have the power to decide on the agenda on the day.
+            One of the <Link href="/about">core tenets of {conference.Name}</Link> is that the agenda is democratically
+            selected. Session voting is the main mechanism that we employ to achieve that. This means that you
+            (collectively) have the power to decide on the agenda on the day.
           </Text>
 
           {conference.AnonymousVoting && (
@@ -131,22 +128,15 @@ export function VoteContent({ conference, dates, submissionCount }: VoteContentP
                 We ideally want the people who are attending to have the greatest influence on the agenda and we also
                 feel this is fairer to session submitters since it makes for a more level playing field for social
                 network reach; this year we have an optional field for you to add in your ticket # (from your
-                confirmation email) if you've{' '}
-                <Link href="/tickets">
-                  <a>purchased a ticket</a>
-                </Link>{' '}
-                which will <strong>give your vote a higher weighting</strong>.
+                confirmation email) if you've <Link href="/tickets">purchased a ticket</Link> which will{' '}
+                <strong>give your vote a higher weighting</strong>.
               </li>
             )}
             {conference.TicketNumberWhileVoting === TicketNumberWhileVoting.Required && (
               <li>
                 We ideally want the people who are attending to have the greatest influence on the agenda and we also
                 feel this is fairer to session submitters since it makes for a more level playing field for social
-                network reach; this year you have to{' '}
-                <Link href="/tickets">
-                  <a>purchase a ticket</a>
-                </Link>{' '}
-                in order to vote.
+                network reach; this year you have to <Link href="/tickets">purchase a ticket</Link> in order to vote.
               </li>
             )}
             {conference.PreferentialVoting && (

@@ -21,11 +21,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
         <h2>Sponsors</h2>
         <p>
           We are currently looking for sponsors! If you'd like to explore sponsorship opportunities, please check out
-          our{' '}
-          <Link href="/sponsorship">
-            <a>sponsorship page</a>
-          </Link>{' '}
-          for more information.
+          our <Link href="/sponsorship">sponsorship page</Link> for more information.
         </p>
       </StyledSponsorsContainer>
     )
@@ -158,10 +154,7 @@ export const Sponsors = ({ sponsors, show, hideUpsell }: SponsorsProps) => {
       {!hideUpsell && (
         <p>
           If you'd like to explore sponsorship opportunities, please check out our{' '}
-          <Link href="/sponsorship">
-            <a>sponsorship page</a>
-          </Link>{' '}
-          for more information.
+          <Link href="/sponsorship">sponsorship page</Link> for more information.
         </p>
       )}
 

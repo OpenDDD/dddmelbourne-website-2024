@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import { SafeLink } from 'components/global/safeLink'
 import Conference from './conference'
+import conference from './conference'
 import { Dates, FAQ, TicketPurchasingOptions } from './types'
 import { format } from 'date-fns'
-import conference from './conference'
 
 export default function getFaqs(dates: Dates): FAQ[] {
   const Faqs: FAQ[] = []
@@ -25,13 +25,15 @@ export default function getFaqs(dates: Dates): FAQ[] {
       }.`,
     })
   }
-  Faqs.push({
-    Question: 'How much does it cost to attend?',
-    Answer: `${Conference.TicketPrice} covers your entry, food and coffee all day and access to the afterparty! Amazing value right!?
-      We are able to keep the ticket price so low thanks to our generous sponsors.
-      ${Conference.Name} is a non profit event and any excess will be kept as part of a fund for future events and/or donated to charity.`,
-    Category: 'tickets',
-  })
+  if (Conference.TicketPurchasingOptions !== TicketPurchasingOptions.NotOnSale) {
+    Faqs.push({
+      Question: 'How much does it cost to attend?',
+      Answer: `${Conference.TicketPrice} covers your entry, food and coffee all day and access to the afterparty! Amazing value right!?
+        We are able to keep the ticket price so low thanks to our generous sponsors.
+        ${Conference.Name} is a non profit event and any excess will be kept as part of a fund for future events and/or donated to charity.`,
+      Category: 'tickets',
+    })
+  }
 
   Faqs.push({
     Question: "What if I can't afford to attend? [Financial Assistance]",
@@ -94,29 +96,32 @@ export default function getFaqs(dates: Dates): FAQ[] {
     ),
   })
 
-  Faqs.push({
-    Question: 'When does registration open?',
-    Answer: (
-      <Fragment>
-        {dates.RegistrationOpen ? (
-          <Fragment>
-            Now! Go to <a href="/tickets">the tickets page</a> to register.
-          </Fragment>
-        ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.SoldOut ? (
-          <Fragment>The conference is now sold out.</Fragment>
-        ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.WaitListOpen ? (
-          <Fragment>The conference has an open waitlist for tickets.</Fragment>
-        ) : dates.RegistrationClosed ? (
-          <Fragment>Ticket sales have closed.</Fragment>
-        ) : (
-          <Fragment>
-            Registration opens on {format(Conference.RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
-            {format(Conference.RegistrationOpenFrom, dates.TimeDisplayFormat)}.<br />
-          </Fragment>
-        )}
-      </Fragment>
-    ),
-  })
+  if (Conference.TicketPurchasingOptions !== TicketPurchasingOptions.NotOnSale) {
+    Faqs.push({
+      Question: 'When does registration open?',
+      Answer: (
+        <Fragment>
+          {dates.RegistrationOpen ? (
+            <Fragment>
+              Now! Go to <a href="/tickets">the tickets page</a> to register.
+            </Fragment>
+          ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.SoldOut ? (
+            <Fragment>The conference is now sold out.</Fragment>
+          ) : Conference.TicketPurchasingOptions === TicketPurchasingOptions.WaitListOpen ? (
+            <Fragment>The conference has an open waitlist for tickets.</Fragment>
+          ) : dates.RegistrationClosed ? (
+            <Fragment>Ticket sales have closed.</Fragment>
+          ) : (
+            <Fragment>
+              Registration opens on {format(Conference.RegistrationOpenFrom, dates.DateDisplayFormat)} at{' '}
+              {format(Conference.RegistrationOpenFrom, dates.TimeDisplayFormat)}.<br />
+            </Fragment>
+          )}
+        </Fragment>
+      ),
+    })
+  }
+
   Faqs.push({
     Question: 'Can I pay by cheque, invoice, cash, dollarbucks?',
     Answer: (
@@ -150,11 +155,8 @@ export default function getFaqs(dates: Dates): FAQ[] {
     Question: `What is the hashtag for ${Conference.Name}?`,
     Answer: (
       <Fragment>
-        The Twitter hashtag is{' '}
-        <SafeLink href={'https://twitter.com/search?q=%23' + Conference.HashTag} target="_blank">
-          #{Conference.HashTag}
-        </SafeLink>
-        .
+        We'd love it if you could use our hashtag #{Conference.HashTag} on all your social media posts, across all the
+        different channels
       </Fragment>
     ),
   })
@@ -191,18 +193,6 @@ export default function getFaqs(dates: Dates): FAQ[] {
         <a className="maillink" href={'mailto:' + Conference.ContactEmail}>
           {Conference.ContactEmail}
         </a>
-        {Conference.Socials.Twitter.Name !== null ? (
-          <Fragment>
-            {' '}
-            and Twitter at{' '}
-            <SafeLink href={'https://twitter.com/' + Conference.Socials.Twitter.Name} target="_blank">
-              @{Conference.Socials.Twitter.Name}
-            </SafeLink>
-            . See also the other Social Media accounts at the footer of this page.
-          </Fragment>
-        ) : (
-          '. Also, see our various social media accounts at the footer of this page.'
-        )}
       </Fragment>
     ),
   })
