@@ -25,5 +25,5 @@
     "incremental": true
   },
   "exclude": ["node_modules", "./deploy/**", "next.config.js"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["jest-setup.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

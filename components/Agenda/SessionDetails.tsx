@@ -41,7 +41,8 @@ export const SessionDetails = ({
           <StyledBioFigure key={presenter.Name.replace(/\s/g, '-')}>
             <StyledBioProfile
               src={
-                `https://pixboost.com/api/2/img/${presenter.ProfilePhotoUrl}/optimise?auth=MjMyNzUwMTg3Nw__` ||
+                presenter.ProfilePhotoUrl ?
+                `https://pixboost.com/api/2/img/${presenter.ProfilePhotoUrl}/optimise?auth=MjMyNzUwMTg3Nw__` :
                 '/static/images/profile-image-blank.jpg'
               }
               alt={`${presenter.Name} profile photo`}

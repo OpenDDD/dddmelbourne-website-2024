@@ -10,10 +10,23 @@ export default defineConfig([
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], languageOptions: { globals: globals.browser } },
   tseslint.configs.recommended,
   {
-    ...pluginReact.configs.flat.recommended,
-    rules: {
-      "react/prop-types": "off"
-    }
+    ...pluginReact.configs.flat.recommended
   },
   pluginReact.configs.flat['jsx-runtime'],
+  {
+    rules: {
+      "react/prop-types": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "react/no-unescaped-entities": "off"
+    }
+  },
+  {
+    ignores: [
+      "typings/**/*",
+      "coverage/**/*",
+      "jest.config.js",
+      "next.config.js",
+      ".next/**/*"
+    ],
+  }
 ]);

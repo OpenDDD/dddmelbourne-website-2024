@@ -35,7 +35,7 @@ type TextProps = {
   children: React.ReactNode
   textAlign?: 'left' | 'center' | 'right'
   className?: string
-  tag?: React.ElementType<any>
+  tag?: React.ElementType
 }
 
 export function Text({ children, textAlign, tag = 'p', className }: TextProps): JSX.Element {

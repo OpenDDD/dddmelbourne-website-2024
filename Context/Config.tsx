@@ -23,7 +23,7 @@ interface ConfigState {
 
 const ConfigContext = React.createContext<ConfigState | undefined>(undefined)
 
-const ConfigProvider = ({ children }: { children: React.ReactNode }): ReactElement<any> => {
+const ConfigProvider = ({ children }: { children: React.ReactNode }): ReactElement => {
   const [currentDate, setCurrentDate] = React.useState(dateTimeProvider.now())
 
   React.useEffect(() => {

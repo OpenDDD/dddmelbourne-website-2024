@@ -139,8 +139,8 @@ const Feedback: NextPage<FeedbackProps> = ({ sessions }) => {
                 <details>
                   <StyledSummary>Previous sessions</StyledSummary>
                   <StyledSessionList>
-                    {sessionGroups.pastSessionGroups.map((sessionGroup) => (
-                      <Fragment>
+                    {sessionGroups.pastSessionGroups.map((sessionGroup, idx) => (
+                      <Fragment key={idx}>
                         <StyledSessionTimeframe key={sessionGroup.timeStart.valueOf()}>
                           <time dateTime={sessionGroup.timeStart.toISOString()}>
                             {format(sessionGroup.timeStart, 'hh:mm')}
