@@ -42,7 +42,7 @@ export function adaptSessionizeSessions(sessionizeAgenda): Session[] {
   return sessionizeAgenda.sessions.map((s) => {
     let format = ''
     let level = ''
-    let tags = []
+    const tags = []
     s.categoryItems.forEach(c => {
       if (c in formatsById) {
         format = formatsById[c]
