@@ -3149,7 +3149,7 @@ const agenda = parseJson(`
 
           "id": 288587,
 
-          "name": "Severless",
+          "name": "Serverless",
 
           "sort": 29
 

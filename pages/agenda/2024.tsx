@@ -12,10 +12,10 @@ import { set } from 'date-fns'
 import { StyledAgendaPresenter } from '../../components/Agenda/AgendaSession.styled'
 import { Agenda } from '../../components/Agenda/Agenda'
 import { zonedTimeToUtc } from 'date-fns-tz'
-import { Presenter, Session } from '../../config/types'
-import { agenda } from './agenda2024'
+import { agenda } from '../../config/past-agendas/2024'
 import { Main } from 'layouts/main'
 import conference from '../../config/conference'
+import { adaptSessionizeSessions } from '../../components/utils/pastAgenda'
 
 interface AgendaPageProps {
   selectedSessionId?: string
@@ -25,70 +25,8 @@ const AgendaPage: NextPage = ({
                                 selectedSessionId,
                               }: AgendaPageProps) => {
   const date = zonedTimeToUtc('2024-03-16T09:00', 'Australia/Melbourne')
-  const presentersById = {}
-  agenda.speakers.forEach((p) => {
-    presentersById[p.id] = {
-      Id: p.id,
-      Name: p.fullName,
-      Tagline: p.tagLine,
-      Bio: p.bio,
-      ProfilePhotoUrl: p.profilePicture,
-    } as Presenter
-  })
 
-  const formatsById = {}
-  agenda.categories.forEach(c => {
-    if (c.title === 'Session format') {
-      c.items.forEach(f => {
-        formatsById[f.id] = f.name
-      })
-    }
-  })
-
-  const levelsById = {}
-  agenda.categories.forEach(c => {
-    if (c.title === 'Level') {
-      c.items.forEach(l => {
-        levelsById[l.id] = l.name
-      })
-    }
-  })
-
-  const tagsById = {}
-  agenda.categories.forEach(c => {
-    if (c.title === 'Tags') {
-      c.items.forEach(t => {
-        tagsById[t.id] = t.name
-      })
-    }
-  })
-
-  const agendaSessions = agenda.sessions.map((s) => {
-    let format = ''
-    let level = ''
-    let tags = []
-    s.categoryItems.forEach(c => {
-      if (c in formatsById) {
-        format = formatsById[c]
-      }
-      if (c in levelsById) {
-        level = levelsById[c]
-      }
-      if (c in tagsById) {
-        tags.push(tagsById[c])
-      }
-    })
-    return {
-      Id: s.id,
-      ExternalId: s.id,
-      Title: s.title,
-      Abstract: s.description,
-      Presenters: s.speakers.map(speakerId => presentersById[speakerId]),
-      Format: format,
-      Level: level,
-      Tags: tags,
-    } as Session
-  })
+  const agendaSessions = adaptSessionizeSessions(agenda)
   const roomNames = agenda.rooms.map(r => r.name)
 
   return (

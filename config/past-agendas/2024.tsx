@@ -1587,7 +1587,7 @@ const agenda = parseJson(`
         },
         {
           "id": 206945,
-          "name": "Severless",
+          "name": "Serverless",
           "sort": 29
         },
         {
