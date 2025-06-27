@@ -23,39 +23,39 @@ const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
 const currentInstance = 2026
 const firstInstance = 2024
-const registrationOpenFrom = zonedTimeToUtc('2024-10-01T12:00:00', tz)
+const registrationOpenFrom = zonedTimeToUtc('2025-07-15T12:00:00', tz)
 const registrationOpenWave2From = zonedTimeToUtc('2024-10-01T12:00:00', tz)
 const registrationOpenUntil = null
-const presentationSubmissionsOpenFrom = zonedTimeToUtc('9999-09-01T08:00:00', tz)
-const presentationSubmissionsOpenUntil = zonedTimeToUtc('9999-11-01T23:59:59', tz)
-const votingOpenFrom = zonedTimeToUtc('9999-11-08T00:00:00', tz)
-const votingOpenUntil = zonedTimeToUtc('9999-11-20T23:59:59', tz)
-const agendaPublishedFrom = zonedTimeToUtc('9999-11-30T09:00:00', tz)
+const presentationSubmissionsOpenFrom = zonedTimeToUtc('2025-07-30T12:00:00', tz)
+const presentationSubmissionsOpenUntil = zonedTimeToUtc('2025-09-30T23:59:59', tz)
+const votingOpenFrom = zonedTimeToUtc('2025-10-06T00:00:00', tz)
+const votingOpenUntil = zonedTimeToUtc('2025-10-20T23:59:59', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2025-11-03T09:00:00', tz)
 const feedbackOpenFrom = zonedTimeToUtc('9999-11-08T00:00:00', tz)
 const feedbackOpenUntil = endDate
 const importantDates: ImportantDate[] = [
-  // {
-  //   Date: presentationSubmissionsOpenFrom,
-  //   Description: 'Call for presentations open',
-  //   Type: 'content',
-  // },
-  // {
-  //   Date: presentationSubmissionsOpenUntil,
-  //   Description: 'Call for presentations close',
-  //   Type: 'content',
-  // },
-  // {
-  //   Date: registrationOpenFrom,
-  //   Description: 'Ticket sales open',
-  //   Type: 'tickets',
-  // },
-  // { Description: 'Voting open', Date: votingOpenFrom, Type: 'voting' },
-  // { Description: 'Voting close', Date: votingOpenUntil, Type: 'voting' },
-  // {
-  //   Date: agendaPublishedFrom,
-  //   Description: 'Agenda published',
-  //   Type: 'agenda',
-  // },
+  {
+    Date: presentationSubmissionsOpenFrom,
+    Description: 'Call for presentations open',
+    Type: 'content',
+  },
+  {
+    Date: presentationSubmissionsOpenUntil,
+    Description: 'Call for presentations close',
+    Type: 'content',
+  },
+  {
+    Date: registrationOpenFrom,
+    Description: 'Ticket sales open',
+    Type: 'tickets',
+  },
+  { Description: 'Voting open', Date: votingOpenFrom, Type: 'voting' },
+  { Description: 'Voting close', Date: votingOpenUntil, Type: 'voting' },
+  {
+    Date: agendaPublishedFrom,
+    Description: 'Agenda published',
+    Type: 'agenda',
+  },
 ]
 
 if (registrationOpenUntil !== null && Number(ticketPurchasingOptions) === Number(TicketPurchasingOptions.OnSale)) {
