@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Main } from 'layouts/main'
 import { NextPage } from 'next'
 import { Text } from 'components/global/text'
@@ -6,7 +6,6 @@ import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'
 import getConferenceActions from '../config/actions'
 import ImportantDates from '../components/importantDates'
-// import Link from 'next/link'
 import { Sponsors } from '../components/Sponsors/sponsors'
 
 const mailingList =
@@ -15,7 +14,12 @@ const mailingList =
 export const Index: NextPage = () => {
   const { conference, dates, currentDate } = useConfig()
   const actions = getConferenceActions(conference, dates)
-
+  const mailingListRaw = useMemo(
+    () => ({
+      __html: mailingList,
+    }),
+    [],
+  )
   return (
     <Main title="Home" showHero={true}>
       <section>
@@ -32,7 +36,7 @@ export const Index: NextPage = () => {
 
         <p>&nbsp;</p>
 
-        <div dangerouslySetInnerHTML={{ __html: mailingList }}></div>
+        <div dangerouslySetInnerHTML={mailingListRaw}></div>
 
         <p>&nbsp;</p>
 
