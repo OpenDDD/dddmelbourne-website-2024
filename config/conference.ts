@@ -17,14 +17,14 @@ const tagLine = `${name} is an inclusive non-profit conference for the Melbourne
 
 const tz = 'Australia/Melbourne'
 const hideDate = false
-const ticketPurchasingOptions = TicketPurchasingOptions.NotOnSale
+const ticketPurchasingOptions = TicketPurchasingOptions.OnSale
 const staticDate = '2026-02-21T09:00'
 const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
 const currentInstance = 2026
 const firstInstance = 2024
 const registrationOpenFrom = zonedTimeToUtc('2025-07-15T12:00:00', tz)
-const registrationOpenWave2From = zonedTimeToUtc('2024-10-01T12:00:00', tz)
+const registrationOpenWave2From = zonedTimeToUtc('2025-10-01T12:00:00', tz)
 const registrationOpenUntil = null
 const presentationSubmissionsOpenFrom = zonedTimeToUtc('2025-07-30T12:00:00', tz)
 const presentationSubmissionsOpenUntil = zonedTimeToUtc('2025-09-30T23:59:59', tz)
@@ -92,10 +92,10 @@ const Conference: IConference = {
   GoogleAnalyticsId: 'G-E5CD021NB4',
   TicketPrice: 'TBC',
   ChildcarePrice: 'free',
-  ChildcareRegistrationLink: 'https://ti.to/ddd-melbourne/ddd-2025-childcare',
+  ChildcareRegistrationLink: 'https://ti.to/ddd-melbourne/ddd-2026-childcare',
   TicketsProviderId: TicketsProvider.Tito,
   TicketsProviderAccountId: 'ddd-melbourne',
-  TicketsProviderEventId: 'ddd-2025',
+  TicketsProviderEventId: 'ddd-2026',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
   HashTag: 'DDDMelb',
