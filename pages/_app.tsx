@@ -10,7 +10,6 @@ import ReactModal from 'react-modal'
 import { zIndex } from '../components/utils/styles/zindex'
 import Conference from 'config/conference'
 
-ReactModal.setAppElement('#content')
 ReactModal.defaultStyles = {
   overlay: {
     zIndex: zIndex.agendaOverlay,
@@ -19,6 +18,11 @@ ReactModal.defaultStyles = {
 }
 
 function CustomApp({ Component, pageProps }: AppProps): React.JSX.Element {
+  React.useEffect(() => {
+    if (document.getElementById('content')) {
+      ReactModal.setAppElement('#content')
+    }
+  });
   return (
     <ConfigProvider>
       <ThemeProvider theme={theme}>
@@ -52,7 +56,7 @@ function CustomApp({ Component, pageProps }: AppProps): React.JSX.Element {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-      
+
               gtag('config', '${Conference.GoogleAnalyticsId}');
               `,
             }}

@@ -3,8 +3,8 @@ import { breakpoint, breakpointMax } from 'components/utils/styles/breakpoints'
 import { calcRem } from 'components/utils/styles/calcRem'
 
 export const StyledActionBarContainer = styled('div')(({ theme }) => ({
-  display: 'grid',
-  gridTemplateColumns: '1fr',
+  display: 'flex',
+  justifyContent: 'center',
   alignItems: 'center',
   backgroundColor: theme.colors.grey100,
   borderBottom: `1px solid ${theme.colors.grey300}`,
@@ -15,6 +15,7 @@ export const StyledActionBarContainer = styled('div')(({ theme }) => ({
     gridColumn: 1,
     gridRow: 1,
     marginLeft: calcRem(theme.metrics.xl),
+    marginRight: calcRem(theme.metrics.xl),
 
     [breakpoint('lg')]: {
       display: 'block',
