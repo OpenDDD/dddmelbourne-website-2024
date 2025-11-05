@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react'
-import { theme } from 'components/utils/styles/theme'
 import Conference from 'config/conference'
 import { Session, Sponsor } from 'config/types'
 import { ActionButton } from 'components/actionButton'
 import { Agenda } from 'components/Agenda/Agenda'
 import {
   StyledAgendaRow,
-  StyledAgendaRowList,
   StyledFeedbackActions,
   StyledTrackHeader,
   StyledUpNext,
@@ -198,13 +196,14 @@ export const CurrentAgenda = ({
                   <AgendaSession room={3} sessionId="1002367" />
                   <AgendaSession
                     room={4}
+                    isWorkshop
                     sessionId="1045279"
                     renderTitle={(title) => (
-                      <StyledAgendaTitle>{title}<br />(Part 1)</StyledAgendaTitle>
+                      <StyledAgendaTitle>{title}</StyledAgendaTitle>
                     )}
                   />
                   <AgendaTime time={set(date, { hours: 14, minutes: 15 })} />
-                  <AgendaSession fullWidth>
+                  <AgendaSession fullWidth excludeWorkshopTrack>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
                   <AgendaTime time={set(date, { hours: 14, minutes: 30 })} duration={45} />
@@ -218,9 +217,11 @@ export const CurrentAgenda = ({
                   <AgendaSession room={3} sessionId="1029734" />
                   <AgendaSession
                     room={4}
+                    isWorkshop
+                    isWorkshopContinuation
                     sessionId="1045279"
                     renderTitle={(title) => (
-                      <StyledAgendaTitle>{title}<br />(Part 2)</StyledAgendaTitle>
+                      <StyledAgendaTitle>{title}<br />(continued)</StyledAgendaTitle>
                     )}
                   />
                   <AgendaTime time={set(date, { hours: 15, minutes: 15 })} />
