@@ -6,15 +6,28 @@ import { tableLayoutBreakpointFrom } from './layout'
 
 interface StyledSectionProps {
   fullWidth?: boolean
+  excludeWorkshopTrack?: boolean
   session?: boolean
+  isWorkshop?: boolean
+  isWorkshopContinuation?: boolean
 }
 
-export const StyledSection = styled('section')<StyledSectionProps>(({ fullWidth, session }) => ({
+export const StyledSection = styled('section')<StyledSectionProps>(({ fullWidth, excludeWorkshopTrack, session, isWorkshop, isWorkshopContinuation }) => ({
   padding: session ? undefined : calcRem(20, 8),
+  backgroundColor: `#f9f9f9`,
+  gridColumn: fullWidth ? 'span 5' : 'auto' /*'auto'*/,
 
   [breakpointMax(tableLayoutBreakpointFrom)]: {
-    gridColumn: fullWidth ? '1 / -1' : 'auto',
+    gridColumn: fullWidth ? 'span 2' : 'auto' /*'auto'*/,
   },
+
+  [breakpoint(tableLayoutBreakpointFrom)]: {
+    gridRow: isWorkshop ? 'span 3' : 'auto',
+    gridColumn: excludeWorkshopTrack 
+      ? '2 / workshops' 
+      : fullWidth ? 'span 5' : 'auto',
+    display: isWorkshopContinuation ? 'none' : 'inherit'
+  }
 }))
 StyledSection.displayName = 'StyledSection'
 

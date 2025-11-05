@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { theme } from 'components/utils/styles/theme'
 import Conference from 'config/conference'
 import { Session, Sponsor } from 'config/types'
 import { ActionButton } from 'components/actionButton'
@@ -95,28 +96,23 @@ export const CurrentAgenda = ({
                   </StyledAgendaRow>
                 </StyledUpNext>
               )}
-              <StyledAgendaContainer>
-                <StyledAgendaRowList>
+              <StyledAgendaContainer talkTracks={4} workshopTracks={1}>
+                {/* <StyledAgendaRowList>
                   <li>Time</li>
                   {Conference.RoomNames.map((name) => (
                     <li style={{ backgroundColor: `${Conference.RoomColors[name]}`, color: 'inherit' }} key={name}>
                       {name}
                     </li>
                   ))}
-                </StyledAgendaRowList>
-                <StyledAgendaRow>
+                </StyledAgendaRowList> */}
                   <AgendaTime time={set(date, { hours: 8, minutes: 0 })} />
                   <AgendaSession room="" alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Registration</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 8, minutes: 45 })} />
                   <AgendaSession room={0} alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Welcome and Housekeeping</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 9, minutes: 0 })} duration={45} />
                   <AgendaSession
                     sessionId="1039434"
@@ -128,14 +124,10 @@ export const CurrentAgenda = ({
                     isKeynote
                     alwaysShowRoom
                   />
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 9, minutes: 45 })} />
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Morning Tea</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 10, minutes: 15 })} duration={45} />
                   <AgendaSession
                     room={0}
@@ -147,19 +139,16 @@ export const CurrentAgenda = ({
                   <AgendaSession room={3} sessionId="1044802" />
                   <AgendaSession
                     room={4}
+                    isWorkshop
                     sessionId="988090"
                     renderTitle={(title) => (
-                      <StyledAgendaTitle>{title}<br />(Part 1)</StyledAgendaTitle>
+                      <StyledAgendaTitle>{title}</StyledAgendaTitle>
                     )}
                   />
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 11, minutes: 0 })} />
-                  <AgendaSession fullWidth>
+                  <AgendaSession fullWidth excludeWorkshopTrack>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 11, minutes: 15 })} duration={45} />
                   <AgendaSession
                     room={0}
@@ -171,19 +160,17 @@ export const CurrentAgenda = ({
                   <AgendaSession room={3} sessionId="990488" />
                   <AgendaSession
                     room={4}
+                    isWorkshop
+                    isWorkshopContinuation
                     sessionId="988090"
                     renderTitle={(title) => (
-                      <StyledAgendaTitle>{title}<br />(Part 2)</StyledAgendaTitle>
+                      <StyledAgendaTitle>{title}<br />(continued)</StyledAgendaTitle>
                     )}
                   />
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 12, minutes: 0 })} />
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow tracks={4}>
                   <AgendaTime time={set(date, { hours: 12, minutes: 15 })} duration={20} />
                   <AgendaSession
                     room={0}
@@ -196,14 +183,10 @@ export const CurrentAgenda = ({
                   <AgendaSession>
                     <StyledTrackHeader />
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 12, minutes: 35 })} />
                   <AgendaSession room="" alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Lunch</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 13, minutes: 30 })} duration={45} />
                   <AgendaSession
                     room={0}
@@ -220,15 +203,10 @@ export const CurrentAgenda = ({
                       <StyledAgendaTitle>{title}<br />(Part 1)</StyledAgendaTitle>
                     )}
                   />
-                </StyledAgendaRow>
-
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 14, minutes: 15 })} />
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 14, minutes: 30 })} duration={45} />
                   <AgendaSession
                     room={0}
@@ -245,15 +223,10 @@ export const CurrentAgenda = ({
                       <StyledAgendaTitle>{title}<br />(Part 2)</StyledAgendaTitle>
                     )}
                   />
-                </StyledAgendaRow>
-
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 15, minutes: 15 })} />
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Afternoon Tea</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 15, minutes: 45 })} duration={45} />
                   <AgendaSession
                     room={0}
@@ -266,14 +239,10 @@ export const CurrentAgenda = ({
                   <AgendaSession>
                     <StyledTrackHeader />
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 16, minutes: 30 })} />
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 16, minutes: 45 })} duration={60} />
                   <AgendaSession
                     sessionId="988046"
@@ -285,14 +254,10 @@ export const CurrentAgenda = ({
                     isKeynote
                     alwaysShowRoom
                   />
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime time={set(date, { hours: 17, minutes: 15 })} />
                   <AgendaSession room={0} alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Closing</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
-                <StyledAgendaRow>
                   <AgendaTime
                     time={set(date, { hours: 18, minutes: 0 })}
                     endTime={set(date, { hours: 20, minutes: 30 })}
@@ -300,7 +265,6 @@ export const CurrentAgenda = ({
                   <AgendaSession room="Beer Deluxe, Federation Square" alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Afterparty</StyledTrackHeader>
                   </AgendaSession>
-                </StyledAgendaRow>
               </StyledAgendaContainer>
             </AgendaProvider>
           )
