@@ -4,7 +4,7 @@ import { Session, Sponsor } from 'config/types'
 import { ActionButton } from 'components/actionButton'
 import { Agenda } from 'components/Agenda/Agenda'
 import {
-  StyledAgendaRow,
+  StyledAgendaTimeRoomCell,
   StyledFeedbackActions,
   StyledTrackHeader,
   StyledUpNext,
@@ -66,7 +66,7 @@ export const CurrentAgenda = ({
               {Conference.ShowNextSessions && nextSessionGroup && nextSessionGroup.sessions.length > 0 && (
                 <StyledUpNext>
                   <h2>Up next</h2>
-                  <StyledAgendaRow>
+                  <StyledAgendaContainer talkTracks={4} workshopTracks={1}>
                     <AgendaTime time={nextSessionGroup.timeStart} />
                     {nextSessionGroup.sessions.map((session, index) =>
                       Array.isArray(session) ? (
@@ -91,18 +91,16 @@ export const CurrentAgenda = ({
                         />
                       ),
                     )}
-                  </StyledAgendaRow>
+                  </StyledAgendaContainer>
                 </StyledUpNext>
               )}
               <StyledAgendaContainer talkTracks={4} workshopTracks={1}>
-                {/* <StyledAgendaRowList>
-                  <li>Time</li>
+                  <StyledAgendaTimeRoomCell>Time</StyledAgendaTimeRoomCell>
                   {Conference.RoomNames.map((name) => (
-                    <li style={{ backgroundColor: `${Conference.RoomColors[name]}`, color: 'inherit' }} key={name}>
+                    <StyledAgendaTimeRoomCell room={Conference.RoomColors[name]} key={name}>
                       {name}
-                    </li>
+                    </StyledAgendaTimeRoomCell>
                   ))}
-                </StyledAgendaRowList> */}
                   <AgendaTime time={set(date, { hours: 8, minutes: 0 })} />
                   <AgendaSession room="" alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Registration</StyledTrackHeader>

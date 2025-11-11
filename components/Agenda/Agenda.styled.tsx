@@ -6,6 +6,11 @@ import { tableLayoutBreakpointFrom } from './layout'
 const rowBackgroundColor = '#f9f9f9'
 const cellBorder = '1px solid #ddd'
 
+
+interface StyledAgendaTimeRoomCellProps {
+  room?: string
+}
+
 interface StyledAgendaRowProps {
   tracks?: number
 }
@@ -63,6 +68,22 @@ export const StyledAgendaRow = styled('section')<StyledAgendaRowProps>(({ tracks
   },
 }))
 StyledAgendaRow.displayName = 'StyledAgendaRow'
+
+export const StyledAgendaTimeRoomCell = styled('div')<StyledAgendaTimeRoomCellProps>(({ theme, room }) => ({
+  position: 'sticky',
+  top: 100,
+  display: 'none',
+  padding: calcRem(theme.metrics.md),
+  backgroundColor: room ? room : theme.colors.dddpurple,
+  color: room ? 'inherit' : theme.colors.white,
+  fontSize: calcRem(20),
+  fontWeight: theme.weights.bold,
+  textAlign: 'center',
+ 
+  [breakpoint(tableLayoutBreakpointFrom)]: {
+      display: 'block'
+  }
+}))
 
 export const StyledAgendaRowList = styled('ul')(({ theme }) => ({
   position: 'sticky',
