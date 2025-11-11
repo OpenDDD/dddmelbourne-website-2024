@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { tableLayoutBreakpointFrom } from './layout'
 
 export const StyledAgendaTime = styled('div')(({ theme }) => ({
-  gridColumn: `1 / -1`,
+  gridColumn: 'span 2', // `1 / -1`,
   padding: calcRem(10),
   backgroundColor: theme.colors.secondary,
   color: '#fff',
@@ -12,8 +12,9 @@ export const StyledAgendaTime = styled('div')(({ theme }) => ({
 
   [breakpoint(tableLayoutBreakpointFrom)]: {
     gridColumn: 'auto',
-    backgroundColor: 'transparent',
+    backgroundColor: '#f9f9f9', // 'transparent',
     color: 'inherit',
+    gridRow: 'auto'
   },
 }))
 StyledAgendaTime.displayName = 'StyledAgendaTime'

@@ -17,7 +17,10 @@ interface AgendaSessionProps {
   alwaysShowRoom?: boolean
   sponsorId?: string
   fullWidth?: boolean
+  excludeWorkshopTrack?: boolean,
   isKeynote?: boolean
+  isWorkshop?: boolean
+  isWorkshopContinuation?: boolean
   renderTitle?: (title: string) => React.ReactNode
   renderPresenters?: (presenters: string) => React.ReactNode
 }
@@ -29,7 +32,10 @@ export const AgendaSession = ({
   alwaysShowRoom,
   sponsorId,
   fullWidth,
+  excludeWorkshopTrack,
   isKeynote,
+  isWorkshop,
+  isWorkshopContinuation,
   renderTitle,
   renderPresenters,
 }: AgendaSessionProps) => {
@@ -39,7 +45,12 @@ export const AgendaSession = ({
   const presenters = session ? session.Presenters.map((p) => p.Name).join(', ') : ''
 
   return (
-    <StyledSection fullWidth={fullWidth} session={session !== false}>
+    <StyledSection 
+      fullWidth={fullWidth} 
+      session={session !== false} 
+      isWorkshop={isWorkshop} 
+      isWorkshopContinuation={isWorkshopContinuation}
+      excludeWorkshopTrack={excludeWorkshopTrack}>
       {!session && !children && <StyledAgendaPresenter>Loading&hellip;</StyledAgendaPresenter>}
       {session && (
         <StyledAgendaButton
