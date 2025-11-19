@@ -71,7 +71,7 @@ StyledAgendaRow.displayName = 'StyledAgendaRow'
 
 export const StyledAgendaTimeRoomCell = styled('div')<StyledAgendaTimeRoomCellProps>(({ theme, room }) => ({
   position: 'sticky',
-  top: 100,
+  top: 75,
   display: 'none',
   padding: calcRem(theme.metrics.md),
   backgroundColor: room ? room : theme.colors.dddpurple,
