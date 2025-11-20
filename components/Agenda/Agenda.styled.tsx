@@ -6,6 +6,11 @@ import { tableLayoutBreakpointFrom } from './layout'
 const rowBackgroundColor = '#f9f9f9'
 const cellBorder = '1px solid #ddd'
 
+
+interface StyledAgendaTimeRoomCellProps {
+  room?: string
+}
+
 interface StyledAgendaRowProps {
   tracks?: number
 }
@@ -63,6 +68,22 @@ export const StyledAgendaRow = styled('section')<StyledAgendaRowProps>(({ tracks
   },
 }))
 StyledAgendaRow.displayName = 'StyledAgendaRow'
+
+export const StyledAgendaTimeRoomCell = styled('div')<StyledAgendaTimeRoomCellProps>(({ theme, room }) => ({
+  position: 'sticky',
+  top: 75,
+  display: 'none',
+  padding: calcRem(theme.metrics.md),
+  backgroundColor: room ? room : theme.colors.dddpurple,
+  color: room ? 'inherit' : theme.colors.white,
+  fontSize: calcRem(20),
+  fontWeight: theme.weights.bold,
+  textAlign: 'center',
+ 
+  [breakpoint(tableLayoutBreakpointFrom)]: {
+      display: 'block'
+  }
+}))
 
 export const StyledAgendaRowList = styled('ul')(({ theme }) => ({
   position: 'sticky',
@@ -134,9 +155,27 @@ export const StyledUpNext = styled('div')(({ theme }) => ({
 }))
 StyledUpNext.displayName = 'StyledUpNext'
 
-export const StyledAgendaContainer = styled('div')(({ theme }) => ({
+interface StyledAgendaContainerProps {
+  talkTracks?: number,
+  workshopTracks?: number
+}
+
+export const StyledAgendaContainer = styled('div')<StyledAgendaContainerProps>(({ theme, talkTracks = 4, workshopTracks = 1 }) => ({
   position: 'relative',
   marginBottom: calcRem(theme.metrics.xl),
+  display: 'grid',
+  gridTemplateColumns: `repeat(2, 1fr)`,
+  backgroundColor: '#ddd',
+  border: cellBorder,
+  textAlign: 'center',
+  gap: calcRem(1),
+
+
+// NEW CODE - maybe need to remove or override the above instead?  and use tracks for the repeating part?
+  [breakpoint(tableLayoutBreakpointFrom)]: {
+    gridTemplateColumns: `${calcRem(90)} repeat(${talkTracks}, 1fr) repeat(${workshopTracks}, [workshops] 1fr);`
+  },
+
 }))
 StyledAgendaContainer.displayName = 'StyledAgendaContainer'
 
