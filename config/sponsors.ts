@@ -20,7 +20,7 @@ const platinumSponsors: Sponsor[] = [
   },
   {
     id: '2026-netwealth',
-    imageUrl: '/static/images/sponsors/2026-netwealth.jpg',
+    imageUrl: '/static/images/sponsors/2026-netwealth.png',
     name: 'Netwealth',
     type: SponsorType.Platinum,
     url: 'https://www.netwealth.com.au/',
@@ -37,7 +37,7 @@ const goldSponsors: Sponsor[] = [
   },
   {
     id: '2026-umbraco',
-    imageUrl: '/static/images/sponsors/2025-umbraco.png',
+    imageUrl: '/static/images/sponsors/2026-umbraco.png',
     name: 'Umbraco',
     type: SponsorType.Gold,
     url: 'https://umbraco.com/',
@@ -49,36 +49,6 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://www.twilio.com/',
   },
-  // {
-  //   id: 'webjet',
-  //   imageUrl: '/static/images/sponsors/2024-webjet.png',
-  //   name: 'Webjet',
-  //   type: SponsorType.Gold,
-  //   url: 'https://www.webjet.com.au/',
-  // },
-
-  // {
-  //   id: 'ndcmelb',
-  //   imageUrl: '/static/images/sponsors/2025-ndcmelb.png',
-  //   type: SponsorType.Gold
-  //   url: 'https://ndcmelbourne.com/',
-  // },
-  // {
-  //   id: 'datastax',
-  //   imageUrl: '/static/images/sponsors/2025-datastax.png',
-  //   name: 'Datastax',
-  //   type: SponsorType.Gold,
-  //   url: 'https://www.datastax.com/',
-  //   logoSize: '20',
-  // },
-  // {
-  //   id: 'clicksend',
-  //   imageUrl: '/static/images/sponsors/2025-clicksend.png',
-  //   name: 'Clicksend',
-  //   type: SponsorType.Gold,
-  //   url: 'https://www.clicksend.com',
-  //   logoSize: '40',
-  // },
 ]
 
 const silverSponsors: Sponsor[] = [
@@ -89,32 +59,17 @@ const silverSponsors: Sponsor[] = [
     type: SponsorType.Silver,
     url: 'https://stileeducation.com/',
   },
-  // {
-  //   id: 'kodez',
-  //   imageUrl: '/static/images/sponsors/2024-kodez-3.png',
-  //   name: 'Kodez',
-  //   type: SponsorType.Silver,
-  //   url: 'https://kodez.com.au',
-  // },
-  // {
-  //   id: 'insight',
-  //   imageUrl: '/static/images/sponsors/2025-insight.jpg',
-  //   name: 'Insight',
-  //   type: SponsorType.Silver,
-  //   url: 'https://au.insight.com/',
-  //   logoSize: '35',
-  // },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
-  {
-    id: '2026-drawboard',
-    imageUrl: '/static/images/sponsors/2025-drawboard.png',
-    name: 'Drawboard',
-    type: SponsorType.CoffeeCart,
-    url: 'https://www.drawboard.com/',
-    logoSize: '60',
-  },
+  // {
+  //   id: '2026-drawboard',
+  //   imageUrl: '/static/images/sponsors/2025-drawboard.png',
+  //   name: 'Drawboard',
+  //   type: SponsorType.CoffeeCart,
+  //   url: 'https://www.drawboard.com/',
+  //   logoSize: '60',
+  // },
   {
     id: '2026-rea',
     imageUrl: '/static/images/sponsors/2026-rea.png',
@@ -144,15 +99,15 @@ const serviceSponsors: Sponsor[] = [
     url: 'https://www.kaleida.team/',
     logoSize: '40',
   },
-  {
-    id: '2026-nonzerosum',
-    imageUrl: '/static/images/sponsors/2026-nonzerosum.png',
-    name: 'Non Zero Sum',
-    type: SponsorType.Service,
-    serviceProvided: 'Childcare',
-    url: 'https://nonzerosum.au/',
-    logoSize: '40',
-  },
+  // {
+  //   id: '2026-nonzerosum',
+  //   imageUrl: '/static/images/sponsors/2026-nonzerosum.png',
+  //   name: 'Non Zero Sum',
+  //   type: SponsorType.Service,
+  //   serviceProvided: 'Childcare',
+  //   url: 'https://nonzerosum.au/',
+  //   logoSize: '40',
+  // },
 ]
 
 const communityPartners: Sponsor[] = []
