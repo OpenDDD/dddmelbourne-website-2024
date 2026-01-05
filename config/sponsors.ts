@@ -66,12 +66,19 @@ const silverSponsors: Sponsor[] = [
     type: SponsorType.Silver,
     url: 'https://stileeducation.com/',
   },
+  {
+    id: '2026-ndc',
+    imageUrl: '/static/images/sponsors/2026-ndc-sydney.png',
+    name: 'NDC Sydney',
+    type: SponsorType.Silver,
+    url: 'https://ndcsydney.com/',
+  },
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
   {
     id: '2026-drawboard',
-    imageUrl: '/static/images/sponsors/2025-drawboard.png',
+    imageUrl: '/static/images/sponsors/2026-drawboard.png',
     name: 'Drawboard',
     type: SponsorType.CoffeeCart,
     url: 'https://www.drawboard.com/',
