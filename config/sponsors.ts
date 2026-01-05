@@ -49,6 +49,13 @@ const goldSponsors: Sponsor[] = [
     type: SponsorType.Gold,
     url: 'https://www.twilio.com/',
   },
+  {
+    id: '2026-fabirc',
+    imageUrl: '/static/images/sponsors/2026-fabric.png',
+    name: 'Fabric Group',
+    type: SponsorType.Gold,
+    url: 'https://www.fabricgroup.com.au/',
+  },
 ]
 
 const silverSponsors: Sponsor[] = [
@@ -62,14 +69,14 @@ const silverSponsors: Sponsor[] = [
 ]
 
 const coffeeCartSponsors: Sponsor[] = [
-  // {
-  //   id: '2026-drawboard',
-  //   imageUrl: '/static/images/sponsors/2025-drawboard.png',
-  //   name: 'Drawboard',
-  //   type: SponsorType.CoffeeCart,
-  //   url: 'https://www.drawboard.com/',
-  //   logoSize: '60',
-  // },
+  {
+    id: '2026-drawboard',
+    imageUrl: '/static/images/sponsors/2025-drawboard.png',
+    name: 'Drawboard',
+    type: SponsorType.CoffeeCart,
+    url: 'https://www.drawboard.com/',
+    logoSize: '60',
+  },
   {
     id: '2026-rea',
     imageUrl: '/static/images/sponsors/2026-rea.png',
@@ -99,15 +106,15 @@ const serviceSponsors: Sponsor[] = [
     url: 'https://www.kaleida.team/',
     logoSize: '40',
   },
-  // {
-  //   id: '2026-nonzerosum',
-  //   imageUrl: '/static/images/sponsors/2026-nonzerosum.png',
-  //   name: 'Non Zero Sum',
-  //   type: SponsorType.Service,
-  //   serviceProvided: 'Childcare',
-  //   url: 'https://nonzerosum.au/',
-  //   logoSize: '40',
-  // },
+  {
+    id: '2026-nonzerosum',
+    imageUrl: '/static/images/sponsors/2026-non-zero-sum.png',
+    name: 'Non Zero Sum',
+    type: SponsorType.Service,
+    serviceProvided: 'Childcare',
+    url: 'https://nonzerosum.au/',
+    logoSize: '40',
+  },
 ]
 
 const communityPartners: Sponsor[] = []
