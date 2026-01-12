@@ -132,7 +132,7 @@ export const CurrentAgenda = ({
                   </AgendaSession>
                   <AgendaSession room={1} sessionId="1015549" />
                   <AgendaSession room={2} sessionId="992525" />
-                  <AgendaSession room={3} sessionId="1044802" />
+                  <AgendaSession room={3} sessionId="1027254" />
                   <AgendaSession
                     room={4}
                     isWorkshop
@@ -210,9 +210,9 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="997274" />
-                  <AgendaSession room={2} sessionId="1041341" />
-                  <AgendaSession room={3} sessionId="1029734" />
+                  <AgendaSession room={1} sessionId="1041341" />
+                  <AgendaSession room={2} sessionId="1029734" />
+                  <AgendaSession room={3} sessionId="1043437" />
                   <AgendaSession
                     room={4}
                     isWorkshop
