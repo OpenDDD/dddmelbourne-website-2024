@@ -50,11 +50,25 @@ const goldSponsors: Sponsor[] = [
     url: 'https://www.twilio.com/',
   },
   {
-    id: '2026-fabirc',
+    id: '2026-fabric',
     imageUrl: '/static/images/sponsors/2026-fabric.png',
     name: 'Fabric Group',
     type: SponsorType.Gold,
     url: 'https://www.fabricgroup.com.au/',
+  },
+  {
+    id: '2026-buildkite',
+    imageUrl: '/static/images/sponsors/2026-buildkite.png',
+    name: 'BuildKite',
+    type: SponsorType.Gold,
+    url: 'https://buildkite.com/',
+  },
+  {
+    id: '2026-vercel',
+    imageUrl: '/static/images/sponsors/2026-vercel.png',
+    name: 'Vercel',
+    type: SponsorType.Gold,
+    url: 'https://vercel.com/',
   },
 ]
 
@@ -72,6 +86,13 @@ const silverSponsors: Sponsor[] = [
     name: 'NDC Sydney',
     type: SponsorType.Silver,
     url: 'https://ndcsydney.com/',
+  },
+  {
+    id: '2026-aws',
+    imageUrl: '/static/images/sponsors/2026-aws.svg',
+    name: 'AWS',
+    type: SponsorType.Silver,
+    url: 'https://aws.amazon.com/',
   },
 ]
 
