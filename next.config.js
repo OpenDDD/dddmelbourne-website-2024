@@ -23,6 +23,20 @@ const config = {
   },
   compiler: {
     emotion: true,
+  },
+  async redirects() {
+      return [
+          {
+              source: '/conference-feedback',
+              destination: 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1Fl-EtxArEOMrZBBUn5pErlWr-nATeFBhEyYDe7_oeFUMUs3TzFQU0lOUzVSS0U2UzVLNUs1TUpNSy4u',
+              permanent: false,
+          },
+          {
+              source: '/feedback/:session',
+              destination: 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1Fl-EtxArEOMrZBBUn5pErlWr-nATeFBhEyYDe7_oeFUNUE4OVNPWkVPRU45OVVQRDRWSTM2U0w3Ti4u&r668ebe4ef1754bc0abeaf4a9bd318451=:session',
+              permanent: false,
+          },
+      ]
   }
 }
 

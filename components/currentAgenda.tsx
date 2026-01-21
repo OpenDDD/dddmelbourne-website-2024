@@ -42,9 +42,6 @@ export const CurrentAgenda = ({
           <ActionButton
             action={{ Title: 'Conference Feedback', Url: Conference.ConferenceFeedbackLink, Category: 'conference' }}
           />
-          <ActionButton
-            action={{ Title: 'Session feedback', Url: Conference.SessionFeedbackLink, Category: 'conference' }}
-          />
         </StyledFeedbackActions>
       )}
 
