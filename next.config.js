@@ -28,12 +28,12 @@ const config = {
       return [
           {
               source: '/conference-feedback',
-              destination: 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1Fl-EtxArEOMrZBBUn5pErlWr-nATeFBhEyYDe7_oeFUMUs3TzFQU0lOUzVSS0U2UzVLNUs1TUpNSy4u',
+              destination: 'https://forms.office.com/Pages/ResponsePage.aspx?id=1Fl-EtxArEOMrZBBUn5pErlWr-nATeFBhEyYDe7_oeFUMzI4OTIyMFU0UVZaOExGOThYME9KNldGMy4u',
               permanent: false,
           },
           {
               source: '/feedback/:session',
-              destination: 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=1Fl-EtxArEOMrZBBUn5pErlWr-nATeFBhEyYDe7_oeFUNUE4OVNPWkVPRU45OVVQRDRWSTM2U0w3Ti4u&r668ebe4ef1754bc0abeaf4a9bd318451=:session',
+              destination: 'https://forms.office.com/Pages/ResponsePage.aspx?id=1Fl-EtxArEOMrZBBUn5pErlWr-nATeFBhEyYDe7_oeFUMzFTWDY4T1pFOVdYWlE2NU9MMjdSVlpWTy4u&rade9feed4a6746d4bcc8ac412a5a5246=:session',
               permanent: false,
           },
       ]
