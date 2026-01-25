@@ -239,7 +239,7 @@ export const CurrentAgenda = ({
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaTime time={set(date, { hours: 16, minutes: 45 })} duration={60} />
+                  <AgendaTime time={set(date, { hours: 16, minutes: 45 })} duration={45} />
                   <AgendaSession
                     sessionId="988046"
                     room={0}
@@ -250,7 +250,7 @@ export const CurrentAgenda = ({
                     isKeynote
                     alwaysShowRoom
                   />
-                  <AgendaTime time={set(date, { hours: 17, minutes: 15 })} />
+                  <AgendaTime time={set(date, { hours: 17, minutes: 30 })} />
                   <AgendaSession room={0} alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Closing</StyledTrackHeader>
                   </AgendaSession>
