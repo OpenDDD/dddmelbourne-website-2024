@@ -84,7 +84,7 @@ const Conference: IConference = {
   Organiser: {
     Name: 'OZ Dev Inc.',
     Url: 'https://medium.com/ddd-melbourne/the-ddd-melbourne-crew-5f0dd3da09df',
-    ShirtColour: 'bright blue',
+    ShirtColour: 'fuchsia pink',
   },
   TagLine: tagLine,
   SiteDescription: `${tagLine}.`,
@@ -111,7 +111,7 @@ const Conference: IConference = {
   MentoringEmail: 'speakers@dddmelbourne.com',
   EmergencyContactName: 'Bron Thulke',
   EmergencyContactPhoneNumber: '0414 431 474',
-  MediaOfficerName: 'Alicia Cheah',
+  MediaOfficerName: 'Mel Kaulfuss',
 
   AnonymousReportFormUrl: 'https://forms.office.com/r/adraBbhH8T',
 
@@ -172,7 +172,7 @@ const Conference: IConference = {
 
   ImportantContacts: {
     Police: {
-      Details: 'Melbourne West Police Station, 313 Spencer St, Docklands VIC 3008',
+      Details: 'Melbourne West Police Station, 226 Flinders Ln, Melbourne VIC 3000 ',
       Phone: null,
       MapUrl:
         'https://www.google.com/maps/place/Melbourne+West+Police+Station/@-37.813749,144.9488465,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad65d4f44719edf:0xc5a10f192bea4367!8m2!3d-37.8137533!4d144.9510352',
