@@ -96,7 +96,7 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
         fully accessible.
       </Text>
 
-      <Text>Melbourne Townhall has accessible restrooms located on the Ground and Third Floor.</Text>
+      <Text>Melbourne Town Hall has accessible restrooms located on the Ground and Third Floor.</Text>
 
       <h2>Registration and security</h2>
       {/*TODO: Image*/}
@@ -157,8 +157,8 @@ const ConferenceDayPage: NextPage<ConferencePageProps> = ({ sessions }) => {
       <Text>We will have complimentary barista coffee available on the day from two locations.</Text>
 
       <ul>
-        <li>Foyer: Coffee and hot drinks will be available all day.</li>
-        <li>Collins Foyer (out the back of the Main Hall): Coffee and hot drinks will be available all day.</li>
+        <li>Main Hall: Coffee and hot drinks will be available until 3:30pm (other than during keynote)</li>
+        <li>Collins Foyer (out the back of the Main Hall): Coffee and hot drinks will be available until 3:30pm</li>
       </ul>
 
       <Text>Thank you to our coffee sponsors REA Group and Datastax!</Text>
