@@ -26,7 +26,7 @@ const ShhhNopePage = (): JSX.Element => {
         </div>
         <br />
         <br />
-        <h3>You really think we'd make it that easy?? Keep looking 😉</h3>
+        <h3>Didn't you learn ANYTHING last year? Beware scannig random QR codes 😉</h3>
       </div>
     </Main>
   )
