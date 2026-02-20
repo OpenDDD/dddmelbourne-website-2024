@@ -31,7 +31,7 @@ const presentationSubmissionsOpenUntil = zonedTimeToUtc('2025-09-30T23:59:59', t
 const votingOpenFrom = zonedTimeToUtc('2025-10-06T00:00:00', tz)
 const votingOpenUntil = zonedTimeToUtc('2025-10-20T23:59:59', tz)
 const agendaPublishedFrom = zonedTimeToUtc('2025-11-05T12:00:00', tz)
-const feedbackOpenFrom = add(date, { hours: -3 })
+const feedbackOpenFrom = add(date, { days: -1 })
 const feedbackOpenUntil = add(date, { days: 7 })
 const importantDates: ImportantDate[] = [
   {

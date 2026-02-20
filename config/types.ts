@@ -219,11 +219,7 @@ export interface Action {
   Title: string
   Url: string
   Category: string
-}
-
-export interface Image {
-  Url: string
-  Alternate: string
+  OpenInNewTab?: boolean
 }
 
 export interface Organiser {

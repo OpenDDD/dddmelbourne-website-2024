@@ -110,7 +110,7 @@ export const Agenda = ({ sessions, ...props }: AgendaProps) => {
             livestream={sessionState.sessionLivestream}
           />
 
-          {props.acceptingFeedback && (
+          {props.acceptingFeedback && sessionState.selectedSession && (
             <StyledCenteredParagraph>
               <SafeLink className="btn btn-secondary" target="_blank" href={`${props.feedbackLink}/${sessionState.selectedSession.Title}`}>
                 Give feedback

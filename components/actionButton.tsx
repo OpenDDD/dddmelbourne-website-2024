@@ -7,7 +7,7 @@ interface ActionButtonProps {
 }
 
 export const ActionButton = ({ action }: ActionButtonProps) => (
-  <ButtonAnchor kind="primary" href={action.Url}>
+  <ButtonAnchor kind="primary" href={action.Url} target={action.OpenInNewTab ? "_blank" : ""}>
     {action.Title}
   </ButtonAnchor>
 )

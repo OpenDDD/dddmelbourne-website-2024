@@ -60,6 +60,7 @@ export default function getConferenceActions(conference: Conference, dates: Date
       Category: 'conference',
       Title: 'Give feedback',
       Url: conference.ConferenceFeedbackLink,
+      OpenInNewTab: true,
     })
   }
 
