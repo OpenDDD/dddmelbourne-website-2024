@@ -9,7 +9,7 @@ import {
   Venue,
 } from './types'
 import { zonedTimeToUtc } from 'date-fns-tz'
-import { add, set } from 'date-fns'
+import { add } from 'date-fns'
 import { MelbourneTownHall } from './venues/melbourne-town-hall'
 
 const name = 'DDD Melbourne'
@@ -18,19 +18,18 @@ const tagLine = `${name} is an inclusive non-profit conference for the Melbourne
 const tz = 'Australia/Melbourne'
 const hideDate = false
 const ticketPurchasingOptions = TicketPurchasingOptions.OnSale
-const staticDate = '2026-02-21T09:00'
+const staticDate = '2027-02-20T09:00'
 const date = zonedTimeToUtc(staticDate, tz)
 const endDate = add(date, { hours: 12 })
-const currentInstance = 2026
+const currentInstance = 2027
 const firstInstance = 2024
-const registrationOpenFrom = zonedTimeToUtc('2025-07-15T11:00:00', tz)
-const registrationOpenWave2From = zonedTimeToUtc('2025-10-01T11:00:00', tz)
-const registrationOpenUntil = zonedTimeToUtc('2026-02-21T09:00:00', tz)
-const presentationSubmissionsOpenFrom = zonedTimeToUtc('2025-07-30T12:00:00', tz)
-const presentationSubmissionsOpenUntil = zonedTimeToUtc('2025-09-30T23:59:59', tz)
-const votingOpenFrom = zonedTimeToUtc('2025-10-06T00:00:00', tz)
-const votingOpenUntil = zonedTimeToUtc('2025-10-20T23:59:59', tz)
-const agendaPublishedFrom = zonedTimeToUtc('2025-11-05T12:00:00', tz)
+const registrationOpenFrom = zonedTimeToUtc('2026-08-14T11:00:00', tz)
+const registrationOpenUntil = zonedTimeToUtc('2027-02-19T23:59:59', tz)
+const presentationSubmissionsOpenFrom = zonedTimeToUtc('2026-07-24T12:00:00', tz)
+const presentationSubmissionsOpenUntil = zonedTimeToUtc('2026-09-30T23:59:59', tz)
+const votingOpenFrom = zonedTimeToUtc('2026-10-07T00:00:00', tz)
+const votingOpenUntil = zonedTimeToUtc('2026-10-21T23:59:59', tz)
+const agendaPublishedFrom = zonedTimeToUtc('2026-11-04T12:00:00', tz)
 const feedbackOpenFrom = add(date, { days: -1 })
 const feedbackOpenUntil = add(date, { days: 7 })
 const importantDates: ImportantDate[] = [
@@ -92,16 +91,16 @@ const Conference: IConference = {
   GoogleAnalyticsId: 'G-E5CD021NB4',
   TicketPrice: 'TBC',
   ChildcarePrice: 'free',
-  ChildcareRegistrationLink: 'https://ti.to/ddd-melbourne/ddd-2026-childcare',
+  ChildcareRegistrationLink: null,
   TicketsProviderId: TicketsProvider.Tito,
   TicketsProviderAccountId: 'ddd-melbourne',
-  TicketsProviderEventId: 'ddd-2026',
+  TicketsProviderEventId: '',
   TicketsProviderFinancialAssistanceCode: 'financialassistance',
   TicketPurchasingOptions: ticketPurchasingOptions,
   HashTag: 'DDDMelb',
   SellingPoints: ['One day', 'Fully catered', 'Inclusive atmosphere', 'Interesting presentations', 'Awesome people'],
   Handbook: '',
-  SessionizeUrl: 'https://sessionize.com/ddd-melbourne-2026/',
+  SessionizeUrl: null,
   SessionizeEditUrl: 'https://sessionize.com/app/speaker/',
   PreviouslySubmittedTopics:
     'Agile, building great teams, UI design, UX, software testing, virtual reality, women in tech, web accessibility, open source software, workplace culture, mental health, unconscious bias, building engaged teams, self-employment tips, mentoring, Scrum, pair programming, bots, IoT, machine learning, neural networks, quantum encryption, security, reverse engineering, blockchain, Assembly language, automated deployments, mobile development, mobile test automation, Domain Driven Design, cloud native, architecture, microservices, serverless, service meshes, stream programming and Rx, APIs, GraphQL, actors, JavaScript, SPAs, TypeScript, authentication, React, UWP, Elm, HTML, HTTP protocol, Git, Docker and pointers',
@@ -129,7 +128,6 @@ const Conference: IConference = {
   DoorsOpenTime: '8:00am',
   FinishTime: '5:30pm',
   RegistrationOpenFrom: registrationOpenFrom,
-  Wave2RegistrationOpenFrom: registrationOpenWave2From,
   RegistrationOpenUntil: registrationOpenUntil,
   PresentationSubmissionsOpenFrom: presentationSubmissionsOpenFrom,
   PresentationSubmissionsOpenUntil: presentationSubmissionsOpenUntil,
@@ -209,68 +207,9 @@ const Conference: IConference = {
     'Swanston room': '#fff5cc',
   },
 
-  Livestreams: [
-    'https://youtu.be/ovEA5PaOdWo?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/8mq3bCMrmbE?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/DsFlSkTPH-Y?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/pqRQ4rN6adg?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/ox6ixHfs4xM?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/2KjEBFAVgoU?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/Plo8dSxAjHw?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/EU-VeLYi8LM?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-    'https://youtu.be/LQ5vtriC_bI?list=PLkLJSte3oodSYGOtIq-4ntOD5CH8b-lkx',
-  ],
+  Livestreams: [],
 
-  SessionGroups: [
-    {
-      sessions: ['337380'],
-      timeStart: set(date, { hours: 9, minutes: 10 }),
-      timeEnd: set(date, { hours: 10, minutes: 0 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['344274', '343408', '344367', '344044', '344101', '343942', '342543', '334148', '344023'],
-      timeStart: set(date, { hours: 10, minutes: 10 }),
-      timeEnd: set(date, { hours: 10, minutes: 55 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['333791', '344494', '338797', '344002', '344418', '343628', '338125', '343620', '339320'],
-      timeStart: set(date, { hours: 11, minutes: 25 }),
-      timeEnd: set(date, { hours: 12, minutes: 10 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['333736', '343984', '340959', '344464', '343953', '341816', '344501', '344419', '342452'],
-      timeStart: set(date, { hours: 12, minutes: 20 }),
-      timeEnd: set(date, { hours: 12, minutes: 40 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['337322', '344493', '343385', '343105', '336320', '343968', '339597', '344431', '341472'],
-      timeStart: set(date, { hours: 12, minutes: 50 }),
-      timeEnd: set(date, { hours: 13, minutes: 35 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['379497', '379496'],
-      timeStart: set(date, { hours: 14, minutes: 35 }),
-      timeEnd: set(date, { hours: 15, minutes: 5 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['343399', '343561', '341315', '340848', '343948', '339017', '343697', ['343793', '344491'], '344427'],
-      timeStart: set(date, { hours: 15, minutes: 15 }),
-      timeEnd: set(date, { hours: 15, minutes: 35 }),
-      type: 'SessionIds',
-    },
-    {
-      sessions: ['383016'],
-      timeStart: set(date, { hours: 16, minutes: 5 }),
-      timeEnd: set(date, { hours: 16, minutes: 55 }),
-      type: 'SessionIds',
-    },
-  ],
+  SessionGroups: [],
 
   VolunteerSubmissionFormId: '9c302d13-e580-4edf-ba13-5bc27eb7b97f',
 }

@@ -4,6 +4,7 @@ out
 npm-debug.log
 tmp.json
 .DS_Store
+*:Zone.Identifier
 .eslintcache
 coverage
 *.tsbuildinfo

@@ -10,6 +10,13 @@ import { formatInTimeZone } from 'date-fns-tz'
 
 const CFPPage: NextPage = () => {
   const { conference, dates } = useConfig()
+  const sessionizeSubmission = conference.SessionizeUrl ? (
+    <ButtonAnchor kind="primary" href={conference.SessionizeUrl} target="_blank" rel="noopener">
+      Submit a session via Sessionize
+    </ButtonAnchor>
+  ) : (
+    'The Sessionize submission link will be published here soon.'
+  )
 
   return (
     <PageWithSidebar
@@ -25,9 +32,7 @@ const CFPPage: NextPage = () => {
       </Text>
 
       <Text textAlign="center">
-        <ButtonAnchor kind="primary" href={conference.SessionizeUrl} target="_blank" rel="noopener">
-          Submit a session via Sessionize
-        </ButtonAnchor>
+        {sessionizeSubmission}
       </Text>
 
       <Text>
@@ -107,9 +112,7 @@ const CFPPage: NextPage = () => {
       </StyledList>
 
       <Text textAlign="center">
-        <ButtonAnchor href={conference.SessionizeUrl} kind="primary" target="_blank" rel="noopener">
-          Submit a session via Sessionize
-        </ButtonAnchor>
+        {sessionizeSubmission}
       </Text>
 
       <h2>Already submitted, but want to edit?</h2>

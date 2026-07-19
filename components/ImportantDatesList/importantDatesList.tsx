@@ -76,7 +76,7 @@ export const ImportantDatesList = ({
       <StyledImportantDateFooter>
         Can't wait? Then join our regular{' '}
         <Link href="https://www.meetup.com/ddd-melbourne-by-night/">DDD By Night meetup</Link> to get the vibe
-        or checkout past <Link href="/agenda/2024">2024</Link> or <Link href="/agenda/2025">2025</Link> agendas!
+        or checkout past <Link href="/agenda/2024">2024</Link>, <Link href="/agenda/2025">2025</Link>, or <Link href="/agenda/2026">2026</Link> agendas!
       </StyledImportantDateFooter>
     </Fragment>
   )

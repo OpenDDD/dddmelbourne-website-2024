@@ -9,6 +9,7 @@ const customJestConfig = {
     '^test/(.*)$': '<rootDir>/test/$1',
     '^Context/(.*)$': '<rootDir>/Context/$1',
     '^config/(.*)$': '<rootDir>/config/$1',
+    '^layouts/(.*)$': '<rootDir>/layouts/$1',
   },
   clearMocks: true,
   collectCoverage: true,

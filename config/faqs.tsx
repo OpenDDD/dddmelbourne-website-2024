@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { SafeLink } from 'components/global/safeLink'
 import Conference from './conference'
-import conference from './conference'
 import { Dates, FAQ, TicketPurchasingOptions } from './types'
 import { format } from 'date-fns'
 
@@ -86,12 +85,18 @@ export default function getFaqs(dates: Dates): FAQ[] {
     Question: 'Will childcare be available?',
     Answer: (
       <Fragment>
-        DDD Melbourne will be providing onsite childcare free of charge this year on a first come first served basis for
-        children. Please register at this link{' '}
-        <SafeLink href={conference.ChildcareRegistrationLink} target="_blank">
-          link
-        </SafeLink>
-        .
+        {Conference.ChildcareRegistrationLink ? (
+          <Fragment>
+            DDD Melbourne will be providing onsite childcare free of charge this year on a first come first served basis for
+            children. Please register at this link{' '}
+            <SafeLink href={Conference.ChildcareRegistrationLink} target="_blank">
+              link
+            </SafeLink>
+            .
+          </Fragment>
+        ) : (
+          'DDD Melbourne will be providing onsite childcare free of charge this year on a first come first served basis for children. Details will be published closer to the event.'
+        )}
       </Fragment>
     ),
   })

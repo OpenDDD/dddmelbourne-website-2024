@@ -14,6 +14,7 @@ import { getCommonServerSideProps } from 'components/utils/getCommonServerSidePr
 const TicketPage: NextPage = () => {
   const { conference, dates } = useConfig()
   const faqs = getFaqs(dates)
+  const hasTicketProviderEventId = conference.TicketsProviderEventId.length > 0
 
   return (
     <Main title="Tickets" description={`Purchase tickets for ${conference.Name}`}>
@@ -28,12 +29,13 @@ const TicketPage: NextPage = () => {
       )}
 
       <FaqList faqs={faqs.filter((f) => f.Category === 'tickets')} />
-      {/*TODO: Add not that wave 1 can vote*/}
 
-      {conference.TicketsProviderId === TicketsProvider.Eventbrite && (
+      {!hasTicketProviderEventId && <Text>Ticket details will be available soon.</Text>}
+
+      {hasTicketProviderEventId && conference.TicketsProviderId === TicketsProvider.Eventbrite && (
         <Eventbrite eventId={conference.TicketsProviderEventId} />
       )}
-      {conference.TicketsProviderId === TicketsProvider.Tito && (
+      {hasTicketProviderEventId && conference.TicketsProviderId === TicketsProvider.Tito && (
         <Tito accountId={conference.TicketsProviderAccountId} eventId={conference.TicketsProviderEventId} />
       )}
     </Main>

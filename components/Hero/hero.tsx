@@ -38,12 +38,12 @@ export const Hero = (): JSX.Element => {
           }}
           minWidth={300}
           maxWidth={3000}
-          src="dddmelbourne/hero/dddmelb-hero-25-b.jpg"
+          src="dddmelbourne/hero/dddmelb-hero-27-a.jpg"
           sizes={{
             lg: '100vw',
             sm: '100vw',
           }}
-          imgProps={{ fetchPriority: 'high', width: 4898, height: 2067 }}
+          imgProps={{ fetchPriority: 'high', width: 7008, height: 4672 }}
         />
       </HeroWrapper>
     </React.Fragment>
