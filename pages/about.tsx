@@ -97,15 +97,18 @@ const About: NextPage = () => {
       </StyledList>
       <h2>Sister events</h2>
       <Text>We have a number of sister events across Australia:</Text>
-      <StyledLogoWrapper logoMaxWidth={200}>
+      <StyledLogoWrapper logoMaxWidth={250}>
         <SafeLink href="https://dddperth.com/" target="_blank">
           <img src="/static/images/logo.png" alt="DDD Perth logo" loading="lazy" />
         </SafeLink>{' '}
-        <SafeLink href="https://www.dddsydney.com.au/" target="_blank">
-          <img src="/static/images/logo-dddsydney-2019.png" alt="DDD Sydney logo" loading="lazy" />
+        <SafeLink href="https://dddadelaide.com/" target="_blank">
+          <img src="/static/images/logo-dddadelaide.png" alt="DDD Adelaide logo" loading="lazy" />
         </SafeLink>{' '}
         <SafeLink href="http://dddbrisbane.com/" target="_blank">
           <img src="/static/images/logo-dddbrisbane-2019.jpg" alt="DDD Brisbane logo" loading="lazy" />
+        </SafeLink>
+        <SafeLink href="http://dddoutback.com/" target="_blank">
+          <img src="/static/images/logo-dddoutback.png" alt="DDD Outback logo" loading="lazy" />
         </SafeLink>
       </StyledLogoWrapper>
     </PageWithSidebar>
