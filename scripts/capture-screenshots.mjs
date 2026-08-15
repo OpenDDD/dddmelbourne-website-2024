@@ -7,6 +7,7 @@ const baseUrl = process.env.SCREENSHOT_BASE_URL ?? 'http://127.0.0.1:3100'
 const outputDir = process.env.SCREENSHOT_OUTPUT_DIR ?? '.artifacts/screenshots'
 const requestedRoutes = process.argv.slice(2)
 const routes = requestedRoutes.length > 0 ? requestedRoutes : ['/', '/agenda']
+const repositoryRoot = process.cwd()
 const viewports = [
   {
     name: 'desktop',
@@ -29,8 +30,16 @@ function routeToFilename(route, viewportName) {
 }
 
 async function ensureOutputDir() {
-  await fs.rm(outputDir, { recursive: true, force: true })
-  await fs.mkdir(outputDir, { recursive: true })
+  const resolvedOutputDir = path.resolve(outputDir)
+  const relativeToRepo = path.relative(repositoryRoot, resolvedOutputDir)
+  const isInsideRepo = relativeToRepo !== '' && !relativeToRepo.startsWith('..') && !path.isAbsolute(relativeToRepo)
+
+  if (!isInsideRepo) {
+    throw new Error(`SCREENSHOT_OUTPUT_DIR must be inside the repository: ${resolvedOutputDir}`)
+  }
+
+  await fs.rm(resolvedOutputDir, { recursive: true, force: true })
+  await fs.mkdir(resolvedOutputDir, { recursive: true })
 }
 
 async function captureScreenshots() {

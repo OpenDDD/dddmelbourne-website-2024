@@ -13,7 +13,7 @@ The DDD Melbourne website is deployed to https://dddmelbourne.com and is built u
 
 ## Copilot cloud-agent dev loop
 
-- `.github/workflows/copilot-setup-steps.yml` bootstraps the cloud agent with Node 18 and `npm ci`
+- `.github/workflows/copilot-setup-steps.yml` bootstraps the cloud agent with Node 20 and `npm ci`
 - Start the site with `npm run dev:copilot` (binds to port `3100` by default; override with `COPILOT_PORT=3101 npm run dev:copilot`)
 - Use the in-app `Testing` panel to jump between conference states such as `Pre-CFP`, `Voting open`, and `Agenda published`
 - Verify pages with `curl http://127.0.0.1:3100/` and route-specific requests like `curl http://127.0.0.1:3100/agenda` (or match your `COPILOT_PORT`)
