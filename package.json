@@ -9,6 +9,8 @@
   "scripts": {
     "clean": "rimraf build .next public/_next",
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev --turbopack",
+    "dev:copilot": "node scripts/run-copilot-dev.mjs",
+    "screenshot:copilot": "node scripts/capture-screenshots.mjs",
     "build": "next build",
     "start": "next start",
     "analyze": "cross-env ANALYZE=true npm run build",
@@ -59,12 +61,13 @@
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "jest-axe": "^6.0.0",
+    "playwright": "^1.62.1",
     "rimraf": "^3.0.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.33.0"
   },
   "engines": {
-    "node": "18.x.x"
+    "node": "18.x.x || 20.x.x"
   },
   "overrides": {
     "@types/react": "19.2.8",

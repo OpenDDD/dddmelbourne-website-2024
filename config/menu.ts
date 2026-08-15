@@ -55,10 +55,10 @@ export default function Menu(conference: Conference, dates: Dates): { Top: MenuI
     })
   }
 
-  if (dates.AgendaPublished) {
+  if (dates.AgendaPublished || conference.PreviousInstances.length > 0) {
     topMenu.push({
       href: '/agenda',
-      name: 'Agenda',
+      name: dates.AgendaPublished ? 'Agenda' : 'Past Agendas',
     })
   }
 
