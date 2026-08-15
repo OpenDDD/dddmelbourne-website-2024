@@ -1,0 +1,22 @@
+[
+  {
+    "route": "/",
+    "viewport": "desktop",
+    "file": "home-desktop.png"
+  },
+  {
+    "route": "/agenda",
+    "viewport": "desktop",
+    "file": "agenda-desktop.png"
+  },
+  {
+    "route": "/",
+    "viewport": "mobile",
+    "file": "home-mobile.png"
+  },
+  {
+    "route": "/agenda",
+    "viewport": "mobile",
+    "file": "agenda-mobile.png"
+  }
+]
