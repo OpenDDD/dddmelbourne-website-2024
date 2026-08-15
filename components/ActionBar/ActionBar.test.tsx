@@ -31,7 +31,7 @@ describe('<ActionBar />', () => {
   test('renders', () => {
     renderActionBar()
 
-    expect(screen.getByRole('listdcdcd')).toBeInTheDocument()
+    expect(screen.getByRole('list')).toBeInTheDocument()
   })
 
   test('Show link when accepting presentations', () => {
