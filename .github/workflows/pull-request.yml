@@ -1,0 +1,17 @@
+name: pull-request.yml
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  test_and_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '18'
+      - run: npm run test
+      - run: npm run build
+
