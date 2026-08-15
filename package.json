@@ -63,7 +63,7 @@
     "jest-axe": "^6.0.0",
     "playwright": "^1.62.1",
     "rimraf": "^3.0.2",
-    "typescript": "^5.8.3",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.33.0"
   },
   "engines": {
