@@ -38,7 +38,7 @@
   "devDependencies": {
     "@emotion/jest": "^11.8.0",
     "@eslint/js": "^9.28.0",
-    "@next/bundle-analyzer": "15.5.9",
+    "@next/bundle-analyzer": "16.3.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
