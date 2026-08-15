@@ -7,8 +7,21 @@ The DDD Melbourne website is deployed to https://dddmelbourne.com and is built u
 - Checkout repository on your machine - ensure you have [Node.js](https://nodejs.org/) installed
 - Run `npm install` in the repository root (to restore npm packages)
 - Run `npm run dev` to start a local dev environment that watches for changes and supports Hot Module Replacement / Hot Reloading
+- Run `npm run dev:copilot` when you want a debugger-free local server for agent-driven or headless verification
 - Use Visual Studio Code as the preferred dev environment - breakpoint debugging should work and you should be able to run the "Start Dev Webserver" task to get it to run the dev environment
 - Note: `package.json` has some URLs defined in the `dev` task that reference the [backend API](https://github.com/dddwa/ddd-backend)
+
+## Copilot cloud-agent dev loop
+
+- `.github/workflows/copilot-setup-steps.yml` bootstraps the cloud agent with Node 18 and `npm ci`
+- Start the site with `npm run dev:copilot` (binds to port `3100` by default; override with `COPILOT_PORT=3101 npm run dev:copilot`)
+- Use the in-app `Testing` panel to jump between conference states such as `Pre-CFP`, `Voting open`, and `Agenda published`
+- Verify pages with `curl http://127.0.0.1:3100/` and route-specific requests like `curl http://127.0.0.1:3100/agenda` (or match your `COPILOT_PORT`)
+- Capture verification screenshots with `npm run screenshot:copilot` (desktop and mobile for `/` and `/agenda` by default) or pass routes like `npm run screenshot:copilot -- /about /agenda/2025`
+- Pull requests can publish those screenshots to the `copilot-screenshots` branch and comment inline image previews via `.github/workflows/pr-screenshot-preview.yml`
+- Stop the server after verification so the environment stays clean
+
+Screenshots are written to `.artifacts/screenshots/` as `*-desktop.png` and `*-mobile.png`, and the directory is ignored by git.
 
 ## Building the code for prod release
 

@@ -2,6 +2,7 @@ import { Action, Conference, Dates } from './types'
 
 export default function getConferenceActions(conference: Conference, dates: Dates): Action[] {
   const actions: Action[] = []
+  const hasAgendaContent = dates.AgendaPublished || conference.PreviousInstances.length > 0
 
   if (dates.AcceptingPresentations) {
     actions.push({
@@ -27,23 +28,23 @@ export default function getConferenceActions(conference: Conference, dates: Date
     })
   }
 
-  if (dates.AgendaPublished) {
-    let agendaTitle = 'View the agenda'
-    if (dates.IsComplete) {
-      agendaTitle = `${conference.Instance} agenda`
-    }
-    actions.push({
-      Category: 'agenda',
-      Title: agendaTitle,
-      Url: '/agenda',
-    })
-  }
-
   if (dates.VotingOpen) {
     actions.push({
       Category: 'voting',
       Title: 'Vote for agenda',
       Url: '/vote',
+    })
+  }
+
+  if (hasAgendaContent) {
+    let agendaTitle = 'View past agendas'
+    if (dates.AgendaPublished) {
+      agendaTitle = dates.IsComplete ? `${conference.Instance} agenda` : 'View the agenda'
+    }
+    actions.push({
+      Category: 'agenda',
+      Title: agendaTitle,
+      Url: '/agenda',
     })
   }
 

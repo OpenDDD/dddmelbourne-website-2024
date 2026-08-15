@@ -55,6 +55,12 @@ describe('<ActionBar />', () => {
 
     conference.TicketPurchasingOptions = originalValue
   })
+
+  test('Show past agendas before the current agenda is published', () => {
+    renderActionBar(add(conference.PresentationSubmissionsOpenUntil, { minutes: 1 }))
+
+    expect(screen.getByRole('link', { name: /view past agendas/i })).toHaveAttribute('href', '/agenda')
+  })
 })
 
 describe('<ActionBar/> a11y', () => {

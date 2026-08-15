@@ -1,0 +1,153 @@
+name: PR Screenshot Preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  screenshot-preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      COPILOT_PORT: 3100
+      SCREENSHOT_BASE_URL: http://127.0.0.1:3100
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start dev server
+        run: |
+          npm run dev:copilot > /tmp/copilot-dev.log 2>&1 &
+          echo $! > /tmp/copilot-dev.pid
+
+      - name: Wait for dev server
+        run: |
+          for _ in $(seq 1 60); do
+            if curl --fail --silent "${SCREENSHOT_BASE_URL}/" > /dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+
+          cat /tmp/copilot-dev.log
+          exit 1
+
+      - name: Capture screenshots
+        run: npm run screenshot:copilot
+
+      - name: Publish screenshots
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          SCREENSHOT_BRANCH="copilot-screenshots"
+          SCREENSHOT_ROOT="$(mktemp -d)"
+          SCREENSHOT_TARGET="${SCREENSHOT_ROOT}/pr-${PR_NUMBER}/${GITHUB_SHA}"
+
+          git fetch origin "${SCREENSHOT_BRANCH}" || true
+
+          if git show-ref --verify --quiet "refs/remotes/origin/${SCREENSHOT_BRANCH}"; then
+            git worktree add "${SCREENSHOT_ROOT}" "origin/${SCREENSHOT_BRANCH}"
+          else
+            git worktree add --detach "${SCREENSHOT_ROOT}"
+            (
+              cd "${SCREENSHOT_ROOT}"
+              git switch --orphan "${SCREENSHOT_BRANCH}"
+              find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+              touch .nojekyll
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              git add .nojekyll
+              git commit -m "Initialize screenshot preview branch"
+              git push origin "${SCREENSHOT_BRANCH}"
+            )
+            git worktree remove "${SCREENSHOT_ROOT}" --force
+            SCREENSHOT_ROOT="$(mktemp -d)"
+            SCREENSHOT_TARGET="${SCREENSHOT_ROOT}/pr-${PR_NUMBER}/${GITHUB_SHA}"
+            git fetch origin "${SCREENSHOT_BRANCH}"
+            git worktree add "${SCREENSHOT_ROOT}" "origin/${SCREENSHOT_BRANCH}"
+          fi
+
+          mkdir -p "${SCREENSHOT_TARGET}"
+          cp -R .artifacts/screenshots/. "${SCREENSHOT_TARGET}/"
+          touch "${SCREENSHOT_ROOT}/.nojekyll"
+
+          (
+            cd "${SCREENSHOT_ROOT}"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .nojekyll "pr-${PR_NUMBER}/${GITHUB_SHA}"
+            git commit -m "Add screenshot preview for PR #${PR_NUMBER} (${GITHUB_SHA})" || exit 0
+            git push origin HEAD:"${SCREENSHOT_BRANCH}"
+          )
+
+      - name: Build PR comment
+        env:
+          SCREENSHOT_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/copilot-screenshots/pr-${{ github.event.pull_request.number }}/${{ github.sha }}
+          SCREENSHOT_PR_NUMBER: ${{ github.event.pull_request.number }}
+          SCREENSHOT_SHA: ${{ github.sha }}
+        run: node scripts/create-screenshot-comment.mjs > /tmp/screenshot-comment.md
+
+      - name: Comment on pull request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs')
+            const body = fs.readFileSync('/tmp/screenshot-comment.md', 'utf8')
+            const { owner, repo } = context.repo
+            const issue_number = context.payload.pull_request.number
+            const marker = '<!-- copilot-screenshot-preview -->'
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            })
+
+            const existingComment = comments.find((comment) => comment.body.includes(marker))
+
+            if (existingComment) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existingComment.id,
+                body,
+              })
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              })
+            }
+
+      - name: Stop dev server
+        if: always()
+        run: |
+          if [ -f /tmp/copilot-dev.pid ]; then
+            kill "$(cat /tmp/copilot-dev.pid)" || true
+          fi
