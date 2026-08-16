@@ -1,4 +1,4 @@
-import { adaptSessionizeSessions } from './pastAgenda'
+import { adaptSessionizeSessions, extractYoutubeId } from './pastAgenda'
 import { Session } from '../../config/types'
 
 describe('adaptSessionizeSessions', () => {
@@ -167,5 +167,67 @@ describe('adaptSessionizeSessions', () => {
     expect(result[0].Format).toBe('')
     expect(result[0].Level).toBe('')
     expect(result[0].Tags).toEqual([])
+  })
+})
+
+describe('extractYoutubeId', () => {
+  it('should return null for null or undefined input', () => {
+    expect(extractYoutubeId(null)).toBeNull()
+    expect(extractYoutubeId(undefined)).toBeNull()
+    expect(extractYoutubeId('')).toBeNull()
+  })
+
+  it('should extract ID from standard youtube.com watch URL', () => {
+    expect(extractYoutubeId('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
+  })
+
+  it('should extract ID from youtu.be short URL', () => {
+    expect(extractYoutubeId('https://youtu.be/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
+  })
+
+  it('should extract ID from embed URL', () => {
+    expect(extractYoutubeId('https://www.youtube.com/embed/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
+  })
+
+  it('should return null for non-YouTube URLs', () => {
+    expect(extractYoutubeId('https://vimeo.com/12345')).toBeNull()
+  })
+})
+
+describe('adaptSessionizeSessions with recordingUrl', () => {
+  it('should map recordingUrl to YoutubeId when a valid YouTube URL is provided', () => {
+    const mockAgenda = {
+      speakers: [{ id: 'speaker1', fullName: 'Jane Doe', tagLine: '', bio: '', profilePicture: '' }],
+      categories: [],
+      sessions: [{
+        id: 'session1',
+        title: 'Talk Title',
+        description: 'Desc',
+        speakers: ['speaker1'],
+        categoryItems: [],
+        recordingUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      }],
+    }
+
+    const result = adaptSessionizeSessions(mockAgenda)
+    expect(result[0].YoutubeId).toBe('dQw4w9WgXcQ')
+  })
+
+  it('should not set YoutubeId when recordingUrl is null', () => {
+    const mockAgenda = {
+      speakers: [{ id: 'speaker1', fullName: 'Jane Doe', tagLine: '', bio: '', profilePicture: '' }],
+      categories: [],
+      sessions: [{
+        id: 'session1',
+        title: 'Talk Title',
+        description: 'Desc',
+        speakers: ['speaker1'],
+        categoryItems: [],
+        recordingUrl: null,
+      }],
+    }
+
+    const result = adaptSessionizeSessions(mockAgenda)
+    expect(result[0].YoutubeId).toBeUndefined()
   })
 })

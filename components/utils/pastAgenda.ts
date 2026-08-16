@@ -1,5 +1,11 @@
 import { Presenter, Session } from '../../config/types'
 
+export function extractYoutubeId(url: string | null | undefined): string | null {
+  if (!url) return null
+  const match = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(?:[^a-zA-Z0-9_-]|$)/)
+  return match ? match[1] : null
+}
+
 export function adaptSessionizeSessions(sessionizeAgenda): Session[] {
   const presentersById = {}
   sessionizeAgenda.speakers.forEach((p) => {
@@ -54,6 +60,7 @@ export function adaptSessionizeSessions(sessionizeAgenda): Session[] {
         tags.push(tagsById[c])
       }
     })
+    const youtubeId = extractYoutubeId(s.recordingUrl)
     return {
       Id: s.id,
       ExternalId: s.id,
@@ -63,6 +70,7 @@ export function adaptSessionizeSessions(sessionizeAgenda): Session[] {
       Format: format,
       Level: level,
       Tags: tags,
+      ...(youtubeId ? { YoutubeId: youtubeId } : {}),
     } as Session
   })
 }

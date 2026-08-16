@@ -85,7 +85,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=_m_AogoGP5I",
 
       "status": "Accepted",
 
@@ -135,7 +135,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=tv-hdwhsfVY",
 
       "status": "Accepted",
 
@@ -189,7 +189,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=sPItyncteOo",
 
       "status": "Accepted",
 
@@ -241,7 +241,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Dj_X8EbYjEE",
 
       "status": "Accepted",
 
@@ -345,7 +345,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=cSWqdltNjnk",
 
       "status": "Accepted",
 
@@ -395,7 +395,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Pa-3tQzyUbs",
 
       "status": "Accepted",
 
@@ -445,7 +445,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=GYJYNZv6T6c",
 
       "status": "Accepted",
 
@@ -499,7 +499,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=UPJJ3udeUho",
 
       "status": "Accepted",
 
@@ -549,7 +549,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=ilGDwHv7gFw",
 
       "status": "Accepted",
 
@@ -613,7 +613,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=xezVRmf_Mms",
 
       "status": "Accepted",
 
@@ -661,7 +661,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=-IfDJN7kxZo",
 
       "status": "Accepted",
 
@@ -771,7 +771,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=uMobzVG20pw",
 
       "status": "Accepted",
 
@@ -823,7 +823,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=H-c_HlsQjn4",
 
       "status": "Accepted",
 
@@ -879,7 +879,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Nu0gRHcqdPw",
 
       "status": "Accepted",
 
@@ -929,7 +929,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Xfksp0WCCJQ",
 
       "status": "Accepted",
 
@@ -1033,7 +1033,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=qvWSPHZUTLg",
 
       "status": "Accepted",
 
@@ -1085,7 +1085,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=CwEeVFx1aOg",
 
       "status": "Accepted",
 
@@ -1133,7 +1133,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=BsrYi-TEzyw",
 
       "status": "Accepted",
 
@@ -1187,7 +1187,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=JHdWRAVV51w",
 
       "status": "Accepted",
 
@@ -1241,7 +1241,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=D5EnZdTYexI",
 
       "status": "Accepted",
 
@@ -1305,7 +1305,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=LsVqWJz31Ds",
 
       "status": "Accepted",
 
@@ -1361,7 +1361,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=5DVbbp0ZZB8",
 
       "status": "Accepted",
 
@@ -1417,7 +1417,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=TItaGGEtlnY",
 
       "status": "Accepted",
 
@@ -1457,7 +1457,7 @@ const agenda = parseJson(`
 
       "liveUrl": null,
 
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=AR9GIdoeczM",
 
       "status": "Accepted",
 
