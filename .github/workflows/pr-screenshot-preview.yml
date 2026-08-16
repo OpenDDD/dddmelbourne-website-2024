@@ -53,8 +53,32 @@ jobs:
           cat /tmp/copilot-dev.log
           exit 1
 
+      - name: Collect changed files
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs')
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              per_page: 100,
+            })
+            fs.writeFileSync('/tmp/changed-files.txt', files.map((file) => file.filename).join('\n'))
+
+      - name: Infer screenshot routes
+        run: |
+          node scripts/infer-screenshot-routes.mjs --files-from /tmp/changed-files.txt > /tmp/screenshot-routes.txt
+          cat /tmp/screenshot-routes.txt
+
       - name: Capture screenshots
-        run: npm run screenshot:copilot
+        run: |
+          ROUTES="$(tr '\n' ' ' < /tmp/screenshot-routes.txt)"
+          if [ -z "${ROUTES// }" ]; then
+            echo "No affected routes inferred; skipping screenshot capture."
+            exit 0
+          fi
+          npm run screenshot:copilot -- ${ROUTES}
 
       - name: Publish screenshots
         env:
@@ -62,6 +86,11 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
+          if [ ! -f .artifacts/screenshots/manifest.json ]; then
+            echo "No screenshots captured; skipping publish."
+            exit 0
+          fi
+
           SCREENSHOT_BRANCH="copilot-screenshots"
           SCREENSHOT_ROOT="$(mktemp -d)"
           SCREENSHOT_TARGET="${SCREENSHOT_ROOT}/pr-${PR_NUMBER}/${GITHUB_SHA}"
@@ -108,9 +137,15 @@ jobs:
           SCREENSHOT_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/copilot-screenshots/pr-${{ github.event.pull_request.number }}/${{ github.sha }}
           SCREENSHOT_PR_NUMBER: ${{ github.event.pull_request.number }}
           SCREENSHOT_SHA: ${{ github.sha }}
-        run: node scripts/create-screenshot-comment.mjs > /tmp/screenshot-comment.md
+        run: |
+          if [ ! -f .artifacts/screenshots/manifest.json ]; then
+            echo "No screenshots captured; skipping comment generation."
+            exit 0
+          fi
+          node scripts/create-screenshot-comment.mjs > /tmp/screenshot-comment.md
 
       - name: Comment on pull request
+        if: hashFiles('.artifacts/screenshots/manifest.json') != ''
         uses: actions/github-script@v7
         with:
           script: |
