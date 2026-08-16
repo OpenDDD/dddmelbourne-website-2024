@@ -5,6 +5,7 @@ import { fetchSessions } from 'components/utils/useSessions'
 import Conference from 'config/conference'
 import { Session } from 'config/types'
 import { Main } from 'layouts/agendaWide'
+import { PageWithSidebar } from 'layouts/withSidebar'
 import { NextPage } from 'next'
 import { useConfig } from 'Context/Config'
 import { formatInTimeZone } from 'date-fns-tz'
@@ -22,30 +23,38 @@ const AgendaPage: NextPage<AgendaPageProps> = ({ sessions, sessionId }) => {
     sessionId = urlParams.get('sessionId')
   }
 
+  if (!dates.AgendaPublished) {
+    return (
+      <PageWithSidebar title="Agenda" description={conference.Name + ' agenda.'}>
+        <h1>{dates.IsComplete && conference.Instance} Agenda</h1>
+        <p>
+          The agenda has not yet been finalised; please come back on{' '}
+          {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.DateDisplayFormat)}{' '}
+          {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.TimeDisplayFormat)}. In the
+          meantime, check out our previous agendas below.
+        </p>
+        <AllAgendas dates={dates} conference={conference} conferenceInstance={conference.Instance} />
+        <Sponsors
+          show={!conference.HideSponsors}
+          hideUpsell={conference.HideSponsorshipUpsell}
+          sponsors={conference.Sponsors}
+        />
+      </PageWithSidebar>
+    )
+  }
+
   return (
     <Main title="Agenda" description={conference.Name + ' agenda.'}>
       <div className="container">
         <h1>{dates.IsComplete && conference.Instance} Agenda</h1>
-
-        {!dates.AgendaPublished && (
-          <div>
-            The agenda has not yet been finalised; please come back on{' '}
-            {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.DateDisplayFormat)}{' '}
-            {formatInTimeZone(conference.AgendaPublishedFrom, conference.TimeZone, dates.TimeDisplayFormat)}. In the
-            meantime, check out our previous agendas below.
-            <AllAgendas dates={dates} conference={conference} conferenceInstance={conference.Instance} />
-          </div>
-        )}
-        {dates.AgendaPublished && (
-          <CurrentAgenda
-            date={Conference.Date}
-            sessions={sessions}
-            sponsors={conference.Sponsors}
-            acceptingFeedback={dates.AcceptingFeedback}
-            feedbackLink={conference.SessionFeedbackLink}
-            selectedSessionId={sessionId}
-          />
-        )}
+        <CurrentAgenda
+          date={Conference.Date}
+          sessions={sessions}
+          sponsors={conference.Sponsors}
+          acceptingFeedback={dates.AcceptingFeedback}
+          feedbackLink={conference.SessionFeedbackLink}
+          selectedSessionId={sessionId}
+        />
         <Sponsors
           show={!conference.HideSponsors}
           hideUpsell={conference.HideSponsorshipUpsell}
