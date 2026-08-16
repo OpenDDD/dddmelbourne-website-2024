@@ -49,7 +49,7 @@ const AgendaPage: NextPage = ({
                 rooms={roomNames}
                 livestreams={[]}
               >
-                <StyledAgendaContainer>
+                <StyledAgendaContainer useLegacyRowLayout>
                   <StyledAgendaRowList>
                     <li>Time</li>
                     {Conference.RoomNames.map((name) => (
