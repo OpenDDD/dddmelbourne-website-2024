@@ -158,23 +158,29 @@ StyledUpNext.displayName = 'StyledUpNext'
 interface StyledAgendaContainerProps {
   talkTracks?: number,
   workshopTracks?: number
+  useLegacyRowLayout?: boolean,
 }
 
-export const StyledAgendaContainer = styled('div')<StyledAgendaContainerProps>(({ theme, talkTracks = 4, workshopTracks = 1 }) => ({
+export const StyledAgendaContainer = styled('div')<StyledAgendaContainerProps>(({
+  theme,
+  talkTracks = 4,
+  workshopTracks = 1,
+  useLegacyRowLayout = false,
+}) => ({
   position: 'relative',
   marginBottom: calcRem(theme.metrics.xl),
-  display: 'grid',
-  gridTemplateColumns: `repeat(2, 1fr)`,
+  display: useLegacyRowLayout ? 'block' : 'grid',
+  gridTemplateColumns: useLegacyRowLayout ? undefined : `repeat(2, 1fr)`,
   backgroundColor: '#ddd',
   border: cellBorder,
   textAlign: 'center',
-  gap: calcRem(1),
+  gap: useLegacyRowLayout ? undefined : calcRem(1),
 
-
-// NEW CODE - maybe need to remove or override the above instead?  and use tracks for the repeating part?
-  [breakpoint(tableLayoutBreakpointFrom)]: {
-    gridTemplateColumns: `${calcRem(90)} repeat(${talkTracks}, 1fr) repeat(${workshopTracks}, [workshops] 1fr);`
-  },
+  [breakpoint(tableLayoutBreakpointFrom)]: useLegacyRowLayout
+    ? {}
+    : {
+      gridTemplateColumns: `${calcRem(90)} repeat(${talkTracks}, 1fr) repeat(${workshopTracks}, [workshops] 1fr)`,
+    },
 
 }))
 StyledAgendaContainer.displayName = 'StyledAgendaContainer'
