@@ -247,6 +247,7 @@ export interface Session {
   Format: string
   Level: string
   Tags: string[]
+  YoutubeId?: string
 }
 
 export type EloSession = Pick<Session, 'Id' | 'Title' | 'Abstract' | 'Tags'>

@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Session } from 'config/types'
 import { Badge } from 'components/Badge/Badge'
 import { SafeLink } from 'components/global/safeLink'
+import ResponsiveVideo from 'components/responsiveVideo'
 import {
   StyledBioFigure,
   StyledBioName,
@@ -78,6 +79,13 @@ export const SessionDetails = ({
           </StyledBioFigure>
         ))}
       <StyledPreWrappedParagraph>{session.Abstract}</StyledPreWrappedParagraph>
+
+      {session.YoutubeId && (
+        <ResponsiveVideo
+          src={`https://www.youtube.com/embed/${session.YoutubeId}`}
+          title={session.Title}
+        />
+      )}
 
       {(!hideLevelAndFormat || !hideTags) && (
         <StyledTagList>
