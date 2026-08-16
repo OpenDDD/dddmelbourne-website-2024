@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { Session } from 'config/types'
 import { Badge } from 'components/Badge/Badge'
 import { SafeLink } from 'components/global/safeLink'

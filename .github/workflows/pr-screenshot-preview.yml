@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 25
     env:
       COPILOT_PORT: 3100
-      SCREENSHOT_BASE_URL: http://127.0.0.1:3100
+      SCREENSHOT_BASE_URL: http://localhost:3100
 
     steps:
       - name: Checkout repository

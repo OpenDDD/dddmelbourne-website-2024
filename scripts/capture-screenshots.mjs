@@ -3,7 +3,7 @@ import path from 'node:path'
 import process from 'node:process'
 import { chromium, devices } from 'playwright'
 
-const baseUrl = process.env.SCREENSHOT_BASE_URL ?? 'http://127.0.0.1:3100'
+const baseUrl = process.env.SCREENSHOT_BASE_URL ?? 'http://localhost:3100'
 const outputDir = process.env.SCREENSHOT_OUTPUT_DIR ?? '.artifacts/screenshots'
 const requestedRoutes = process.argv.slice(2)
 const routes = requestedRoutes.length > 0 ? requestedRoutes : ['/', '/agenda']

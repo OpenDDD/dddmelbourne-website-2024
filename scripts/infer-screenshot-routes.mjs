@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises'
-import path from 'node:path'
 import process from 'node:process'
 
 const args = process.argv.slice(2)
@@ -77,10 +76,6 @@ const sharedRouteMappings = [
     match: (file) => file === 'pages/cfp.tsx',
     routes: ['/cfp'],
   },
-  {
-    match: (file) => file.startsWith('pages/vote/'),
-    routes: ['/vote', '/vote/landing', '/vote/elo'],
-  },
 ]
 
 function pageFileToRoute(file) {
@@ -88,6 +83,9 @@ function pageFileToRoute(file) {
     return null
   }
 
+  if (file.startsWith('pages/vote/')) {
+    return null
+  }
   const relativePath = file.slice('pages/'.length).replace(/\.(ts|tsx|js|jsx)$/, '')
 
   if (relativePath.startsWith('_')) {

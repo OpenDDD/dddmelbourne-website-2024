@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { StyledBadge } from './Badge.styled'
 
 export type BadgeType = 'primary' | 'secondary' | 'info'

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { FAQ } from 'config/types'
 import { StyledDetails, StyledDetailsBody, StyledSummary } from './FaqDetail.styled'
 import { Text } from 'components/global/text'

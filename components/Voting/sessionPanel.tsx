@@ -1,4 +1,3 @@
-import React from 'react'
 import { Session } from 'config/types'
 import { Button } from 'components/global/Button/Button'
 import SessionDetails from '../sessionDetails'

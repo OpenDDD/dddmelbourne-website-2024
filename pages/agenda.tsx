@@ -1,4 +1,3 @@
-import React from 'react'
 import { CurrentAgenda } from 'components/currentAgenda'
 import { Sponsors } from 'components/Sponsors/sponsors'
 import { fetchSessions } from 'components/utils/useSessions'

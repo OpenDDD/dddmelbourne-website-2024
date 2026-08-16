@@ -1,4 +1,3 @@
-import React from 'react'
 import { Action, TicketPurchasingOptions } from 'config/types'
 import { ActionButton } from 'components/actionButton'
 import { StyledList } from 'components/global/text'

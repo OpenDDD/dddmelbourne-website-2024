@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { NextPage } from 'next'
 import { StyledList, Text } from 'components/global/text'
 import { PageWithSidebar } from 'layouts/withSidebar'

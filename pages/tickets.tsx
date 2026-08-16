@@ -1,4 +1,3 @@
-import React from 'react'
 import { NextPage, GetServerSideProps } from 'next'
 import { FaqList } from 'components/FAQList/FaqList'
 import Conference from 'config/conference'

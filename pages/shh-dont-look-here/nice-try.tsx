@@ -1,5 +1,5 @@
 import { Main } from 'layouts/main'
-import React, { type JSX } from 'react'
+import { type JSX } from 'react'
 
 const ShhhNiceTryPage = (): JSX.Element => {
   return (

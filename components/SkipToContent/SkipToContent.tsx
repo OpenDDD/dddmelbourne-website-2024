@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledSkipAnchor } from './SkipToContent.styled'
 
 interface SkipToContentProps {

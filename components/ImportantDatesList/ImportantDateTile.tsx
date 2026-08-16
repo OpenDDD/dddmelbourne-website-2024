@@ -1,4 +1,3 @@
-import React from 'react'
 import { ImportantDate, Types } from 'config/types'
 import {
   StyledAbbr,

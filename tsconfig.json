@@ -3,9 +3,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
@@ -14,8 +14,14 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "typeRoots": ["./node_modules/@types"],
-    "lib": ["dom", "es2015", "es2016"],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -24,6 +30,15 @@
     "baseUrl": ".",
     "incremental": true
   },
-  "exclude": ["node_modules", "./deploy/**", "next.config.js"],
-  "include": ["jest-setup.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules",
+    "./deploy/**",
+    "next.config.js"
+  ],
+  "include": [
+    "jest-setup.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

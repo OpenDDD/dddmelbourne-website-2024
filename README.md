@@ -4,7 +4,7 @@ The DDD Melbourne website is deployed to https://dddmelbourne.com and is built u
 
 ## Getting started
 
-- Checkout repository on your machine - ensure you have [Node.js](https://nodejs.org/) installed
+- Checkout repository on your machine - ensure you have [Node.js](https://nodejs.org/) 20.9 or newer installed
 - Run `npm install` in the repository root (to restore npm packages)
 - Run `npm run dev` to start a local dev environment that watches for changes and supports Hot Module Replacement / Hot Reloading
 - Run `npm run dev:copilot` when you want a debugger-free local server for agent-driven or headless verification
@@ -13,10 +13,10 @@ The DDD Melbourne website is deployed to https://dddmelbourne.com and is built u
 
 ## Copilot cloud-agent dev loop
 
-- `.github/workflows/copilot-setup-steps.yml` bootstraps the cloud agent with Node 20 and `npm ci`
+- `.github/workflows/copilot-setup-steps.yml` bootstraps the cloud agent with Node 20.9+ and `npm ci`
 - Start the site with `npm run dev:copilot` (binds to port `3100` by default; override with `COPILOT_PORT=3101 npm run dev:copilot`)
 - Use the in-app `Testing` panel to jump between conference states such as `Pre-CFP`, `Voting open`, and `Agenda published`
-- Verify pages with `curl http://127.0.0.1:3100/` and route-specific requests like `curl http://127.0.0.1:3100/agenda` (or match your `COPILOT_PORT`)
+- Verify pages with `curl http://localhost:3100/` and route-specific requests like `curl http://localhost:3100/agenda` (or match your `COPILOT_PORT`)
 - Capture verification screenshots with `npm run screenshot:copilot` (desktop and mobile for `/` and `/agenda` by default) or pass routes like `npm run screenshot:copilot -- /about /agenda/2025`
 - Infer affected routes from changed files with `node scripts/infer-screenshot-routes.mjs <changed-file>...` or `node scripts/infer-screenshot-routes.mjs --files-from /tmp/changed-files.txt`
 - Pull requests can publish those screenshots to the `copilot-screenshots` branch and comment inline image previews via `.github/workflows/pr-screenshot-preview.yml`
