@@ -1,0 +1,202 @@
+[
+  {
+    "route": "/",
+    "viewport": "desktop",
+    "file": "home-desktop.png"
+  },
+  {
+    "route": "/about",
+    "viewport": "desktop",
+    "file": "about-desktop.png"
+  },
+  {
+    "route": "/agenda",
+    "viewport": "desktop",
+    "file": "agenda-desktop.png"
+  },
+  {
+    "route": "/agenda/2024",
+    "viewport": "desktop",
+    "file": "agenda-2024-desktop.png"
+  },
+  {
+    "route": "/agenda/2025",
+    "viewport": "desktop",
+    "file": "agenda-2025-desktop.png"
+  },
+  {
+    "route": "/agenda/2026",
+    "viewport": "desktop",
+    "file": "agenda-2026-desktop.png"
+  },
+  {
+    "route": "/cfp",
+    "viewport": "desktop",
+    "file": "cfp-desktop.png"
+  },
+  {
+    "route": "/code-of-conduct",
+    "viewport": "desktop",
+    "file": "code-of-conduct-desktop.png"
+  },
+  {
+    "route": "/conference-day",
+    "viewport": "desktop",
+    "file": "conference-day-desktop.png"
+  },
+  {
+    "route": "/contact",
+    "viewport": "desktop",
+    "file": "contact-desktop.png"
+  },
+  {
+    "route": "/faq",
+    "viewport": "desktop",
+    "file": "faq-desktop.png"
+  },
+  {
+    "route": "/shh-dont-look-here/ddd-is-life",
+    "viewport": "desktop",
+    "file": "shh-dont-look-here-ddd-is-life-desktop.png"
+  },
+  {
+    "route": "/shh-dont-look-here/haha",
+    "viewport": "desktop",
+    "file": "shh-dont-look-here-haha-desktop.png"
+  },
+  {
+    "route": "/shh-dont-look-here/nice-try",
+    "viewport": "desktop",
+    "file": "shh-dont-look-here-nice-try-desktop.png"
+  },
+  {
+    "route": "/shh-dont-look-here/nope",
+    "viewport": "desktop",
+    "file": "shh-dont-look-here-nope-desktop.png"
+  },
+  {
+    "route": "/shh-dont-look-here/not-2024",
+    "viewport": "desktop",
+    "file": "shh-dont-look-here-not-2024-desktop.png"
+  },
+  {
+    "route": "/sponsorship",
+    "viewport": "desktop",
+    "file": "sponsorship-desktop.png"
+  },
+  {
+    "route": "/supersecretlink",
+    "viewport": "desktop",
+    "file": "supersecretlink-desktop.png"
+  },
+  {
+    "route": "/tickets",
+    "viewport": "desktop",
+    "file": "tickets-desktop.png"
+  },
+  {
+    "route": "/venue",
+    "viewport": "desktop",
+    "file": "venue-desktop.png"
+  },
+  {
+    "route": "/",
+    "viewport": "mobile",
+    "file": "home-mobile.png"
+  },
+  {
+    "route": "/about",
+    "viewport": "mobile",
+    "file": "about-mobile.png"
+  },
+  {
+    "route": "/agenda",
+    "viewport": "mobile",
+    "file": "agenda-mobile.png"
+  },
+  {
+    "route": "/agenda/2024",
+    "viewport": "mobile",
+    "file": "agenda-2024-mobile.png"
+  },
+  {
+    "route": "/agenda/2025",
+    "viewport": "mobile",
+    "file": "agenda-2025-mobile.png"
+  },
+  {
+    "route": "/agenda/2026",
+    "viewport": "mobile",
+    "file": "agenda-2026-mobile.png"
+  },
+  {
+    "route": "/cfp",
+    "viewport": "mobile",
+    "file": "cfp-mobile.png"
+  },
+  {
+    "route": "/code-of-conduct",
+    "viewport": "mobile",
+    "file": "code-of-conduct-mobile.png"
+  },
+  {
+    "route": "/conference-day",
+    "viewport": "mobile",
+    "file": "conference-day-mobile.png"
+  },
+  {
+    "route": "/contact",
+    "viewport": "mobile",
+    "file": "contact-mobile.png"
+  },
+  {
+    "route": "/faq",
+    "viewport": "mobile",
+    "file": "faq-mobile.png"
+  },
+  {
+    "route": "/shh-dont-look-here/ddd-is-life",
+    "viewport": "mobile",
+    "file": "shh-dont-look-here-ddd-is-life-mobile.png"
+  },
+  {
+    "route": "/shh-dont-look-here/haha",
+    "viewport": "mobile",
+    "file": "shh-dont-look-here-haha-mobile.png"
+  },
+  {
+    "route": "/shh-dont-look-here/nice-try",
+    "viewport": "mobile",
+    "file": "shh-dont-look-here-nice-try-mobile.png"
+  },
+  {
+    "route": "/shh-dont-look-here/nope",
+    "viewport": "mobile",
+    "file": "shh-dont-look-here-nope-mobile.png"
+  },
+  {
+    "route": "/shh-dont-look-here/not-2024",
+    "viewport": "mobile",
+    "file": "shh-dont-look-here-not-2024-mobile.png"
+  },
+  {
+    "route": "/sponsorship",
+    "viewport": "mobile",
+    "file": "sponsorship-mobile.png"
+  },
+  {
+    "route": "/supersecretlink",
+    "viewport": "mobile",
+    "file": "supersecretlink-mobile.png"
+  },
+  {
+    "route": "/tickets",
+    "viewport": "mobile",
+    "file": "tickets-mobile.png"
+  },
+  {
+    "route": "/venue",
+    "viewport": "mobile",
+    "file": "venue-mobile.png"
+  }
+]
