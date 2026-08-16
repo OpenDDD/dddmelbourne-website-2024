@@ -1,4 +1,3 @@
-import React from 'react'
 import { render, screen } from 'test/test-util'
 import TicketPage from '../../pages/tickets'
 import conference from 'config/conference'

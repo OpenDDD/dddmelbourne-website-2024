@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledToggle } from './NavToggle.styled'
 import { useNavigationState, useNavigationDispatch } from '../Nav.context'
 

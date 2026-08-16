@@ -1,4 +1,3 @@
-import React from 'react'
 import { GetServerSideProps, NextPage } from 'next'
 import Link from 'next/link'
 import { StyledList, Text } from 'components/global/text'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Socials } from 'config/types'
 import { StyledSocialLinks, StyledSocialLink } from './Footer.styled'
 import { FacebookIcon } from 'components/global/Icons/Facebook'

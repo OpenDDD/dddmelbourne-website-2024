@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { Conference, ImportantDate } from 'config/types'
 import { CurrentDate } from 'components/utils/dateTimeProvider'
 import { StyledImportantDateFooter, StyledImportantDateList } from './ImportantDate.styled'

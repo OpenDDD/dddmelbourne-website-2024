@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import Conference from 'config/conference'
 import { Session, Sponsor } from 'config/types'
 import { ActionButton } from 'components/actionButton'

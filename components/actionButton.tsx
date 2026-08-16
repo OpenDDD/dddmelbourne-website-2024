@@ -1,4 +1,3 @@
-import React from 'react'
 import { Action } from 'config/types'
 import { ButtonAnchor } from 'components/global/Button/Button'
 

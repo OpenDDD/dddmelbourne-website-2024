@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { Sponsor, SponsorType } from 'config/types'
 import { StyledSponsorsContainer, StyledSponsorLink } from './Sponsors.styled'
 

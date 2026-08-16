@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { Main } from 'layouts/main'
 import { NextPage } from 'next'
 import { Text } from 'components/global/text'

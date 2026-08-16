@@ -1,4 +1,3 @@
-import React from 'react'
 import { GetServerSideProps, NextPage } from 'next'
 import { format } from 'date-fns'
 import { useConfig } from 'Context/Config'

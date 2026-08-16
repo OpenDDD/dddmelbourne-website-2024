@@ -1,4 +1,3 @@
-import React from 'react'
 
 import { useConfig } from 'Context/Config'
 import styled from '@emotion/styled'

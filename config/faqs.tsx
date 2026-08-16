@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { SafeLink } from 'components/global/safeLink'
 import Conference from './conference'
 import { Dates, FAQ, TicketPurchasingOptions } from './types'

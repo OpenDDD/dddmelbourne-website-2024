@@ -1,4 +1,3 @@
-import React from 'react'
 
 interface RedBubbleIconProps {
   title?: string

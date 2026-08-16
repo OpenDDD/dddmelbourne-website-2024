@@ -1,4 +1,3 @@
-import React from 'react'
 import { FAQ } from 'config/types'
 import { FaqDetail } from './FaqDetail'
 

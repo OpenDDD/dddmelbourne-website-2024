@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledList, Text } from 'components/global/text'
 import { PageWithSidebar } from 'layouts/withSidebar'
 import { ButtonAnchor } from 'components/global/Button/Button'

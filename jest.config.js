@@ -14,6 +14,7 @@ const customJestConfig = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
+  modulePathIgnorePatterns: ['<rootDir>/.next/'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
 }

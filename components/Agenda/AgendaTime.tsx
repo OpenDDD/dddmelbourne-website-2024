@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { format, formatISO } from 'date-fns'
 import { StyledAgendaTime } from './Agendatime.styled'
 
