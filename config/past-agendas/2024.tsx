@@ -23,7 +23,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=97vFcBhUk-g",
       "status": "Accepted",
       "isInformed": false,
       "isConfirmed": false
@@ -50,7 +50,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=V9oXzdW32lc",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -75,7 +75,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39399,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Hx7tdNg1x8g",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -99,7 +99,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39400,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=pO-WN8kvkos",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -125,7 +125,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 42741,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=LhTyfT4NZl4",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -151,7 +151,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Po3JnN7fifM",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -177,7 +177,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39399,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=TxpJjf1B1tQ",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -205,7 +205,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39400,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=-Wb_BTSIWis",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -232,7 +232,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 42741,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=M3fbxajFHF4",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -256,7 +256,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=bZQHhLCq1wQ",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -282,7 +282,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39399,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=R2UPL1GMad4",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -310,7 +310,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39400,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=f9ItpOxCdsY",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -336,7 +336,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 42741,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=i8G1sPRmAWA",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -360,7 +360,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=XuIdPvDtJ0w",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -384,7 +384,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39399,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=-LyQht8aGbk",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -410,7 +410,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39400,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=yGkJeOvELV8",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -438,7 +438,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 42741,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=7hZAqXh3oA8",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -462,7 +462,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=QO655tSMC1w",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -491,7 +491,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39399,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=CfgWt-r7kFM",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -517,7 +517,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39400,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=Bc6ovt9IXBw",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -543,7 +543,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 42741,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=T8Img8a7weM",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -575,7 +575,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=27r_bNOeSD8",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -601,7 +601,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39399,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=qx_6wGYzy4Y",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -628,7 +628,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39400,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=sMTYQxJpaWM",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -652,7 +652,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 42741,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=FO0Qn_5NLSY",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
@@ -677,7 +677,7 @@ const agenda = parseJson(`
       "questionAnswers": [],
       "roomId": 39398,
       "liveUrl": null,
-      "recordingUrl": null,
+      "recordingUrl": "https://www.youtube.com/watch?v=f0KFfh1ZWow",
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true

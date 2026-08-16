@@ -8,6 +8,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "988022",
+    "YoutubeId": "2DDPZtfiC8o",
     "Tags": [
       "Leadership"
     ],
@@ -30,6 +31,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1039434",
+    "YoutubeId": "zhWy1EdJKSc",
     "Tags": [
       "AI",
       "Leadership",
@@ -54,6 +56,7 @@ export const sessions: Session[] = [
     "Format": "20 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1045189",
+    "YoutubeId": "JZpk8zFo_ig",
     "Tags": [
       "Agile",
       "APIs",
@@ -82,6 +85,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "Mostly intermediate",
     "ExternalId": "1041341",
+    "YoutubeId": "RU04gB2vHtM",
     "Tags": [
       "Agile",
       "Automation",
@@ -107,6 +111,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1015549",
+    "YoutubeId": "C13X3NYQQoc",
     "Tags": [
       "Career",
       "Leadership",
@@ -132,6 +137,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "Mostly intermediate",
     "ExternalId": "1003005",
+    "YoutubeId": "rSqnkOhboZM",
     "Tags": [
       "Agile",
       "Leadership"
@@ -155,6 +161,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1029734",
+    "YoutubeId": "DsAZpU8uNtQ",
     "Tags": [
       "Architecture",
       "Backend dev",
@@ -181,6 +188,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1002367",
+    "YoutubeId": "UKiOxo66src",
     "Tags": [
       "Architecture",
       "Automation",
@@ -230,6 +238,7 @@ export const sessions: Session[] = [
     "Format": "20 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1027254",
+    "YoutubeId": "ZZ7SssikV9E",
     "Tags": [
       "Leadership"
     ],
@@ -252,6 +261,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "988046",
+    "YoutubeId": "ZqYvUe3L1I4",
     "Tags": [
       "AI",
       "Azure",
@@ -277,6 +287,7 @@ export const sessions: Session[] = [
     "Format": "Either",
     "Level": "No experience necessary",
     "ExternalId": "1029050",
+    "YoutubeId": "UlZGuH-PyPk",
     "Tags": [
       "APIs",
       "Backend dev",
@@ -304,6 +315,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1043437",
+    "YoutubeId": "XopP7YXLbJM",
     "Tags": [
       "Architecture",
       "Infrastructure",
@@ -338,6 +350,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "Mostly intermediate",
     "ExternalId": "990488",
+    "YoutubeId": "UiQIiGv4eDU",
     "Tags": [
       "Career",
       "Leadership",
@@ -362,6 +375,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "Mostly intermediate",
     "ExternalId": "1038310",
+    "YoutubeId": "fkIOmBk3SrA",
     "Tags": [
       "Cloud",
       "Containers",
@@ -415,6 +429,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1041475",
+    "YoutubeId": "haaGkoEFII8",
     "Tags": [
       "Career",
       "Professional/soft skills"
@@ -438,6 +453,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1014469",
+    "YoutubeId": "yShghjsCzHs",
     "Tags": [
       "Leadership",
       "Professional/soft skills",
@@ -462,6 +478,7 @@ export const sessions: Session[] = [
     "Format": "45 minutes",
     "Level": "Mostly intermediate",
     "ExternalId": "992525",
+    "YoutubeId": "tcBeDeGR6LE",
     "Tags": [
       "APIs",
       "Design and UX",
@@ -489,6 +506,7 @@ export const sessions: Session[] = [
     "Format": "20 minutes",
     "Level": "Mostly intermediate",
     "ExternalId": "990436",
+    "YoutubeId": "CkpQsz_Tpow",
     "Tags": [
       "AI",
       "Backend dev",
@@ -514,6 +532,7 @@ export const sessions: Session[] = [
     "Format": "Either",
     "Level": "No experience necessary",
     "ExternalId": "1037768",
+    "YoutubeId": "QYtUg_Et9OA",
     "Tags": [
       "DevOps",
       "Testing",
@@ -538,6 +557,7 @@ export const sessions: Session[] = [
     "Format": "20 minutes",
     "Level": "No experience necessary",
     "ExternalId": "1043927",
+    "YoutubeId": "yDRYdKpvaNo",
     "Tags": [
       "Leadership",
       "Professional/soft skills",
