@@ -158,7 +158,7 @@ StyledUpNext.displayName = 'StyledUpNext'
 interface StyledAgendaContainerProps {
   talkTracks?: number,
   workshopTracks?: number
-  useLegacyRowLayout?: boolean
+  useLegacyRowLayout?: boolean,
 }
 
 export const StyledAgendaContainer = styled('div')<StyledAgendaContainerProps>(({
