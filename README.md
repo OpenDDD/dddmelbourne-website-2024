@@ -18,6 +18,7 @@ The DDD Melbourne website is deployed to https://dddmelbourne.com and is built u
 - Use the in-app `Testing` panel to jump between conference states such as `Pre-CFP`, `Voting open`, and `Agenda published`
 - Verify pages with `curl http://localhost:3100/` and route-specific requests like `curl http://localhost:3100/agenda` (or match your `COPILOT_PORT`)
 - Capture verification screenshots with `npm run screenshot:copilot` (desktop and mobile for `/` and `/agenda` by default) or pass routes like `npm run screenshot:copilot -- /about /agenda/2025`
+- Infer affected routes from changed files with `node scripts/infer-screenshot-routes.mjs <changed-file>...` or `node scripts/infer-screenshot-routes.mjs --files-from /tmp/changed-files.txt`
 - Pull requests can publish those screenshots to the `copilot-screenshots` branch and comment inline image previews via `.github/workflows/pr-screenshot-preview.yml`
 - Stop the server after verification so the environment stays clean
 

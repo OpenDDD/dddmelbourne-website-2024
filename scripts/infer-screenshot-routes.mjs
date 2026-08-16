@@ -86,7 +86,6 @@ function pageFileToRoute(file) {
   if (file.startsWith('pages/vote/')) {
     return null
   }
-
   const relativePath = file.slice('pages/'.length).replace(/\.(ts|tsx|js|jsx)$/, '')
 
   if (relativePath.startsWith('_')) {
