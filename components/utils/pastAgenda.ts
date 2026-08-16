@@ -2,7 +2,7 @@ import { Presenter, Session } from '../../config/types'
 
 export function extractYoutubeId(url: string | null | undefined): string | null {
   if (!url) return null
-  const match = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/)
+  const match = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(?:[^a-zA-Z0-9_-]|$)/)
   return match ? match[1] : null
 }
 
