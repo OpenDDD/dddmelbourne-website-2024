@@ -15,7 +15,7 @@ jobs:
             https://dddperth.com/about
             https://dddperth.com/agenda
       - name: Save results
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v7
         with:
           name: lighthouse-results
           path: '.lighthouseci' # This will save the Lighthouse results as .json files
