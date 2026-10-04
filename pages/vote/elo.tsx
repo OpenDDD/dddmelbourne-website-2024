@@ -30,7 +30,7 @@ type EloProps = {
   votingSessionId: string
 }
 
-async function fetchPair(sessionId: string, sessionIdHeaderName = 'X-DDDPerth-VotingSessionId') {
+async function fetchPair(sessionId: string, sessionIdHeaderName = 'X-DDDMelbourne-VotingSessionId') {
   const resp = await fetch(process.env.NEXT_PUBLIC_ELO_PAIR, {
     headers: {
       [sessionIdHeaderName]: sessionId,
