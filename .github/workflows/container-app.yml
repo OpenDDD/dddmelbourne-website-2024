@@ -12,7 +12,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: openddd/dddmelbourne-website-2024
 
 jobs:
   build_and_deploy_job:
@@ -47,19 +47,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-#      - name: Log in to Azure
-#        uses: azure/login@v2
-#        with:
-#          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-#          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-#          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-#          auth-type: IDENTITY
-#          enable-AzPSSession: true
-#      - name: Build and deploy Container App
-#        uses: azure/container-apps-deploy-action@v1
-#        with:
-#          imageToDeploy: ghcr.io/openddd/dddmelbourne-website-2024:feat-next-13
-#          containerAppName: website-ghcr
-#          resourceGroup: dddmelb-2024
-#          targetPort: 3000
-#          ingress: external
+      - name: Log in to Azure
+        uses: azure/login@v3
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Deploy Container App
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          imageToDeploy: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.push.outputs.digest }}
+          containerAppName: website-ghcr
+          resourceGroup: dddmelb-2024
