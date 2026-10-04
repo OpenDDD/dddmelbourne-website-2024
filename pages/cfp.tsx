@@ -30,9 +30,7 @@ const CFPPage: NextPage = () => {
         {conference.PreviouslySubmittedTopics}.
       </Text>
 
-      <Text textAlign="center">
-        {sessionizeSubmission}
-      </Text>
+      <Text textAlign="center">{sessionizeSubmission}</Text>
 
       <Text>
         We want to encourage people that wouldn't normally speak at conferences to give it a go! We do this by:
@@ -57,6 +55,17 @@ const CFPPage: NextPage = () => {
         </li>
         <li>
           Encouraging submissions from <strong>multiple presenters as well as solo presenters.</strong>
+        </li>
+        <li>
+          Running{' '}
+          {!conference.SpeakerProposalTrainingUrl ? (
+            <span>online CFP training sessions</span>
+          ) : (
+            <strong>
+              <a href={conference.SpeakerProposalTrainingUrl}>online CFP training sessions</a>
+            </strong>
+          )}{' '}
+          on how to develop your great talk idea and write a compelling submission.
         </li>
         <li>
           Providing a{' '}
@@ -110,9 +119,7 @@ const CFPPage: NextPage = () => {
         </li>
       </StyledList>
 
-      <Text textAlign="center">
-        {sessionizeSubmission}
-      </Text>
+      <Text textAlign="center">{sessionizeSubmission}</Text>
 
       <h2>Already submitted, but want to edit?</h2>
       <Text textAlign="center">

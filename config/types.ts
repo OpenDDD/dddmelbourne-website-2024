@@ -27,6 +27,7 @@ export interface Conference {
   Handbook: string | null
   SessionizeUrl: string | null
   SessionizeEditUrl: string | null
+  SpeakerProposalTrainingUrl: string | null
   PreviouslySubmittedTopics: string
 
   Venue: Venue | null
