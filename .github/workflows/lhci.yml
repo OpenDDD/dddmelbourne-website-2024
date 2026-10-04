@@ -6,16 +6,17 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v12
+        uses: treosh/lighthouse-ci-action@3e7e23fb74242897f95c0ba9cabad3d0227b9b18 # 12.6.2
         with:
           urls: |
             https://dddperth.com/
             https://dddperth.com/about
             https://dddperth.com/agenda
       - name: Save results
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: lighthouse-results
           path: '.lighthouseci' # This will save the Lighthouse results as .json files
+          include-hidden-files: true
