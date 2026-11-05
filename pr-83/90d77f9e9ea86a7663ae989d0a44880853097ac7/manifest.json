@@ -1,0 +1,42 @@
+[
+  {
+    "route": "/agenda",
+    "viewport": "desktop",
+    "file": "agenda-desktop.png"
+  },
+  {
+    "route": "/agenda/2024",
+    "viewport": "desktop",
+    "file": "agenda-2024-desktop.png"
+  },
+  {
+    "route": "/agenda/2025",
+    "viewport": "desktop",
+    "file": "agenda-2025-desktop.png"
+  },
+  {
+    "route": "/agenda/2026",
+    "viewport": "desktop",
+    "file": "agenda-2026-desktop.png"
+  },
+  {
+    "route": "/agenda",
+    "viewport": "mobile",
+    "file": "agenda-mobile.png"
+  },
+  {
+    "route": "/agenda/2024",
+    "viewport": "mobile",
+    "file": "agenda-2024-mobile.png"
+  },
+  {
+    "route": "/agenda/2025",
+    "viewport": "mobile",
+    "file": "agenda-2025-mobile.png"
+  },
+  {
+    "route": "/agenda/2026",
+    "viewport": "mobile",
+    "file": "agenda-2026-mobile.png"
+  }
+]
