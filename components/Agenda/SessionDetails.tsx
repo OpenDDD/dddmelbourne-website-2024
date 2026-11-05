@@ -14,6 +14,10 @@ import {
   StyledTagList,
 } from './SessionDetails.styled'
 
+// Pixboost rejects cdn.sessionize.com URLs with 403 but accepts sessionize.com, which redirects to the CDN.
+const pixboostUrl = (photoUrl: string) =>
+  `https://pixboost.com/api/2/img/${photoUrl.replace(/^https:\/\/cdn\.sessionize\.com\//i, 'https://sessionize.com/')}/optimise?auth=MjMyNzUwMTg3Nw__`
+
 interface SessionDetailsProps {
   session: Session
   showPresenters: boolean
@@ -43,7 +47,7 @@ export const SessionDetails = ({
             <StyledBioProfile
               src={
                 presenter.ProfilePhotoUrl ?
-                `https://pixboost.com/api/2/img/${presenter.ProfilePhotoUrl}/optimise?auth=MjMyNzUwMTg3Nw__` :
+                pixboostUrl(presenter.ProfilePhotoUrl) :
                 '/static/images/profile-image-blank.jpg'
               }
               alt={`${presenter.Name} profile photo`}
