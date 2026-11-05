@@ -108,10 +108,10 @@ export const CurrentAgenda = ({
                   </AgendaSession>
                   <AgendaTime time={set(date, { hours: 9, minutes: 0 })} duration={45} />
                   <AgendaSession
-                    sessionId="1039434"
+                    sessionId="2cc6efd3-a178-479d-b3e7-5580b9c474e2"
                     room={0}
                     renderPresenters={(presenters) => (
-                      <StyledAgendaPresenter isKeynote>Keynote: {presenters}</StyledAgendaPresenter>
+                      <StyledAgendaPresenter isKeynote>{presenters ? `Keynote: ${presenters}` : 'Keynote'}</StyledAgendaPresenter>
                     )}
                     fullWidth
                     isKeynote
@@ -127,13 +127,13 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1015549" />
-                  <AgendaSession room={2} sessionId="992525" />
-                  <AgendaSession room={3} sessionId="1027254" />
+                  <AgendaSession room={1} sessionId="1296693" />
+                  <AgendaSession room={2} sessionId="1346316" />
+                  <AgendaSession room={3} sessionId="1325453" />
                   <AgendaSession
                     room={4}
                     isWorkshop
-                    sessionId="988090"
+                    sessionId="1646dec1-ebd3-43f5-8721-4ba8c3ed6f38"
                     renderTitle={(title) => (
                       <StyledAgendaTitle>{title}</StyledAgendaTitle>
                     )}
@@ -148,14 +148,14 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1037768" />
-                  <AgendaSession room={2} sessionId="988022" />
-                  <AgendaSession room={3} sessionId="990488" />
+                  <AgendaSession room={1} sessionId="1341792" />
+                  <AgendaSession room={2} sessionId="1306511" />
+                  <AgendaSession room={3} sessionId="1295904" />
                   <AgendaSession
                     room={4}
                     isWorkshop
                     isWorkshopContinuation
-                    sessionId="988090"
+                    sessionId="1646dec1-ebd3-43f5-8721-4ba8c3ed6f38"
                     renderTitle={(title) => (
                       <StyledAgendaTitle>{title}<br />(continued)</StyledAgendaTitle>
                     )}
@@ -170,9 +170,9 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1043927" />
-                  <AgendaSession room={2} sessionId="990436" />
-                  <AgendaSession room={3} sessionId="1045189" />
+                  <AgendaSession room={1} sessionId="1346577" />
+                  <AgendaSession room={2} sessionId="1346491" />
+                  <AgendaSession room={3} sessionId="1327312" />
                   <AgendaSession>
                     <StyledTrackHeader />
                   </AgendaSession>
@@ -186,13 +186,13 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1038310" />
-                  <AgendaSession room={2} sessionId="1041475" />
-                  <AgendaSession room={3} sessionId="1002367" />
+                  <AgendaSession room={1} sessionId="1346029" />
+                  <AgendaSession room={2} sessionId="1295817" />
+                  <AgendaSession room={3} sessionId="1346683" />
                   <AgendaSession
                     room={4}
                     isWorkshop
-                    sessionId="1045279"
+                    sessionId="cfeb88e1-7d98-49c0-8c4c-a25e03ce5807"
                     renderTitle={(title) => (
                       <StyledAgendaTitle>{title}</StyledAgendaTitle>
                     )}
@@ -207,14 +207,14 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1041341" />
-                  <AgendaSession room={2} sessionId="1029734" />
-                  <AgendaSession room={3} sessionId="1043437" />
+                  <AgendaSession room={1} sessionId="1339380" />
+                  <AgendaSession room={2} sessionId="1323579" />
+                  <AgendaSession room={3} sessionId="1346532" />
                   <AgendaSession
                     room={4}
                     isWorkshop
                     isWorkshopContinuation
-                    sessionId="1045279"
+                    sessionId="cfeb88e1-7d98-49c0-8c4c-a25e03ce5807"
                     renderTitle={(title) => (
                       <StyledAgendaTitle>{title}<br />(continued)</StyledAgendaTitle>
                     )}
@@ -229,9 +229,9 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1029050" />
-                  <AgendaSession room={2} sessionId="1014469" />
-                  <AgendaSession room={3} sessionId="1003005" />
+                  <AgendaSession room={1} sessionId="1344898" />
+                  <AgendaSession room={2} sessionId="1346724" />
+                  <AgendaSession room={3} sessionId="1294975" />
                   <AgendaSession>
                     <StyledTrackHeader />
                   </AgendaSession>
@@ -239,9 +239,9 @@ export const CurrentAgenda = ({
                   <AgendaSession fullWidth>
                     <StyledTrackHeader>Changeover</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaTime time={set(date, { hours: 16, minutes: 45 })} duration={45} />
+                  <AgendaTime time={set(date, { hours: 16, minutes: 45 })} duration={60} />
                   <AgendaSession
-                    sessionId="988046"
+                    sessionId="1345985"
                     room={0}
                     renderPresenters={(presenters) => (
                       <StyledAgendaPresenter isKeynote>Locknote: {presenters}</StyledAgendaPresenter>
@@ -250,7 +250,7 @@ export const CurrentAgenda = ({
                     isKeynote
                     alwaysShowRoom
                   />
-                  <AgendaTime time={set(date, { hours: 17, minutes: 30 })} />
+                  <AgendaTime time={set(date, { hours: 17, minutes: 45 })} />
                   <AgendaSession room={0} alwaysShowRoom fullWidth>
                     <StyledTrackHeader>Closing</StyledTrackHeader>
                   </AgendaSession>
