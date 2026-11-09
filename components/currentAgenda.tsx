@@ -128,7 +128,7 @@ export const CurrentAgenda = ({
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
                   <AgendaSession room={1} sessionId="1296693" />
-                  <AgendaSession room={2} sessionId="1346316" />
+                  <AgendaSession room={2} sessionId="1323579" />
                   <AgendaSession room={3} sessionId="1325453" />
                   <AgendaSession
                     room={4}
@@ -150,7 +150,7 @@ export const CurrentAgenda = ({
                   </AgendaSession>
                   <AgendaSession room={1} sessionId="1341792" />
                   <AgendaSession room={2} sessionId="1306511" />
-                  <AgendaSession room={3} sessionId="1295904" />
+                  <AgendaSession room={3} sessionId="1339380" />
                   <AgendaSession
                     room={4}
                     isWorkshop
@@ -207,8 +207,8 @@ export const CurrentAgenda = ({
                     alwaysShowRoom>
                       <StyledTrackHeader>Sponsor Hall + Networking</StyledTrackHeader>
                   </AgendaSession>
-                  <AgendaSession room={1} sessionId="1339380" />
-                  <AgendaSession room={2} sessionId="1323579" />
+                  <AgendaSession room={1} sessionId="1295904" />
+                  <AgendaSession room={2} sessionId="1346316" />
                   <AgendaSession room={3} sessionId="1346532" />
                   <AgendaSession
                     room={4}
