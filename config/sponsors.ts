@@ -41,7 +41,7 @@ const coffeeCartSponsors: Sponsor[] = [
     imageUrl: '/static/images/sponsors/2027-aiei.png',
     name: 'AI Engineering Melbourne',
     type: SponsorType.CoffeeCart,
-    url: 'https://webdirections.org/',
+    url: 'https://webdirections.org/ai-engineer-melbourne/',
   },
 ]
 const serviceSponsors: Sponsor[] = []
